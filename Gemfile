@@ -70,6 +70,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #hamlでの記載方法のため
 gem 'haml-rails'
+gem 'erb2haml'
 
 #デプロイを行う為にユニコーン追加
 group :production do 
