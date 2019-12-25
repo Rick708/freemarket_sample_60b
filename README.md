@@ -1,24 +1,54 @@
-# README
+# Freemarket DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false, unique: true|
+|name|string|null: false|
+|birthday|string|null: false|
+|password|string|null: false, unique: true|
+|telephone|integer|null: false|
+|credit＿card_number|integer||
+|profile|text||
+|profile_image|string||
+### Association
+- has_many :items
+- has_many :comments
+- has_many :trades
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## itemsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|content|text||
+|price|integer|null:false|
+|status|string||
+|size|string||
+|delivery_charge|integer||
+|delivery_method|integer||
+|delivery_area|string||
+|send_day|string||
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- has_many :comments
+- has_many :trades
+- belongs_to :user
 
-Things you may want to cover:
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|content|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :item
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## tradesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :item
