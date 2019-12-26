@@ -1,0 +1,13 @@
+.header__top
+  .header__top__photo 
+    = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
+  .header__top__form 
+    %input.seach{:placeholder => "何かお探しですか？", :type => "text"}
+  .header__top__icon
+    = fa_icon "search"
+.header__bottom
+  .header__bottom__list カテゴリーから探す
+  .header__bottom__brand ブランドから探す
+
+  .header__bottom__menu　新規会員登録
+  .header__bottom__login ログイン

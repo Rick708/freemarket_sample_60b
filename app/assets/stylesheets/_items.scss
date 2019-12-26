@@ -1,0 +1,118 @@
+
+// ここにCSSきかせていきましょう↓
+.header{
+  width: 700px;
+  color: red;
+  background-color: white;
+  margin:  0 auto;
+  height: 130px;
+  padding: 8px 0px 0px;
+  position: relativer;
+  &__top{
+    height: 60px;
+    display: flex;
+    &__form{
+      color: blue;
+      margin: 0 0 0 auto;
+    }
+    .seach{
+      font-size: 30px;
+      // height: 30px;
+      // padding: 8px 0px 0px;
+      width: 530px;
+    }
+    input::placeholder{
+      font-size: 15px;
+    }
+    &__icon{
+      position:absolute;
+      top: 13px;
+      right: 300px;
+      font-size: 25px;
+    }
+  }
+
+  &__bottom{
+    height: 44px;
+    display: flex;
+    font-size: 16px;
+    &__list{
+      padding-top: 9px;
+    }
+    &__list::before {
+      font-family: FontAwesome;
+      content: '\f0ca';
+      color: red;
+      font-size: 14px;
+      }
+    &__brand{
+    padding-top: 9px;
+    }
+    &__brand::before {
+      font-family: FontAwesome;
+      content: '\f02b';
+      color: red;
+      margin-left: 10px;  
+      }
+    &__menu{
+      margin: 0 0 0 auto;
+      border-style: solid;
+      border-width: 1px;
+      border-color: red;
+      border-image: initial;
+      border-radius: 4px;
+      padding-top: 10px;
+      padding-right: 10px;
+      background-color: red;
+    color: white;
+    }
+    &__login{
+      margin-left: 20px;
+      border-style: solid;
+      border-radius: 4px;
+      border-width: 1px;
+      padding: 9px 9px;
+    }
+  }
+}
+
+.photo__top{
+  height: 400px;
+  width: 100%;
+  background-color: black;
+  color: red;
+  font-size: 30px;
+}
+
+.main{
+  &__list{
+  height: 400px;
+  width: 100%;
+  background-color: white;
+  color: red;
+  font-size: 30px;
+  }
+  &__brand{
+  height: 400px;
+  width: 100%;
+  background-color: white;
+  color: red;
+  font-size: 30px;
+  }
+}
+
+.photo__bottom{
+  height: 400px;
+  width: 100%;
+  background-color: black;
+  color: red;
+  font-size: 30px;
+}
+
+.footer{
+  height: 400px;
+  width: 100%;
+  background-color: gray;
+  color: red;
+  font-size: 30px;
+}
