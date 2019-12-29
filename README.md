@@ -28,10 +28,20 @@
 |delivery_area|string||
 |send_day|string||
 |user_id|integer|null: false, foreign_key: true|
+|item-image_id|integer|foreign_key: true|
 ### Association
 - has_many :comments
 - has_many :trades
+- has_many :item-images
 - belongs_to :user
+
+## item-imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string||
+|item_id|integer|null: false, foreign_key|
+### Asociation
+- belongs_to :item
 
 ## commentsテーブル
 |Column|Type|Options|
