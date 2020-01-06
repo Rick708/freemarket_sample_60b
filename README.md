@@ -4,8 +4,11 @@
 |------|----|-------|
 |nickname|string|null: false, unique: true|
 |name|string|null: false|
+|mail|string|null: false, unique: true|
 |birthday|string|null: false|
 |password|string|null: false, unique: true|
+|postal_code|integer|null: false|
+|street_address|string|null: false|
 |telephone|integer|null: false|
 |credit＿card_number|integer||
 |profile|text||
