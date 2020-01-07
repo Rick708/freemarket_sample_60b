@@ -24,4 +24,7 @@
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
+
+#githubに上がるのを除外する。
 /config/master.key
+/config/credentials.yml.enc
