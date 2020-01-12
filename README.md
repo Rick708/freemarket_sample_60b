@@ -36,7 +36,7 @@
 |prefecture_id|string|null: false, foreign_key: true|
 |address_city|string|null: false|
 |address_street|string|null: false|
-|adress_building|string|null: false|
+|address_building|string|null: false|
 ### Association
 - has_many :users
 - belongs_to :prefecture
@@ -119,6 +119,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |size|string|null: false|
+|item_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :items
@@ -129,6 +130,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |d_method|string||
+|item_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :items
@@ -139,7 +141,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
-|item_id|integer|null: false, foreign_key|
+|item_id|integer|null: false, foreign_key: true|
 ### Asociation
 - belongs_to :item
 
