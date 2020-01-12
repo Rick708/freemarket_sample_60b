@@ -1,0 +1,10 @@
+.mypage-contents {
+  height: 500px;
+  display: flex;
+  .mypage-contents__side-bar {
+    background-color: bisque;
+  }
+  .mypage-contents__main{
+    background-color: aqua;
+  }
+}
