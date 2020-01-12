@@ -1,8 +1,11 @@
 .mypage-contents {
+  background-color: grey;
   height: 1200px;
+  width: 1020px;
+  margin: 40px, auto, 0;
   display: flex;
   .mypage-contents__side-bar {
-    background-color: bisque;
+    background-color: white;
   }
   .mypage-contents__main{
     background-color: aqua;
