@@ -1,6 +1,7 @@
 # Freemarket DB設計
 ## usersテーブル
 - ユーザーテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false, unique: true|
@@ -9,6 +10,7 @@
 |first_name|string|null: false|
 |last_name|string|null: false|
 |mail|string|null: false, unique: true|
+|telephone|string|null: false|
 |birthday_year|string|null: false|
 |birthday_month|string|null: false|
 |birthday_day|string|null: false|
@@ -26,12 +28,12 @@
 
 ## addressesテーブル
 - ユーザー住所テーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |user_id|intrger|null: false, foreign_key: true|
-|telephone|integer|null: false|
 |post_code|integer|null: false|
-|prefecture_id|string|null: false, foreign: true|
+|prefecture_id|string|null: false, foreign_key: true|
 |address_city|string|null: false|
 |address_street|string|null: false|
 |adress_building|string|null: false|
@@ -41,6 +43,7 @@
 
 ## cardsテーブル
 - ユーザークレジットカードテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -53,6 +56,7 @@
 
 ## itemsテーブル
 - 商品テーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -81,6 +85,7 @@
 
 ## categoriesテーブル
 - カテゴリテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -89,15 +94,17 @@
 
 ## brandsテーブル
 - ブランドテーブル
+
 |Column|Type|Options|
 |------|----|-------|
-|name|sring|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :items
 
 ## prefecturesテーブル
 - 都道府県テーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |name|string||
@@ -108,6 +115,7 @@
 
 ## size
 - 商品サイズテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |size|string|null: false|
@@ -117,6 +125,7 @@
 
 ## delivery-method
 - 配送法テーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |d_method|string||
@@ -126,6 +135,7 @@
 
 ## imagesテーブル
 - 商品画像テーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
@@ -135,6 +145,7 @@
 
 ## commentsテーブル
 - コメントテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |content|text|null: false|
@@ -147,6 +158,7 @@
 
 ## purchasesテーブル
 - 購入履歴テーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
