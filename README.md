@@ -33,13 +33,12 @@
 |------|----|-------|
 |user_id|intrger|null: false, foreign_key: true|
 |post_code|integer|null: false|
-|prefecture_id|string|null: false, foreign_key: true|
+|prefecture_code|integer|null: false|
 |address_city|string|null: false|
 |address_street|string|null: false|
 |address_building|string|null: false|
 ### Association
 - has_many :users
-- belongs_to :prefecture
 
 ## cardsテーブル
 - ユーザークレジットカードテーブル
@@ -62,7 +61,7 @@
 |name|string|null: false|
 |content|text||
 |price|integer|null:false|
-|status|string||
+|status|integer|default: 0|
 |delivery_charge|integer||
 |send_day|string||
 |user_id|integer|null: false, foreign_key: true|
@@ -71,7 +70,13 @@
 |brand_id|integer|null: false, foreign_key: true|
 |size_id|integer|null: false, foreign_key: true|
 |delivery_id|integer|null: false, foreign_key: true|
-|prefecture_id|integer|null: false, foreign_key: true|
+|prefecture_code|integer|null: false|
+- prefecture_codeはJpPrefecture,jquery.jpostal.jsを使用
+
+### enum
+- 商品ステータス
+- status:{出品中:0,取引中:1,購入済み:2}
+
 ### Association
 - has_many :comments
 - has_many :purchases
@@ -80,7 +85,6 @@
 - belongs_to :brand
 - belongs_to :delivery
 - belongs_to :size
-- belongs_to :prefecture
 - belongs_to :user
 
 ## categoriesテーブル
@@ -102,24 +106,12 @@
 ### Association
 - has_many :items
 
-## prefecturesテーブル
-- 都道府県テーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string||
-
-### Association
-- has_many :items
-- has_many :address
-
 ## size
 - 商品サイズテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |size|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :items
@@ -130,7 +122,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |d_method|string||
-|item_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :items
