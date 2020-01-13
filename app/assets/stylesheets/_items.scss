@@ -6,6 +6,7 @@
   z-index: 3;
 }
   .toppage-header-top {
+    position:relative;
     width: 1020px;
     margin: 0px auto;
     padding: 8px 0px 0px;
@@ -26,13 +27,11 @@
           width: 150px;
         }
       &__header-search-form {
-        position: relative;
         width: 100%;      
         background-color: rgb(245, 245, 245);
         font-size: 16px;
         height: 40px;
         line-height: 1.4em;
-        width: 100%;
         border-width: 1px;
         border-style: solid;
         border-color: rgb(204, 204, 204);
@@ -40,41 +39,14 @@
         border-radius: 4px;
         outline: none;
         padding: 0px 50px 0px 10px;
-        transition: all 0.3s ease-out 0s;
         }
-          .seach {
-            border:none;
-            background:none;
-            -webkit-appearance: none;
-          }
-        &__header-btn {
-          background-color: transparent;
-          cursor: pointer;
-          height: 40px;
-          position: absolute;
-          right: 0px;
-          top: 0px;
-          width: 40px;
-          -webkit-appearance: none;
-          border-width: initial;
-          border-style: none;
-          border-color: initial;
-          border-image: initial;
-          border-radius: 0px 4px 4px 0px;
-          padding: 0px;
-          color: rgb(34, 34, 34);
-          margin-top: 5px;
-        }
-        &__header-btn-icon {
-          text-align: right;
-          max-width: 100%;
-          max-height: 100%;
-          color: rgb(34, 34, 34);
-          height: 14px;
-          margin-top: 2px;
-          width: 14px;
-          }
-        }
+      &__header-btn {
+        position:absolute; 
+        cursor: pointer;
+        right: 20px;
+        margin-top: 5px;
+      }
+      }
   .toppage-header-top__footer {
     width: 1020px;
     margin: 0px auto;
@@ -189,7 +161,7 @@
 .toppage-main__category-bottom { 
   font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   display: block;
-  width: 1020px;
+  width: 100%;
   height: 100%;
   background-color: rgb(245, 245, 245);
   padding: 42px 0 100px;
@@ -210,7 +182,7 @@
       font-weight: 600;
       line-height: 1.4em;
       margin: 0;
-      padding: 0;
+      padding-left: 50px;
       font-size: 24px;
       margin-bottom: 16px;
       align-items: flex-end;
@@ -220,15 +192,34 @@
     }
     .toppage-main__box {
       width: 1020px;
-      height: 200px;
+      height: 250px;
+      vertical-align: baseline;
+      margin: 0px auto;
+      padding: 0px;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      font: inherit;
   }
+      .toppage-main__smallbox {
+        width: 20%;
+        height: 200px;
+        // padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        // padding: 0.5em 1em;
+        margin: 2em 0;
+        font-weight: nomal;
+        border: solid 1px #000000;
+      }
 .toppage-footer-bottom{
   height: 389px;
   width: 100%;
   background-color: rgb(34,34,34);
   color: rgb(255,255,255);
   font-size: 12px;
-  padding: 0px 10px;
+  padding: 0px 50px;
   box-sizing: border-box;
   &__summary{
     font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
