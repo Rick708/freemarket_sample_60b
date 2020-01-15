@@ -1,3 +1,36 @@
-.mypage-contents__side-bar {
+.mypage-contents-side-bar {
   background-color: white;
+  width: 200px;
+  height: 100%;
+  nav.side-bar-nav {
+    ul.side-bar-list {
+      li {
+        height: 45px;
+        background-color: rgb(243, 240, 235);
+        border-bottom: solid 1px gray;
+        .side-bar__list-avtive {
+          display: inline-block;
+          width: 180px;
+          padding: 10px;
+          position: relative;
+          i.fa.fa-arrow-right {
+            position: absolute;
+            right: 15px;
+            top: 40%;
+          }
+        }
+      }
+    }
+    h3.side-bar-head {
+      height: 15px;
+      padding-top: 40px;
+      font-size: 12px;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+  }
+}
+a:-webkit-any-link {
+  text-decoration: none;
+  color: black;
 }
