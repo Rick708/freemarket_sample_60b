@@ -106,7 +106,7 @@
 ### Association
 - has_many :items
 
-## size
+## sizesテーブル
 - 商品サイズテーブル
 
 |Column|Type|Options|
@@ -116,7 +116,7 @@
 ### Association
 - has_many :items
 
-## delivery-method
+## delivery-methodsテーブル
 - 配送法テーブル
 
 |Column|Type|Options|
