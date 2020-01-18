@@ -1,0 +1,108 @@
+.login_page{
+  background-color:lightgrey;
+  text-align:  center;
+}
+
+.login_logo{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align:  center;
+  height: 49px;
+}
+
+.login{
+  max-width: none;
+  width: 550px;
+  background: white;
+  height: auto;
+  margin:0 auto;
+  .login_message{
+      padding: 40px 64px;
+      border-bottom-style: 2px;
+    .login_message_no{
+      font-size: 16px;
+    }
+    .login_message_new{
+      display: block;
+      margin: 8px 0 0;
+      border: 1px solid #0099e8;
+      background: #0099e8;
+      color: #fff;
+      line-height: 50px;
+    }
+  }
+  .login_sns{
+    padding: 32px 64px;
+    border-top: 1px solid #eee;
+    .login_sns_fb{
+      background: #385185;
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 50px;
+      font-size: 16px;
+      border: 1px solid transparent;
+    }
+    .login_sns_gg{
+      margin: 16px 0 0;
+      background: #fff;
+      color: #333;
+      display: block;
+      width: 100%;
+      line-height: 50px;
+      font-size: 16px;
+      border: #979797 solid 1px;
+    }
+  }
+  .login_form{
+    padding: 32px 64px;
+    input{
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 93%;
+    margin-bottom: 30px;
+    }
+    .login_form_pw{
+      color: red;
+    }
+    .login_form_btm{
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 16px;
+    }
+    .login_form_lost{
+      display: block;
+      margin: 40px 0 0;
+      color: lightblue;
+      text-align: left;
+      font-size: 15px;
+    }
+  }
+}
+
+.login_bottom{
+  text-align:  center;
+  padding: 40px 0;
+  display: flex;
+  .login_bottom_privacy{
+
+  }
+  .login_bottom_terms{
+
+  }
+  .login_bottom_notation{
+
+  }
+  .login_bottom_logo{
+
+  }
+}

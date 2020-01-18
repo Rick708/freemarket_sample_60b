@@ -1,0 +1,28 @@
+.login_page
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  .login_logo
+    = image_tag "fmarket_logo_red.svg", class: "image", width: "200px"
+
+  .login
+    .login_message
+      .login_message_no アカウントをお持ちでない方はこちら
+      .login_message_new 新規会員登録
+    .login_sns
+    =link_to "https://www.facebook.com/", class: ".login_sns_fb" do
+      Facebook
+    =link_to "https://www.facebook.com/", class: ".login_sns_gg" do
+      Google
+    .login_form
+      .login_form_id
+      %input.login_form_id_text{:placeholder => "メールアドレス", :type => "text"}
+      .login_form_pw 
+      %input.login_form_id_text{:placeholder => "パスワード", :type => "text"}
+      .login_form_btm ログイン
+      .login_form_lost パスワードをお忘れの方
+
+  .login_bottom
+    .login_bottom_privacy プライバシーポリシー
+    .login_bottom_terms メルカリ利用規約
+    .login_bottom_notation 特定商取引に関する表記
+  .login_bottom_logo
+    = image_tag "logo_gray.svg", width: "90px"
