@@ -5,24 +5,33 @@
 
   .login
     .login_message
-      .login_message_no アカウントをお持ちでない方はこちら
-      .login_message_new 新規会員登録
+      =link_to "#", class: "login_message_no" do
+        アカウントをお持ちでない方はこちら
+      =link_to "#", class: "login_message_new" do
+        新規会員登録
     .login_sns
-    =link_to "https://www.facebook.com/", class: ".login_sns_fb" do
-      Facebook
-    =link_to "https://www.facebook.com/", class: ".login_sns_gg" do
-      Google
+      =link_to "#", class: "login_sns_fb" do
+        = icon('fab', 'facebook-square', class: "login_sns_fb_btn")
+        Facebookでログイン
+      =link_to "#", class: "login_sns_gg" do
+        = icon('fab', 'google', class: "login_sns_gg_btn")
+        Googleでログイン
     .login_form
       .login_form_id
       %input.login_form_id_text{:placeholder => "メールアドレス", :type => "text"}
       .login_form_pw 
       %input.login_form_id_text{:placeholder => "パスワード", :type => "text"}
-      .login_form_btm ログイン
-      .login_form_lost パスワードをお忘れの方
+      =link_to "#", class: "login_form_btm" do
+        ログイン
+      =link_to "#", class: "login_form_lost" do
+        パスワードをお忘れの方
 
   .login_bottom
-    .login_bottom_privacy プライバシーポリシー
-    .login_bottom_terms メルカリ利用規約
-    .login_bottom_notation 特定商取引に関する表記
+    =link_to "#", class: "login_bottom_privacy" do
+      プライバシーポリシー
+    =link_to "#", class: "login_bottom_notation" do
+      特定商取引に関する表記
+    =link_to "#", class: "login_bottom_terms" do
+      メルカリ利用規約
   .login_bottom_logo
-    = image_tag "logo_gray.svg", width: "90px"
+    = image_tag "logo_gray.svg", width: "110px"
