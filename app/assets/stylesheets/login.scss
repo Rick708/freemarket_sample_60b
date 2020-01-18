@@ -16,14 +16,14 @@
   background: white;
   height: auto;
   margin:0 auto;
-  .login_message{
+  &_message{
       padding: 40px 64px;
       border-bottom-style: 2px;
-    .login_message_no{
+    &_no{
       font-size: 16px;
       text-decoration: none;
     }
-    .login_message_new{
+    &_new{
       text-decoration: none;
       display: block;
       margin: 8px 0 0;
@@ -33,10 +33,10 @@
       line-height: 50px;
     }
   }
-  .login_sns{
+  &_sns{
     padding: 32px 64px;
     border-top: 1px solid #eee;
-    .login_sns_fb{
+    &_fb{
       background: #385185;
       color: #fff;
       display: table;
@@ -46,7 +46,7 @@
       border: 1px solid transparent;
       text-align: center;
       text-decoration: none;
-      .login_sns_fb_btn{
+      &_btn{
         float: left;
         text-align: left; 
         font-size: 30px;
@@ -54,7 +54,7 @@
         display: table-cell
       }
     }
-    .login_sns_gg{
+    &_gg{
       margin: 16px 0 0;
       background: #fff;
       color: #333;
@@ -64,7 +64,7 @@
       font-size: 16px;
       border: #979797 solid 1px;
       text-decoration: none;
-      .login_sns_gg_btn{
+      &_btn{
         float: left;
         text-align: left; 
         font-size: 30px;
@@ -73,7 +73,7 @@
       }
     }
   }
-  .login_form{
+  &_form{
     padding: 32px 64px;
     input{
     height: 48px;
@@ -86,10 +86,10 @@
     width: 93%;
     margin-bottom: 30px;
     }
-    .login_form_pw{
+    &_pw{
       color: red;
     }
-    .login_form_btm{
+    &_btm{
       background: #ea352d;
       border: 1px solid #ea352d;
       color: #fff;
@@ -99,7 +99,7 @@
       font-size: 16px;
       text-decoration: none;
     }
-    .login_form_lost{
+    &_lost{
       display: block;
       margin: 40px 0 0;
       color: lightblue;
@@ -115,12 +115,12 @@
   padding: 40px 0;
   margin: auto;
   width: 550px;
-  .login_bottom_privacy{
+  &_privacy{
     text-align: left;
     text-decoration: none;
     padding-right: 20px;
   }
-  .login_bottom_terms{
+  &_terms{
     text-align: right;
     text-decoration: none;
     padding-right: 20px;
