@@ -114,20 +114,21 @@
   text-align: center;
   padding: 40px 0;
   margin: auto;
+  width: 550px;
   .login_bottom_privacy{
-    float: left;
-    padding-left: 250px;
+    text-align: left;
     text-decoration: none;
-  }
-  .login_bottom_notation{
-    float: right;
-    padding-right: 250px;
-    text-decoration: none;
+    padding-right: 20px;
   }
   .login_bottom_terms{
-    float: right;
-    padding-right: 37px;
+    text-align: right;
     text-decoration: none;
+    padding-right: 20px;
+  }
+  .login_bottom_notation{
+    text-align: center;
+    text-decoration: none;
+    // padding-right: 20px;
   }
   .login_bottom_logo{
 
