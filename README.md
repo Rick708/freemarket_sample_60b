@@ -23,8 +23,8 @@
 - has_many :items
 - has_many :comments
 - has_many :purchases
+- has_many :addresses
 - has_one  :card
-- belongs_to :address
 
 ## addressesテーブル
 - ユーザー住所テーブル
@@ -33,12 +33,12 @@
 |------|----|-------|
 |user_id|intrger|null: false, foreign_key: true|
 |post_code|integer|null: false|
-|prefecture_code|integer|null: false|
-|address_city|string|null: false|
-|address_street|string|null: false|
-|address_building|string|null: false|
+|prefecture_code|integer||
+|address_city|string||
+|address_street|string||
+|address_building|string||
 ### Association
-- has_many :users
+- belongs_to :user
 
 ## cardsテーブル
 - ユーザークレジットカードテーブル
@@ -68,8 +68,8 @@
 |item-image_id|integer|foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 |brand_id|integer|null: false, foreign_key: true|
-|size_id|integer|null: false, foreign_key: true|
-|delivery_id|integer|null: false, foreign_key: true|
+|size|string|null: false|
+|delivery-method|string|null: false|
 |prefecture_code|integer|null: false|
 - prefecture_code:JpPrefecture,jquery.jpostal.jsを使用
 
@@ -83,8 +83,6 @@
 - has_many :item-images
 - belongs_to :category
 - belongs_to :brand
-- belongs_to :delivery
-- belongs_to :size
 - belongs_to :user
 
 ## categoriesテーブル
@@ -102,26 +100,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-
-### Association
-- has_many :items
-
-## sizesテーブル
-- 商品サイズテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|size|string|null: false|
-
-### Association
-- has_many :items
-
-## delivery-methodsテーブル
-- 配送法テーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|d_method|string||
 
 ### Association
 - has_many :items
