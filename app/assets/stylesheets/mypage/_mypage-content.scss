@@ -141,7 +141,7 @@
   &__item-text{
     overflow: hidden;
     display: block;
-    // display: -webkit-box;
+    display: -webkit-box;
     max-height: 4.4em;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
