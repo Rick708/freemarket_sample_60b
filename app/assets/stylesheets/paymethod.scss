@@ -13,6 +13,37 @@
       border-bottom: solid 1px rgb(168, 167, 167);
     }
     form.paymethod-register {
+      .form-card {
+        &__number {
+          .form-require {
+
+          }
+          .input-defalt {
+
+          }
+          ul.card-list {
+            margin: 8px 0 0;
+            li {
+              display: inline;
+            }
+          } 
+        }
+        &__limit {
+          .form-require {
+
+          }
+          .select-half {
+            display: inline-block;
+            width: calc(50% - 2px);
+            .select-default {
+            }
+          }
+         }
+        &__number {
+
+        }
+      }
+      
     
     }
   }

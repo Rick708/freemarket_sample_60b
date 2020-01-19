@@ -13,12 +13,31 @@
           %input.input-defalt{:name => "text", :placeholder => "半角数字のみ"}
           %ul.card-list 
             %li
+              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+            %li
+              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+            %li
+              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+            %li
+              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+            %li
+              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+            %li
+              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+            %li
+              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
         .form-card__limit
           %label 有効期限
           %sapn.form-require 必須
           %br/
-          .select-right
-          .select-left
-        .form-card_security
+          .select-half
+            %input.select-default
+            %i.fas.fa-chevron-down
+            %span 月
+          .select-half
+            %input.select-default
+            %i.fas.fa-chevron-down
+            %span 年
+        .form-card__number
   .entry-footer
     プライバシー
