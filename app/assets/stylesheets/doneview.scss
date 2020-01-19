@@ -1,0 +1,86 @@
+.doneview-header {
+  background: rgb(245, 245, 245); 
+  text-align: center;
+}
+  .login_logo {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    height: 49px;
+  }
+.doneview-main {
+  background-color: rgb(245, 245, 245);
+  &__container {
+    text-align: center;
+    background-color:  #fff;
+    font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif; 
+    max-width: none;
+    width: 456px;
+    height: 450px;
+    margin: 0 auto;
+    display: block;
+  }
+    &__head {
+      padding: 24px 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &__inner {
+      border-top: 1px solid #eee;
+      font-size: 16px;
+      text-align: center;
+      padding: 32px 64px;
+    }
+  }
+    .doneview-btn {
+      padding: 24px 64px 32px;
+      margin-top: 40px;
+      &__red {
+        font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif; 
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 16px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+      }
+}
+.doneview-footer {
+  background: rgb(245, 245, 245); 
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif; 
+  height: 130px; 
+  margin: 0 auto;
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  z-index: 1; 
+  padding: 40px 0; 
+  text-align: center; 
+} 
+.nav { 
+  display: block; 
+} 
+  .ul { 
+    margin-block-start: 1em; 
+    margin-block-end: 1em; 
+    margin-inline-start: 0px; 
+    margin-inline-end: 0px; 
+    padding-inline-start: 40px; 
+} 
+  .li { 
+  color: #333; 
+  text-decoration: none; 
+  font-size: 12px; 
+  margin: 10px; 
+} 
+    .image { 
+    width: 80px; 
+    height: 65px; 
+    margin: 40px auto 0; 
+    } 
