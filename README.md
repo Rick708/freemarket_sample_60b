@@ -71,7 +71,7 @@
 |size_id|integer|null: false, foreign_key: true|
 |delivery_id|integer|null: false, foreign_key: true|
 |prefecture_code|integer|null: false|
-- prefecture_codeはJpPrefecture,jquery.jpostal.jsを使用
+- prefecture_code:JpPrefecture,jquery.jpostal.jsを使用
 
 ### enum
 - 商品ステータス
