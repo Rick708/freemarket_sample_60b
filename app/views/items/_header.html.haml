@@ -10,14 +10,10 @@
   .toppage-header-top__footer
     .toppage-header-top__footer-search
       .toppage-header-top__footer-search-categories
-      = link_to root_path do
-        = icon('fas', 'list-ul lg',
-        alt: 'list-icon', style: 'color:#ea352d')
-      .toppage-header-top__footer-search-wrapper カテゴリーから探す
-      = link_to root_path do
-        = icon('fas', 'tag lg', 
-        alt: 'tag-icon',style: 'color:#ea352d')
-      .toppage-header-top__footer-search-brand ブランドから探す
+      =link_to "#", class: "toppage-header-top__footer-search-wrapper" do
+        カテゴリーから探す
+      =link_to "#", class: "toppage-header-top__footer-search-brand" do
+        ブランドから探す
     .toppage-header-top__footer-search-btn
       .toppage-header-top__footer-search-btn-wrapper 
         =link_to "#", class: "toppage-header-top__footer-search-btn-new" do

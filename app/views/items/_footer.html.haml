@@ -1,12 +1,5 @@
 .toppage-footer-top
-  .toppage-footer-top__box
-    -# .toppage-footer-top__downloadlink
-    -#   .toppage-footer-top__label
-    -#     スマホでかんたんフリマアプリ
-    -#   .toppage-footer-top__text
-    -#     今すぐ無料ダウンロード！
-      .toppage-footer-top__linkicon
-      .toppage-footer-top__photo
+  = image_tag "cropKM18923003.jpg", class: "toppage-footer-top__box", width: "100%", height: "400px"
 .toppage-footer-bottom
   .toppage-footer-bottom__summary
     %h2.toppage-footer-bottom__navtitle メルカリについて
@@ -21,6 +14,14 @@
         公式ブログ
       %li.toppage-footer-bottom__nav
         メルカリロゴ利用ガイドライン
+      %li.toppage-footer-bottom__nav
+      =link_to "#", class: "toppage-footer-bottom__nav_tw" do
+        = icon('fab', 'twitter', class: "contents__btn--icon")
+      =link_to "#", class: "toppage-footer-bottom__nav_fb" do
+        = icon('fab', 'facebook-square',  class: "contents__btn--icon")
+      %li.toppage-footer-bottom__nav
+      =link_to "#", class: "toppage-footer-bottom__nav_mercari" do
+        mercari
   .toppage-footer-bottom__guide
     %h2.toppage-footer-bottom__navtitle ヘルプ&ガイド
     %ul.toppage-footer-bottom__navlist
@@ -71,3 +72,10 @@
         %li.toppage-footer-bottom__nav
           UnitedStates
   .toppage-footer-bottom__license
+    © Mercari,inc.
+  
+.Exhibition
+  .Exhibition_name
+    出品
+  =link_to "#", class: "Exhibition-btn" do
+    = icon('fas', 'camera', class: "Exhibition-icon")

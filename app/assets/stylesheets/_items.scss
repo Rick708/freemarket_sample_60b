@@ -1,3 +1,4 @@
+html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
 .toppage-header-wrapper{
   font-family: '游ゴシック', 'YuGothic', 'arial unicode ms',sans-serif;
   background-color: rgb(255, 255, 255);;
@@ -57,30 +58,44 @@
     .toppage-header-top__footer-search {
       display: flex;
       width: 300px;
-      margin-left: -3px;
+      margin-left: -40px;
       .toppage-header-top__footer-search-categories {
         padding: 0px 10px;
       }
-      .toppage-header-top__footer-search-wrapper {
+      .toppage-header-top__footer-search-wrapper::before {
+        font-family: FontAwesome;
+        content: '\f03a';
+        color: red;
+        margin-left: 10px;  
+      }
+        .toppage-header-top__footer-search-wrapper{
         cursor: pointer;
         padding-left: 0px;
         height: 44px;
         position: relative;
         z-index: 3;
         padding: 0px 10px;
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 600;
         line-height: 36px;
         white-space: nowrap;
+        text-decoration: none;
         }
       }
-      .toppage-header-top__footer-search-brand {
+      .toppage-header-top__footer-search-brand::before {
+        font-family: FontAwesome;
+        content: '\f02b';
+        color: red;
+        margin-left: 10px;
+      }
+      .toppage-header-top__footer-search-brand{
         cursor: pointer;
         margin-left: 11px;
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 600;
         line-height: 36px;
         white-space: nowrap;
+        text-decoration: none;
       }
       }
     .toppage-header-top__footer-search-btn{
@@ -155,9 +170,9 @@
   width: 100%;
   height: 100%;
   background-color: rgb(245, 245, 245);
-  padding: 42px 0 100px;
   flex-direction: column;
   margin: auto;
+  padding: 42px 150px;
 }
   .toppage-main__category-name {
     vertical-align: baseline;
@@ -173,7 +188,6 @@
       font-weight: 600;
       line-height: 1.4em;
       margin: 0;
-      padding-left: 50px;
       font-size: 24px;
       margin-bottom: 16px;
       align-items: flex-end;
@@ -183,9 +197,8 @@
     }
     .toppage-main__box {
       width: 1020px;
-      height: 250px;
+      // height: 250px;（各カテゴリー毎にした場合使う）
       vertical-align: baseline;
-      margin: 0px auto;
       padding: 0px;
       border-width: 0px;
       border-style: initial;
@@ -194,24 +207,33 @@
       font: inherit;
   }
       .toppage-main__smallbox {
-        width: 20%;
-        height: 200px;
-        // padding: 10px;
+        width: 19%;
         display: flex;
         flex-wrap: wrap;
-        // padding: 0.5em 1em;
-        margin: 2em 0;
         font-weight: nomal;
-        border: solid 1px #000000;
+        border: solid 3px #000000;
+        display: inline-block;
+        .toppage-main__smallbox_photo{
+          margin-bottom: 0px;
+        }
+        .toppage-main__smallbox_name{
+          background-color:white;
+          width: 100%;
+          padding: 10px 10px;
+        }
       }
+
+.toppage-footer-top__box{
+  margin-bottom: -4px;
+}
 .toppage-footer-bottom{
-  height: 389px;
+  height: 100%;
   width: 100%;
   background-color: rgb(34,34,34);
-  color: rgb(255,255,255);
   font-size: 12px;
-  padding: 0px 50px;
+  padding: 0px 100px;
   box-sizing: border-box;
+  padding-bottom: 20px;
   &__summary{
     font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
     width: auto;
@@ -245,20 +267,36 @@
     vertical-align: top;
   }
   &__navtitle{
-    font-size: 16px;
+    font-size: 20px;
+    color:white;
   }
-  &__navurl{
-    text-decoration: none;
-    color: rgb(255,255,255);
-    opacity: 0.7;
-    &:hover{
-      padding-bottom: 1px;
-      text-decoration: underline;
-    }
-  }
+
         &__nav{
           line-height: 1.4em;
           margin: 16px 0px 0px;
+          color: rgb(206, 206, 206);
+          &_fb{
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+          }
+          &_tw{
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+          }
+          &_mercari{
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+          }
+          &_mercari::before {
+            font-family: "Font Awesome 5 Free";
+            content: '\f49e';
+            color:white;
+            font-weight: 900; 
+            font-size: 40px
+          }
         }
     &__termsleft{
       display: inline-block;
@@ -274,7 +312,39 @@
   .toppage-footer-bottom__license {
     width: 1020px;
     margin: 30px auto 20px;
+    color: white;
+    text-align: center;
 }
 
+.Exhibition{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 100px;
+  padding-top: 20px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
 
-
+  &-btn{
+    display: block;
+    font-size: 30px;
+    // color: white;
+    text-align: center;
+    font-size: 35px;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+  }
+  &-icon{
+    display: block;
+    font-size: 80px;
+    margin: auto;
+    color: white;
+  }
+  &_name{
+    font-size: 30px;
+    padding-left: 68px;
+    color: white;
+  }
+}
