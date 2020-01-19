@@ -18,6 +18,7 @@
       -webkit-transform: translate(0, -50%);
       transform: translate(0, -50%);
       color: #333;
+      text-decoration: none;
     }
     figure {
       overflow: hidden;
@@ -61,6 +62,7 @@
       font-size: 16px;
       line-height: 72px;
       font-weight: bold;
+      text-decoration: none;
     }
   }
   &__tab{
@@ -116,7 +118,7 @@
     time{
       display: inline-block;
       color: #888;
-      .fa-clock{
+      .a-chevron-right{
         margin-right: 8px;
         font-size: 16px;
         vertical-align: middle;
@@ -139,13 +141,16 @@
   &__item-text{
     overflow: hidden;
     display: block;
-    display: -webkit-box;
+    // display: -webkit-box;
     max-height: 4.4em;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     line-height: 1.5;
+    text-decoration: none;
+    // -webkit-any-link: none;
   }
+
   &__go-list{
     padding: 16px;
     a{
@@ -156,6 +161,7 @@
       color: #333;
       line-height: 56px;
       text-align: center;
+      text-decoration: none;
     }
   }
   &__item-not-found{
