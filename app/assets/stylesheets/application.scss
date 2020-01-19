@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+
+// @import 'font-awesome-sprockets';
+@import './font-awesome'; 
+@import 'signup/header.scss';
+@import 'signup/main.scss';
+@import 'signup/footer.scss';

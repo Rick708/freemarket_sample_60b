@@ -1,3 +1,116 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background: #f5f5f5;
+}
+
+// .signup-header{
+//   text-align: center;
+//   h1 {
+//     display: inline-block;
+//     margin: 11px 0 12px;
+//   }
+//   a {
+//     display: inline-block;
+//     width: 120px;
+//     height: 33px;
+//     margin-right: 8px;
+//     line-height: 33px;
+//   }
+//   img {
+//     width: 185px;
+//     height: 49px;
+//   }
+// }
+
+
+// .signup-main{
+//   display: block;
+//   width: 700px;
+//   margin: 0 auto;
+//   &__container{
+//     background: #fff;
+//   }
+//   &__head{
+//     padding: 24px 8px;
+//     font-size: 18px;
+//     line-height: 1.5;
+//     text-align: center;
+//     &--registration {
+//       padding: 16px;
+//     }
+//   }
+//   &__content{
+//     max-width: 320px;
+//     margin: 0 auto;
+//   }
+//   &__btn-default{
+//     border-radius: 4px;
+//     display: block;
+//     width: 100%;
+//     line-height: 48px;
+//     font-size: 14px;
+//     // border: 1px solid transparent;
+//     -webkit-transition: all ease-out .3s;
+//     transition: all ease-out .3s;
+//     cursor: pointer;
+//     text-align: center;
+//   }
+//   &__btn-sns{
+//     position: relative;
+//     &--mail{
+//       margin: 16px 0 0;
+//       background: #ea352d;
+//       color: #fff;
+//     }
+//     &--facebook{
+//       margin: 16px 0 0;
+//       background: #385185;
+//       color: #fff;
+//     }
+//     &--google {
+//       margin: 16px 0 0;
+//       background: #fff image-url('google.svg') no-repeat 3px top;
+//       border: #979797 solid 1px;
+//       color: #333;
+//     }
+//   }
+// }
+
+
+
+// .signup-footer{
+//   position: absolute;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 1;
+//   height: 250px;
+//   padding: 40px 0;
+//   text-align: center;
+//   ul{
+//     font-size: 0;
+//   }
+//   li{
+//     margin: 16px 0 0;
+//     font-size: 12px;
+//     display: inline-block;
+//     margin-left: 16px;
+//     &:first-child {
+//       margin: 0;
+//     }
+//   }
+//   a{
+//     display: block;
+//     color: #333;
+//   }
+//   &__logo {
+//     width: 80px;
+//     height: 65px;
+//     margin: 40px auto 0;
+//   }
+//   p{
+//     margin: 8px 0 0;
+//   }
+//   small{
+//     font-size: 13px;
+//   }
+// }
