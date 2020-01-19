@@ -136,7 +136,6 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
 .toppage-main {
   position: relative;
   min-height: 100%;
-  // color: rgb(94, 15, 15);
   background-color: rgb(255, 255, 255);
   font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   font-size: 14px;
@@ -213,6 +212,17 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
         font-weight: nomal;
         border: solid 3px #000000;
         display: inline-block;
+        position:relative;
+        .toppage-main__smallbox_price{
+          background-color: rgba(0,0,0, 0.5);
+          width: 80px;
+          height: 20px;
+          position: absolute;
+          top: 120px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          color: white;
+        }
         .toppage-main__smallbox_photo{
           margin-bottom: 0px;
         }
@@ -329,7 +339,6 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
   &-btn{
     display: block;
     font-size: 30px;
-    // color: white;
     text-align: center;
     font-size: 35px;
     width: 200px;
