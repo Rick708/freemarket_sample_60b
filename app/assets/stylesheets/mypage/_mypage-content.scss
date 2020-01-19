@@ -85,7 +85,7 @@
     }
     li{
       position: relative;
-      // border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #eee;
       &:last-child {
         border: 0;
       }
@@ -108,6 +108,7 @@
     min-height: 80px;
     padding: 16px;
     color: #333;
+    text-decoration: none;
     figure{
       position: relative;
       overflow: hidden;
@@ -118,7 +119,7 @@
     time{
       display: inline-block;
       color: #888;
-      .a-chevron-right{
+      .fa-clock{
         margin-right: 8px;
         font-size: 16px;
         vertical-align: middle;
@@ -147,8 +148,6 @@
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     line-height: 1.5;
-    // text-decoration: none;
-    // -webkit-any-link: none;
   }
 
   &__go-list{
