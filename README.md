@@ -15,8 +15,6 @@
 |birthday_month|string|null: false|
 |birthday_day|string|null: false|
 |password|string|null: false, unique: true|
-|address_id|integer|null: false, foreign_key: true|
-|card_id|integer|foreign_key: true|
 |profile|text||
 |profile_image|string||
 ### Association
@@ -65,7 +63,6 @@
 |delivery_charge|integer||
 |send_day|string||
 |user_id|integer|null: false, foreign_key: true|
-|item-image_id|integer|foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 |brand_id|integer|null: false, foreign_key: true|
 |size|string|null: false|
