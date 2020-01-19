@@ -85,7 +85,7 @@
     }
     li{
       position: relative;
-      border-bottom: 1px solid #eee;
+      // border-bottom: 1px solid #eee;
       &:last-child {
         border: 0;
       }
@@ -147,7 +147,7 @@
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     line-height: 1.5;
-    text-decoration: none;
+    // text-decoration: none;
     // -webkit-any-link: none;
   }
 
