@@ -1,1 +1,24 @@
-hello
+.wrapper
+  .entry-header
+    freemarket
+  .paymethod-contents
+    %h2.paymethod-header
+      支払い方法
+    %form.paymethod-register
+      .form-card
+        .form-card__number
+          %label カード番号
+          %span.form-require 必須
+          %br/
+          %input.input-defalt{:name => "text", :placeholder => "半角数字のみ"}
+          %ul.card-list 
+            %li
+        .form-card__limit
+          %label 有効期限
+          %sapn.form-require 必須
+          %br/
+          .select-right
+          .select-left
+        .form-card_security
+  .entry-footer
+    プライバシー

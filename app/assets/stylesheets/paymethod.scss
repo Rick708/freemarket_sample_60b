@@ -1,0 +1,23 @@
+.wrapper {
+  width: 50%;
+  margin: 30px auto;
+  .entry-header {
+    height: 100px;
+    background-color: rgb(173, 172, 172);
+  }
+  .paymethod-contents {
+    h2.paymethod-header {
+      text-align: center;
+      height: 50px;
+      font-size: 20px;
+      border-bottom: solid 1px rgb(168, 167, 167);
+    }
+    form.paymethod-register {
+    
+    }
+  }
+  .entry-footer {
+    height: 100px;
+    background-color: rgb(173, 172, 172);
+  }
+}
