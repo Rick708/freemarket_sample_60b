@@ -1,0 +1,344 @@
+html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
+.toppage-header-wrapper{
+  font-family: '游ゴシック', 'YuGothic', 'arial unicode ms',sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  position: relative;
+}
+  .toppage-header-top {
+    position:relative;
+    width: 1020px;
+    margin: 0px auto;
+    padding: 8px 0px 0px;
+    &__header {
+      display: flex;
+      justify-content: space-between;  
+    }
+      &__header-contents {
+        height: 40px;
+        margin-right: 45px;
+        }
+      &__header-search-form {
+        width: 100%;      
+        background-color: rgb(245, 245, 245);
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(204, 204, 204);
+        border-image: initial;
+        border-radius: 4px;
+        padding: 0px 50px 0px 10px;
+        }
+      &__header-btn {
+        position:absolute;
+        right: 20px;
+        margin-top: 8px;
+      }
+      }
+  .toppage-header-top__footer {
+    width: 1020px;
+    margin: 0px auto;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 8px;
+    .toppage-header-top__footer-search {
+      display: flex;
+      width: 300px;
+      margin-left: -40px;
+      .toppage-header-top__footer-search-categories {
+        padding: 0px 10px;
+      }
+      .toppage-header-top__footer-search-wrapper::before {
+        font-family: FontAwesome;
+        content: '\f03a';
+        color: red;
+        margin-left: 10px;  
+      }
+        .toppage-header-top__footer-search-wrapper{
+        cursor: pointer;
+        padding-left: 0px;
+        height: 44px;
+        position: relative;
+        z-index: 3;
+        padding: 0px 10px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 36px;
+        white-space: nowrap;
+        text-decoration: none;
+        }
+      }
+      .toppage-header-top__footer-search-brand::before {
+        font-family: FontAwesome;
+        content: '\f02b';
+        color: red;
+        margin-left: 10px;
+      }
+      .toppage-header-top__footer-search-brand{
+        cursor: pointer;
+        margin-left: 11px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 36px;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+      }
+    .toppage-header-top__footer-search-btn{
+      .toppage-header-top__footer-search-btn-wrapper {
+        text-align: center;
+        display: flex;
+        .toppage-header-top__footer-search-btn-new {
+          background-color: rgb(234, 53, 45);
+          color: rgb(255, 255, 255);
+          display: block;
+          font-size: 14px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(234, 53, 45);
+          border-image: initial;
+          border-radius: 4px;
+          padding: 8px 10px;
+          text-decoration: none;
+      }
+        .toppage-header-top__footer-search-btn-login {
+          margin-left: 11px;
+          background-color: rgb(255, 255, 255);
+          color: rgb(0, 149, 238);
+          display: block;
+          font-size: 14px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(0, 149, 238);
+          border-image: initial;
+          border-radius: 4px;
+          padding: 8px 10px;
+          transition: all 0.3s ease-out 0s;
+          text-decoration: none;
+        }
+    }
+  }
+
+.toppage-main {
+  position: relative;
+  min-height: 100%;
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-size: 14px;
+  width: 100%;
+  &__category-top {
+    margin-bottom: 16px;
+    text-align: center;
+    background-color: white;
+    font-size: 28px;
+    padding: 56px 0 30px;
+    font-weight: 900;
+  }
+        &__logo {
+          box-sizing: border-box;
+          background-color: rgb(239, 239, 239);
+          cursor: pointer;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 600;
+          border-radius: 15px;
+          padding: 8px 16px;
+          height: 30px;
+          margin: 10px 0px 0px 10px;
+          text-decoration: none;
+          color: black;
+        }
+  }
+.toppage-main__category-bottom { 
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(245, 245, 245);
+  flex-direction: column;
+  margin: auto;
+  padding: 42px 150px;
+}
+  .toppage-main__category-name {
+    vertical-align: baseline;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    font: inherit;
+  }
+    .toppage-main__text {
+      font-weight: 600;
+      line-height: 1.4em;
+      margin: 0;
+      font-size: 24px;
+      margin-bottom: 16px;
+      align-items: flex-end;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+    }
+    .toppage-main__box {
+      width: 1020px;
+      // height: 250px;（各カテゴリー毎にした場合使う）
+      vertical-align: baseline;
+      padding: 0px;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      font: inherit;
+  }
+      .toppage-main__smallbox {
+        width: 19%;
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: nomal;
+        border: solid 3px #000000;
+        display: inline-block;
+        position:relative;
+        .toppage-main__smallbox_price{
+          background-color: rgba(0,0,0, 0.5);
+          width: 80px;
+          height: 20px;
+          position: absolute;
+          top: 120px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          color: white;
+        }
+        .toppage-main__smallbox_photo{
+          margin-bottom: 0px;
+        }
+        .toppage-main__smallbox_name{
+          background-color:white;
+          width: 100%;
+          padding: 10px 10px;
+        }
+      }
+
+.toppage-footer-top__box{
+  margin-bottom: -4px;
+}
+.toppage-footer-bottom{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(34,34,34);
+  font-size: 12px;
+  padding: 0px 100px;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  &__summary{
+    font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    width: auto;
+    margin-top: 18px;
+    padding-right: 40px;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 0px;
+    }
+  &__guide{
+    font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    width: auto;
+    padding-right: 40px;
+    margin-top: 18px;
+    display: inline-block;
+  }
+  &__privacy{
+    font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    padding-right: 40px;
+    margin-top: 18px;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+  }
+  &__country{
+    font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    width: auto;
+    padding-right: 40px;
+    margin-top: 18px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__navtitle{
+    font-size: 20px;
+    color:white;
+  }
+
+        &__nav{
+          line-height: 1.4em;
+          margin: 16px 0px 0px;
+          color: rgb(206, 206, 206);
+          &_fb{
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+          }
+          &_tw{
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+          }
+          &_mercari{
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+          }
+          &_mercari::before {
+            font-family: "Font Awesome 5 Free";
+            content: '\f49e';
+            color:white;
+            font-weight: 900; 
+            font-size: 40px
+          }
+        }
+    &__termsleft{
+      display: inline-block;
+      width: 49%;
+      vertical-align: top;
+    }
+    &__termsright{
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+    }
+}
+  .toppage-footer-bottom__license {
+    width: 1020px;
+    margin: 30px auto 20px;
+    color: white;
+    text-align: center;
+}
+
+.Exhibition{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 100px;
+  padding-top: 20px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+  &-btn{
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    font-size: 35px;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+  }
+  &-icon{
+    display: block;
+    font-size: 80px;
+    margin: auto;
+    color: white;
+  }
+  &_name{
+    font-size: 30px;
+    padding-left: 68px;
+    color: white;
+  }
+}
