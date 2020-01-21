@@ -25,13 +25,22 @@
     padding: 0;
     margin: 0 0 1rem 0;
   }
-  .progress-bar li.is-active{
+  .progress-bar li.is-active4{
     color: red;
   }
-  .progress-bar li.is-active .progress-status{
+  .progress-bar li.is-active1 .progress-status{
     background-color: red;
     z-index: 20;
     position: inherit;
+  }
+  .progress-bar li.is-active2 .progress-status{
+    background-color: red;
+  }
+  .progress-bar li.is-active3 .progress-status{
+    background-color: red;
+  }
+  .progress-bar li.is-active4 .progress-status{
+    background-color: red;
   }
   .progress-bar li {
     flex: 2;
@@ -77,4 +86,7 @@
     background: #ccc;
     z-index: 10;
   }
+}
+#redline {
+  background-color: red;
 }
