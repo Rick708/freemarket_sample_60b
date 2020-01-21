@@ -10,22 +10,22 @@
           %label カード番号
           %span.form-require 必須
           %br/
-          %input.input-defalt{:name => "text", :placeholder => "半角数字のみ"}
+          %input.input-default{:name => "text", :placeholder => "半角数字のみ"}
           %ul.card-list 
             %li
-              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+              = image_tag "credit-gold-01.png", class:"image", width: "60px", height: "30px"
             %li
-              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+              = image_tag "credit-gold-01.png", class:"image", width: "60px", height: "30px"
             %li
-              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+              = image_tag "credit-gold-01.png", class:"image", width: "60px", height: "30px"
             %li
-              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+              = image_tag "credit-gold-01.png", class:"image", width: "60px", height: "30px"
             %li
-              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+              = image_tag "credit-gold-01.png", class:"image", width: "60px", height: "30px"
             %li
-              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+              = image_tag "credit-gold-01.png", class:"image", width: "60px", height: "30px"
             %li
-              = image_tag "credit-gold-01.png", class:"image", width: "40px", height: "30px"
+              = image_tag "credit-gold-01.png", class:"image", width: "60px", height: "30px"
         .form-card__limit
           %label 有効期限
           %sapn.form-require 必須
@@ -39,5 +39,10 @@
             %i.fas.fa-chevron-down
             %span 年
         .form-card__number
+          %label セキュリティコード
+          %span.form-require 必須
+          %br/
+          %input.input-default{:placeholder => "カード背面4桁もしくは3桁の番号"}
+        %input.btn-default-red{:type => "submit",:value => "追加する"}
   .entry-footer
     プライバシー
