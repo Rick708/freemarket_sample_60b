@@ -1,0 +1,135 @@
+.login_page{
+  background-color:lightgrey;
+  text-align:  center;
+}
+
+.login_logo{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align:  center;
+  height: 49px;
+}
+
+.login{
+  max-width: none;
+  width: 550px;
+  background: white;
+  height: auto;
+  margin:0 auto;
+  &_message{
+      padding: 40px 64px;
+      border-bottom-style: 2px;
+    &_no{
+      font-size: 16px;
+      text-decoration: none;
+    }
+    &_new{
+      text-decoration: none;
+      display: block;
+      margin: 8px 0 0;
+      border: 1px solid #0099e8;
+      background: #0099e8;
+      color: #fff;
+      line-height: 50px;
+    }
+  }
+  &_sns{
+    padding: 32px 64px;
+    border-top: 1px solid #eee;
+    &_fb{
+      background: #385185;
+      color: #fff;
+      display: table;
+      width: 100%;
+      line-height: 50px;
+      font-size: 16px;
+      border: 1px solid transparent;
+      text-align: center;
+      text-decoration: none;
+      &_btn{
+        float: left;
+        text-align: left; 
+        font-size: 30px;
+        padding: 10px;
+        display: table-cell
+      }
+    }
+    &_gg{
+      margin: 16px 0 0;
+      background: #fff;
+      color: #333;
+      display: table;
+      width: 100%;
+      line-height: 50px;
+      font-size: 16px;
+      border: #979797 solid 1px;
+      text-decoration: none;
+      &_btn{
+        float: left;
+        text-align: left; 
+        font-size: 30px;
+        padding: 10px;
+        display: table-cell
+      }
+    }
+  }
+  &_form{
+    padding: 32px 64px;
+    input{
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 93%;
+    margin-bottom: 30px;
+    }
+    &_pw{
+      color: red;
+    }
+    &_btm{
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    &_lost{
+      display: block;
+      margin: 40px 0 0;
+      color: lightblue;
+      text-align: left;
+      font-size: 15px;
+      text-decoration: none;
+    }
+  }
+}
+
+.login_bottom{
+  text-align: center;
+  padding: 40px 0;
+  margin: auto;
+  width: 550px;
+  &_privacy{
+    text-align: left;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  &_terms{
+    text-align: right;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  .login_bottom_notation{
+    text-align: center;
+    text-decoration: none;
+  }
+  .login_bottom_logo{
+
+  }
+}

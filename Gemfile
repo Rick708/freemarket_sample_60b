@@ -85,4 +85,4 @@ gem 'fog-aws'
 #トップページ記載の為：アイコン用とログイン用
 gem "font-awesome-rails"
 gem 'devise'
-
+gem 'font-awesome-sass'

@@ -1,0 +1,110 @@
+// html{
+//   background-color:lightgrey;
+//   text-align:  center;
+// }
+
+.signup_logo{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align:  center;
+  height: 49px;
+}
+
+.signup{
+  max-width: none;
+  width: 850px;
+  background: white;
+  height: auto;
+  margin:0 auto;
+  &_message{
+      padding: 40px 200px;
+      border-bottom-style: 2px;
+      font-size: 25px;
+      font-weight: bold;
+  }
+  &_sns{
+    padding: 32px 200px;
+    border-top: 1px solid #eee;
+    &_ma{
+      background: red;
+      color: #fff;
+      display: table;
+      width: 100%;
+      line-height: 50px;
+      font-size: 16px;
+      border: 1px solid transparent;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px; 
+      &_btn{
+        float: left;
+        text-align: left; 
+        font-size: 30px;
+        padding: 10px;
+        display: table-cell
+      }
+    }
+    &_fb{
+      background: #385185;
+      color: #fff;
+      display: table;
+      width: 100%;
+      line-height: 50px;
+      font-size: 16px;
+      border: 1px solid transparent;
+      text-align: center;
+      text-decoration: none;
+      margin: 16px 0 0;
+      border-radius: 5px; 
+      &_btn{
+        float: left;
+        text-align: left; 
+        font-size: 30px;
+        padding: 10px;
+        display: table-cell
+      }
+    }
+    &_gg{
+      margin: 16px 0 0;
+      background: #fff;
+      color: #333;
+      display: table;
+      width: 100%;
+      line-height: 50px;
+      font-size: 16px;
+      border: #979797 solid 1px;
+      text-decoration: none;
+      border-radius: 5px; 
+      &_btn{
+        float: left;
+        text-align: left; 
+        font-size: 30px;
+        padding: 10px;
+        display: table-cell
+      }
+    }
+  }
+}
+
+
+.signup_bottom{
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  margin: auto;
+  width: 550px;
+  &_privacy{
+    text-align: left;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  &_terms{
+    text-align: right;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  .login_bottom_notation{
+    text-align: center;
+    text-decoration: none;
+  }
+}
