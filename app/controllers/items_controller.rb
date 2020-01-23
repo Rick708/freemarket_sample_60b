@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  def registration
+  def index
   end
 
 end
