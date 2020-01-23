@@ -1,22 +1,78 @@
-= render 'header'
+.toppage-header-wrapper
+  .toppage-header-top
+    .toppage-header-top__header
+      .toppage-header-top__header-contents
+        .toppage-header-top__header-search
+          = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
+      %input.toppage-header-top__header-search-form.seach{placeholder: "何かお探しですか？", type:"text"}
+      .toppage-header-top__header-btn
+        = fa_icon "search"
+  .toppage-header-top__footer
+    .toppage-header-top__footer-search
+      .toppage-header-top__footer-search-categories
+      =link_to "#", class: "toppage-header-top__footer-search-wrapper" do
+        カテゴリーから探す
+      =link_to "#", class: "toppage-header-top__footer-search-brand" do
+        ブランドから探す
+      .toppage-header-top__footer-search-categories_mypage
+      =link_to "#", class: "toppage-header-top__footer-search-iine" do
+        いいね！一覧
+      =link_to "#", class: "toppage-header-top__footer-search-Notice" do
+        お知らせ
+      =link_to "#", class: "toppage-header-top__footer-search-list" do
+        やることリスト
+      =link_to "#", class: "toppage-header-top__footer-search-mepage" do
+        マイページ      
 .details_body
   .details
     .details_name 地球儀
     .details_content
     .details_content_photo
-    = image_tag "cropchikyuGFVS3960.jpg", class: "image", width: "100px", height: "400px"
+      = image_tag "cropchikyuGFVS3960.jpg", width: "350px", height: "400px"
     .details_content_info
       .details_content_info_user
+        .details_content_info_user_title 出品者
+        .details_content_info_user_name  Rick
       .details_content_info_category
+        .details_content_info_category_title カテゴリー
+        .details_content_info_category_name おもちゃ
       .details_content_info_brand
+        .details_content_info_brand_title  ブランド
+        .details_content_info_brand_name  ノーブランド
       .details_content_info_status
-      .details_content_info_burden
+        .details_content_info_status_title  商品の状態
+        .details_content_info_status_name  新品
+      .details_content_info_burden 
+        .details_content_info_burden_title  配送料の負担
+        .details_content_info_burden_name 送料込み（出品者負担）
       .details_content_info_method
+        .details_content_info_method_title  配送の方法
+        .details_content_info_method_name らくらくフリマケ便
       .details_content_info_area
+        .details_content_info_area_title  配送元の地域
+        .details_content_info_area_name 難波
       .details_content_info_indication
-    .details_price
-    .details_price_tax
-    .details_btn
+        .details_content_info_indication_title 配送日の目安
+        .details_content_info_indication_name  ２時間で発送
+    .details_price ￥1,200
+    .details_price_tax （税込）送料込み
+    .details_btn 
+      =link_to "#", class: "details_btn" do
+        購入画面に進む
     .details_profile
-    .details_comment
+      この地球儀は適当なフリー素材のサイトから適当に
+      取ってきた画像です。
+      なぜ地球儀なのかと言いますと、特に意味はなく何となくひらいた場所に地球儀の画像があり
+      メルカリというネットオークションに適した画像であると判断した為にこの画像にしました。
+      値段に関しても適当に決めた為特に意味はありません。
+      余談にはなりますが、私は地球儀に1,200は払えません、たけぇ
+  .details_comment
+    .details_comment_rule 
+      相手のことを考え丁寧なコメントを心がけましょう。
+      不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    .details_comment_form
+      %textarea.details_comment_form{type:"text"}
+    .details_comment_btn
+      =link_to "#", class: "details_comment_btn" do
+        コメントする
 = render 'footer'
