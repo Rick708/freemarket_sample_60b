@@ -35,14 +35,15 @@
             position: relative;
             .select-default {
               height: 48px;
-              width: calc(100% - 38px);
+              width: calc(100% - 70px);
               border-radius: 4px;
               border: 1px solid;
+              padding: 0 16px;
             }
             i {
               position: absolute;
               right: 45px;
-              top: 8px;
+              top: 15px;
               color: #888;
               font-size: 20px;
             }
@@ -66,10 +67,11 @@
 }
 
 .input-default {
-  height: 48px;
+  height: 30px;
   width: 100%;
   border-radius: 4px;
   border: 1px solid;
+  padding: 10px 16px 8px;
 }
 .form-require {
   background-color: #ea352d;
