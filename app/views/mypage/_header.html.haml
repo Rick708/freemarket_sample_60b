@@ -1,0 +1,32 @@
+.toppage-header-wrapper
+  .toppage-header-top
+    .toppage-header-top__header
+      .toppage-header-top__header-contents
+        .toppage-header-top__header-search
+          = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
+      %input.toppage-header-top__header-search-form.seach{:placeholder => "何かお探しですか？", :type => "text"}
+      .toppage-header-top__header-btn
+        = fa_icon "search"
+  .toppage-header-top__footer
+    .toppage-header-top__footer-search
+      .toppage-header-top__footer-search-categories
+      =link_to "#", class: "toppage-header-top__footer-search-wrapper" do
+        カテゴリーから探す
+      =link_to "#", class: "toppage-header-top__footer-search-brand" do
+        ブランドから探す
+    .toppage-header-top__footer-contents
+      .toppage-header-top__footer-contents-wrapper
+        .toppage-header-top__footer-login
+          %ul.toppage-header-top__footer-login-contents
+            %li.toppage-header-top__footer-login-content
+              =link_to "#", class: "toppage-header-top__footer-search-brand" do
+                = icon('far', 'heart ', alt: 'heart-icon',
+                style: 'color:#cccccc', class: 'toppage-header-top__footer-login-content--heart-icon')
+                %span いいね！一覧
+            %li.toppage-header-top__footer-login-content--notice
+              = link_to root_path do
+                = icon('far', 'bell', alt: 'bell-icon',
+                style: 'color:#cccccc', class: 'toppage-header-top__footer-login-content--bell-icon')
+                %span お知らせ
+                .toppage-header-top__footer-login-content--notice-count
+                  99+
