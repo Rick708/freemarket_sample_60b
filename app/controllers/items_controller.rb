@@ -1,4 +1,4 @@
 class ItemsController < ApplicationController
-  def signin
+  def index
   end
 end
