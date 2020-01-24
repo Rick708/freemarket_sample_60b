@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get 'login' => 'items#login'
   get 'signin' => 'items#signin'
   get 'details' => 'items#details'
+  get 'registration' => 'items#registration'
 end
 
