@@ -1,15 +1,17 @@
-.signup_page{
+.signin_page{
   background-color:lightgrey;
+  height: 100%;
   text-align:  center;
 }
-.signup_logo{
+
+.signin_logo{
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 100px;
   text-align:  center;
   height: 49px;
 }
 
-.signup{
+.signin{
   max-width: none;
   width: 850px;
   background: white;
@@ -86,7 +88,7 @@
 }
 
 
-.signup_bottom{
+.signin_bottom{
   text-align: center;
   padding-top: 100px;
   padding-bottom: 40px;
