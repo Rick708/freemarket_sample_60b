@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
-  def doneview
+  
+  def index
   end
+
 end

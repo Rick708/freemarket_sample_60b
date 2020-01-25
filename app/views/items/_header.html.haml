@@ -1,0 +1,23 @@
+.toppage-header-wrapper
+  .toppage-header-top
+    .toppage-header-top__header
+      .toppage-header-top__header-contents
+        .toppage-header-top__header-search
+          = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
+      %input.toppage-header-top__header-search-form.seach{placeholder: "何かお探しですか？", type:"text"}
+      .toppage-header-top__header-btn
+        = fa_icon "search"
+  .toppage-header-top__footer
+    .toppage-header-top__footer-search
+      .toppage-header-top__footer-search-categories
+      =link_to "#", class: "toppage-header-top__footer-search-wrapper" do
+        カテゴリーから探す
+      =link_to "#", class: "toppage-header-top__footer-search-brand" do
+        ブランドから探す
+    .toppage-header-top__footer-search-btn
+      .toppage-header-top__footer-search-btn-wrapper 
+        =link_to "#", class: "toppage-header-top__footer-search-btn-new" do
+          新規会員登録
+        =link_to "#", class: "toppage-header-top__footer-search-btn-login" do
+          ログイン
+      

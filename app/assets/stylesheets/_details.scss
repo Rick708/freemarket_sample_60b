@@ -1,0 +1,323 @@
+// ここから下は後日renderで飛ばす
+
+.toppage-header-top {
+  position:relative;
+  width: 1020px;
+  margin: 0px auto;
+  padding: 8px 0px 0px;
+  &__header {
+    display: flex;
+    justify-content: space-between;  
+  }
+    &__header-contents {
+      height: 40px;
+      margin-right: 45px;
+      }
+    &__header-search-form {
+      width: 100%;      
+      background-color: rgb(245, 245, 245);
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(204, 204, 204);
+      border-image: initial;
+      border-radius: 4px;
+      padding: 0px 50px 0px 10px;
+      }
+    &__header-btn {
+      position:absolute;
+      right: 20px;
+      margin-top: 8px;
+    }
+    }
+.toppage-header-top__footer {
+  width: 1020px;
+  margin: 0px auto;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-top: 8px;
+  &-search {
+    display: flex;
+    width: 300px;
+    margin-left: -40px;
+    &-categories {
+      padding: 0px 10px;
+    }
+    &-wrapper::before {
+      font-family: FontAwesome;
+      content: '\f03a';
+      color: red;
+      margin-left: 10px;  
+    }
+      &-wrapper{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      }
+    &-brand::before {
+      font-family: FontAwesome;
+      content: '\f02b';
+      color: red;
+      margin-left: 10px;
+    }
+    &-brand{
+      cursor: pointer;
+      margin-left: 11px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    &-categories_mypage{
+      padding-right: 120px;
+    }
+    &-iine::before {
+      font-family: FontAwesome;
+      content: '\f004';
+      color: gray;
+      margin-left: 10px;
+    }
+    &-iine{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: black;
+    }
+    &-Notice::before {
+      font-family: FontAwesome;
+      content: '\f0f3';
+      ccolor: gray;
+      margin-left: 10px;
+    }
+    &-Notice{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: black;
+    }
+    .toppage-header-top__footer-search-list::before {
+      font-family: FontAwesome;
+      content: '\f00c';
+      color: gray;
+      margin-left: 10px;
+    }
+    &-list{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: black;
+    }
+    &-mepage::before {
+      font-family: "Font Awesome 5 Free";
+      content: '\f4da';
+      color: gray;
+      margin-left: 10px;
+    }
+    &-mepage{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+
+// ここより上は後日renderで飛ばす
+
+body{
+  background-color: #f5f5f5;
+  .details{
+    width: 800px;
+    margin: 40px auto 10px;
+    background-color: white;
+    display: block;
+    padding:0 40px;
+    &_name{
+      font-size: 40px;
+      text-align: center;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    &_content{
+      display: inline;
+      &_photo{
+        float: left;
+      }
+      &_info{
+        float: right;
+        &_user{
+          &_title{
+            @include haba;
+          }
+          &_name{
+            @include haba2;
+          }
+        }
+        &_category{
+          &_title{
+            @include haba;
+          }
+          &_name{
+            @include haba2;
+          }
+        }
+        &_brand{
+          &_title{
+            @include haba;
+          }
+          &_name{
+            @include haba2;
+          }
+
+        }
+        &_status{
+          &_title{
+            @include haba;
+          }
+          &_name{
+            @include haba2;
+          }
+
+        }
+        &_burden{
+          &_title{
+            @include haba;
+          }
+          &_name{
+            @include haba2;
+          }
+
+        }
+        &_method{          
+          &_title{
+          @include haba;
+        }
+        &_name{
+          @include haba2;
+        }
+        }
+        &_area{
+          &_title{
+            @include haba;
+          }
+          &_name{
+            @include haba2;
+          }
+
+        }
+        &_indication{
+          &_title{
+            @include haba;
+          }
+          &_name{
+            @include haba2;
+          }
+
+        }
+      }
+    }
+    &_price{
+      display: inline;
+      margin: auto;
+      font-size: 70px;
+      padding-left: 150px;
+      &_tax{
+        display: inline;
+      }
+    }
+    &_btn{
+      background-color: red;
+      display: block;
+      margin-top: 16px;
+      text-align: center;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 35px;
+      color: white;
+
+    }
+    &_profile{
+      padding-top: 30px;
+      font-size: 30px;
+    }
+  }
+  .details_comment{
+    width: 800px;
+    margin: 40px auto 10px;
+    background-color: white;
+    display: block;
+    padding:40px 40px;
+
+
+    &_rule{
+      background-color: burlywood;
+      margin: 10px 0;
+
+    }
+    &_form{
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      min-height: 100px;
+      border: 1px solid #ccc;
+      background: #fff;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    &_btn{
+      background-color: gray;
+      display: block;
+      margin-top: 16px;
+      text-align: center;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+      color: white;
+      height: 40px;
+      padding-top: 1px;
+    }
+  }
+}
