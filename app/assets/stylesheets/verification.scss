@@ -1,0 +1,30 @@
+.verification_logo{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align:  center;
+  height: 49px;
+}
+
+
+
+.verification_bottom{
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  margin: auto;
+  width: 550px;
+  &_privacy{
+    text-align: left;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  &_terms{
+    text-align: right;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  .varification_bottom_notation{
+    text-align: center;
+    text-decoration: none;
+  }
+}
