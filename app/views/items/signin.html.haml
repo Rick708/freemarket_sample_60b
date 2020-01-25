@@ -1,0 +1,27 @@
+.signin_page
+  .signin_logo
+    = image_tag "fmarket_logo_red.svg", class: "image", width: "200px"
+
+  .signin
+    .signin_message 新規会員登録
+    .signin_sns
+      =link_to "#", class: "signin_sns_ma" do
+        = icon('far', 'envelope', class: "signin_sns_ma_btn")
+        メールアドレスで登録する
+      =link_to "#", class: "signin_sns_fb" do
+        = icon('fab', 'facebook-square', class: "signin_sns_fb_btn")
+        Facebookで登録する
+      =link_to "#", class: "signin_sns_gg" do
+        = icon('fab', 'google', class: "signin_sns_gg_btn")
+        Googleで登録する
+
+  .signin_bottom
+    =link_to "#", class: "signin_bottom_privacy" do
+      プライバシーポリシー
+    =link_to "#", class: "signin_bottom_terms" do
+      メルカリ利用規約
+    =link_to "#", class: "signin_bottom_notation" do
+      特定商取引に関する表記
+  .signin_bottom_logo
+    = image_tag "logo_gray.svg", width: "110px" 
+    
