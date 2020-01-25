@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get 'details' => 'items#details'
   get 'registration' => 'items#registration'
   get 'verification' => 'items#verification'
+  get 'index' => 'mypage#index'
 end
