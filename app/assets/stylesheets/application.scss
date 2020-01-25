@@ -1,5 +1,16 @@
-@import "reset";
+@import "./reset";
+@import "./variable";
+@import "config/colors";
+@import "font-awesome-sprockets";
 @import "font-awesome";
+@import "login";
+@import "signup";
+@import "items";
+@import "details";
+@import 'signup/header.scss';
+@import 'signup/main.scss';
+@import 'signup/footer.scss';
+@import "doneview";
 @import "./paymethod/paymethod.scss";
 @import "./paymethod/paymethod-head.scss";
 @import "./paymethod/paymethod-foot.scss";
