@@ -1,10 +1,119 @@
+html{
+  background-color: #f5f5f5;
+}
+
 .verification_logo{
   padding-top: 40px;
   padding-bottom: 40px;
   text-align:  center;
   height: 49px;
 }
+.verification{
+  max-width: none;
+  width: 700px;
+  background: white;
+  height: auto;
+  margin:20px auto;
+  &_name{
+    font-size: 22px;
+    padding: 20px 0;
+  }
+  &_item{
+    margin-bottom: 40px;
+    margin: 0px 150px;
+    display: inline-block;
+    &_photo{
+      width: 80px;
+      float: left;
+      margin-bottom: 20px;
+      width: 40%;
+    }
+    &_profile{
+      float: right;
+      width: 60%;
+      text-align: left;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    &_price{
+      text-align: left;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+  &_price{
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: left;
+    margin: 0px 150px;
+    border-top: 1px solid #f5f5f5;
+    &_name{
+      float: left;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    &_number{
+      float: right;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  &_pay{
+    padding: 30px 0;
+    text-align: left;
+    margin: 0px 150px;
+    border-top: 1px solid #f5f5f5;
+    &_method{
+      color: lightskyblue;
+      text-decoration: none;
+      &_name{
+        color: lightskyblue;
+        text-decoration: none;
+      }
+      &_name::before {
+        font-family: FontAwesome;
+        content: '\f055';
+        color:lightskyblue;
+        margin-left: 10px;  
+      }
+    }
+  }
+  &_delivery{
+    padding: 30px 0;
+    text-align: left;
+    margin: 0px 150px;
+    border-top: 1px solid #f5f5f5;
+    &_method{
+      color: lightskyblue;
+      text-decoration: none;
+      &_name{
+        color: lightskyblue;
+        text-decoration: none;
+      }
+      &_name::before {
+        font-family: FontAwesome;
+        content: '\f055';
+        color:lightskyblue;
+        margin-left: 10px;  
+      }
+    }
+  }
 
+  &_btn{
+    padding: 30px 0;
+    border-top: 1px solid #f5f5f5;
+    margin: 0px 150px;
+    &_icon{
+      background: gray;
+      border: 1px solid gray;
+      color: #fff;
+      display: block;
+      line-height: 48px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+}
 
 
 .verification_bottom{
