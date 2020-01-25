@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
-  def logout
+  
+  def index
   end
+  
 end
