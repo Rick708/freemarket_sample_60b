@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get 'signin' => 'items#signin'
   get 'details' => 'items#details'
   get 'registration' => 'items#registration'
+  get 'verification' => 'items#verification'
 end
 
