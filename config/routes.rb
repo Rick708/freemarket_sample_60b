@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'registration' => 'items#registration'
   get 'verification' => 'items#verification'
   get 'index' => 'mypage#index'
+  get 'logout' => 'items#logout'
 end
