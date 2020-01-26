@@ -1,4 +1,9 @@
-.logout-content
-  .logout-content__container
-    .logout-content__inner 
-      .logout-content__inner-btn ログアウト
+.mypage-main-container
+  = render 'mypage/header'
+  %main.mypage-container.clearfix
+    = render 'mypage/side-bar'
+    .logout-content
+      .logout-content__container
+        .logout-content__inner 
+          .logout-content__inner-btn ログアウト
+  = render 'exhibition'
