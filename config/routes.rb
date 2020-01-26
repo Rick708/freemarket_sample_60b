@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # root "items#index"
   root "mypage#profile"
 
   get 'login' => 'items#login'
