@@ -87,4 +87,3 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'font-awesome-sass'
 
-

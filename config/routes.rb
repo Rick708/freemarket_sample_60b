@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'verification' => 'items#verification'
   get 'index' => 'mypage#index'
   get 'logout' => 'items#logout'
+  get 'identification' => 'items#identification'
 end
