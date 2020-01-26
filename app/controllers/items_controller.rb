@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
-  def identification
+  
+  def index
   end
+  
 end
