@@ -1,0 +1,43 @@
+.paymethod-contents-register
+  %h2.paymethod-header
+    クレジットカード情報入力
+  %form.paymethod-register
+    .form-card
+      .form-card__number
+        %label カード番号
+        %span.form-require 必須
+        %br/
+        %input.input-default{:name => "text", :placeholder => "半角数字のみ"}
+        %ul.card-list 
+          %li
+            = image_tag "logo_yotuba03.png", class:"image", width: "40px", height: "30px"
+          %li
+            = image_tag "logo_yotuba03.png", class:"image", width: "40px", height: "30px"
+          %li
+            = image_tag "logo_yotuba03.png", class:"image", width: "40px", height: "30px"
+          %li
+            = image_tag "logo_yotuba03.png", class:"image", width: "40px", height: "30px"
+          %li
+            = image_tag "logo_yotuba03.png", class:"image", width: "40px", height: "30px"
+          %li
+            = image_tag "logo_yotuba03.png", class:"image", width: "40px", height: "30px"
+          %li
+            = image_tag "logo_yotuba03.png", class:"image", width: "40px", height: "30px"
+      .form-card__limit
+        %label 有効期限
+        %sapn.form-require 必須
+        %br/
+        .select-half
+          %input.select-default
+          %i.fas.fa-chevron-down
+          %span 月
+        .select-half
+          %input.select-default
+          %i.fas.fa-chevron-down
+          %span 年
+      .form-card__number
+        %label セキュリティコード
+        %span.form-require 必須
+        %br/
+        %input.input-default{:placeholder => "カード背面4桁もしくは3桁の番号"}
+      %input.btn-default-red{:type => "submit",:value => "追加する"}
