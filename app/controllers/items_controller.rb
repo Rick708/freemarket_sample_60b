@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  def index
+  def tell
   end
 
   def register_credit

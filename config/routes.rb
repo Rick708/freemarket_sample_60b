@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'items#index'
+  root 'items#tell'
   get 'profile' => 'mypage#profile'
   get 'login' => 'items#login'
   get 'signin' => 'items#signin'
