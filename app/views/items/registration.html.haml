@@ -1,0 +1,54 @@
+.phone-wrapper
+  .signup-header
+    %h1.mercari__img
+      = image_tag "fmarket_logo_red.svg" 
+    %nav.progress-bar
+      %ol.clearfix
+
+        %li.progress-bar__step
+          会員情報
+          .progress-bar__step__item
+
+        %li.progress-bar__step__phone-number
+          電話番号認証
+          .progress-bar__step__item__phone-number
+
+        %li.progress-bar__step__address
+          お届け先住所入力
+          .progress-bar__step__item__address
+
+        %li.progress-bar__step__payment
+          支払い方法
+          .progress-bar__step__item__payment
+
+        %li.progress-bar__step__complete
+          完了
+          .progress-bar__step__item__complete
+
+
+  .comfirm-phone
+    .confirm-phone__header
+      電話番号の確認
+      -# form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      .a-2
+        .confirm-phone__form
+          .confirm__phone-number
+            %p
+              携帯電話の番号
+              %textarea.confirm__phone-number__input{placeholder: '携帯電話の番号を入力'}
+              .confirm__phone__under__text
+                本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+              %submit.confirm__phone__next-submit{placeholder: "次へ進む"} 
+              .confirm__phone__attention__text
+                ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+              .confirm__phone__reason__text
+                電話番号の確認が必要な理由＞    
+              .mercari__footer
+                .mercari__footer
+                  = link_to "プライバシーポリシー"
+                  = link_to "メルカリ利用規約"
+                  = link_to "特定商取引に関する表記"
+                .mercari__footer__logo
+                  = link_to root_path do
+                    = image_tag "logo_gray.svg", width: "80px"
+                %p © 2020 Mercari - from TEAM 60              
