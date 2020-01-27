@@ -1,0 +1,78 @@
+.indentification-content{
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  height: 1208px;
+  width: 700px;
+  background-color:  white;
+  float: right;
+  &__mypage{
+    height: 100%;
+    width: 100%;
+  }
+    &__head{
+      font-size: 24px;
+      padding: 8px 24px;
+      border-bottom: 1px solid #f5f5f5;
+      text-align: center;
+    }
+    &__info{
+      margin-top: 8px;
+      line-height: 1.5;
+      font-size: 15px;
+    p {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+  }
+    &__textlink{
+      margin: 8px 0 0;
+      line-height: 1.5;
+      color: #0099e8;
+      text-align: right;
+      margin-right: 70px;
+      a {
+        text-decoration: none;
+        color: #0099e8;
+        font-size: 15px;
+      }
+    }
+    &__group{
+      font-size: 15px;
+      font-weight: bold;
+      span{
+        background-color: #ccc;
+        margin-left: 8px;
+        padding: 2px 4px;
+        font-size: 12px;
+        vertical-align: top;
+        color: white;
+        border-radius: 2px;
+      }
+      .input-default {
+        font-weight: normal;
+        height: 30px;
+        width: 600px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+  }
+    .submit__button {
+      margin-top: 40px;
+      background: #ea352d;
+      color: #fff;
+      display: block;
+      width: 630px;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: all ease-out .3s;
+      cursor: pointer;
+      text-align: center;
+      }
+  }
