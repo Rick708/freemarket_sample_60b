@@ -10,3 +10,4 @@ Rails.application.routes.draw do
   get 'logout' => 'items#logout'
   get 'identification' => 'items#identification'
 end
+
