@@ -1,8 +1,10 @@
+
 html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
 .toppage-header-wrapper{
   font-family: '游ゴシック', 'YuGothic', 'arial unicode ms',sans-serif;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   position: relative;
+  background-color: white;
 }
   .toppage-header-top {
     position:relative;
@@ -311,7 +313,7 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
     text-align: center;
 }
 
-.Exhibition{
+.exhibition{
   width: 200px;
   height: 200px;
   background-color: red;

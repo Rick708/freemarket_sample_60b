@@ -1,0 +1,17 @@
+.mypage-main-container
+  = render 'mypage/header'
+  %main.mypage-container.clearfix
+    .l-content
+      %section.l-chapter-container
+        %h2.l-chapter-container__head
+          プロフィール
+        = form_with model: @user, local:true, method: 'POST', class: 'head-form' do |f|
+          .setting-profile-icon
+            %figure
+              = image_tag('profile-user-icon.svg', class: 'image-image', height: '60px', width: '60px')
+            %input.input-default{placeholder: "ユーザー名は？",value: "ジョージ", type:"text"}
+          .setting-profile-content
+            = f.text_area :content, { class: 'textarea-default', placeholder: '例)ご覧いただきありがとうございます。今年からメルカリはじめました！アパレルの出品が多いですので興味のある方、ぜひご覧になってください！' }
+            = f.submit '変更する', class: 'btn-default btn-red'
+    = render 'mypage/side-bar'
+  = render 'items/footer'

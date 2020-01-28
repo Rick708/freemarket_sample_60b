@@ -1,0 +1,80 @@
+.wrapper {
+  width: 750px;
+  margin: 30px auto;
+  .entry-header {
+  }
+  .paymethod-contents {
+    h2.paymethod-header {
+      text-align: center;
+      height: 50px;
+      font-size: 20px;
+      border-bottom: solid 1px rgb(168, 167, 167);
+    }
+    form.paymethod-register {
+      padding: 40px 40px 64px;
+      .form-card {
+        margin: 0px 40px;
+        &__number {
+          .form-require {
+          }
+          .input-default {
+          }
+          ul.card-list {
+            li {
+              display: inline;
+            }
+          } 
+        }
+        &__limit {
+          margin-top: 32px;
+          .form-require {
+          }
+          .select-half {
+            display: inline-block;
+            width: calc(50% - 2px);
+            position: relative;
+            .select-default {
+              height: 48px;
+              width: calc(100% - 70px);
+              border-radius: 4px;
+              border: 1px solid;
+              padding: 0 16px;
+            }
+            i {
+              position: absolute;
+              right: 45px;
+              top: 15px;
+              color: #888;
+              font-size: 20px;
+            }
+          }
+         }
+        &__number {
+          margin-top: 32px;
+        }
+        .btn-default-red {
+          margin-top: 32px;
+          background: #ea352d;
+          color: #fff;
+          width: 100%;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+.input-default {
+  height: 48px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid;
+  padding: 10px 16px 8px;
+}
+.form-require {
+  background-color: #ea352d;
+  color: white;
+  font-size: 12px;
+  margin-left: 5px;
+  padding: 2px 4px;
+}

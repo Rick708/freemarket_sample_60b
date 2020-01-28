@@ -1,0 +1,46 @@
+.doneview-header
+  .signup-header
+    = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
+    .signup-bar.progress-bar
+      %ol.progress-bar
+        %li.is-active 
+          会員情報
+          .progress-status
+          .progress-line
+        %li 
+          電話番号認証
+          .progress-status
+          .progress-line
+        %li 
+          住所入力
+          .progress-status
+          .progress-line
+        %li 
+          支払い方法
+          .progress-status
+          .progress-line-last
+        %li 
+          完了
+          .progress-status
+.doneview-main
+  .doneview-main__container
+    .doneview-main__head
+      会員登録完了
+    .doneview-main__inner
+      %p
+        ありがとうございます。
+        %br
+        会員登録が完了しました。
+      .doneview-btn      
+        .doneview-btn__red
+          メルカリをはじめる
+
+.login_bottom
+  =link_to "#", class: "login_bottom_privacy" do
+    プライバシーポリシー
+  =link_to "#", class: "login_bottom_terms" do
+    メルカリ利用規約
+  =link_to "#", class: "login_bottom_notation" do
+    特定商取引に関する表記
+  .login_bottom_logo
+    = image_tag "logo_gray.svg", width: "110px"

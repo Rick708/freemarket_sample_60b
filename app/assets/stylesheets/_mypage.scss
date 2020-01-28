@@ -1,0 +1,22 @@
+.mypage-container{
+  margin: 24px auto 0;
+  padding-bottom: 40px;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@media screen and (min-width: 768px){
+  .mypage-container{
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1068px){
+  .mypage-container{
+    margin: 40px auto 0;
+    width: 1020px;
+  }
+}
