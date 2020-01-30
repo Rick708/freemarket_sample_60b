@@ -45,6 +45,43 @@
   font-size: 12px;
 }
 
+@mixin newline{
+  margin: 0 15px  0 0;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-size: 12px;
+}
+
+@mixin content{
+  height: 12px;
+  width: 12px;
+  margin: 8px auto 0;
+  border-radius: 50%;
+}
+
+@mixin after{
+  content: '';
+  left: 50%;
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  width: 80%;
+  height: 2px;
+}
+
+@mixin before{
+  right: 50%;
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  width: 80%;
+  height: 2px;
+}
+
 @mixin li{
   display: inline-block;
   position: relative;
