@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'mypage' => 'mypage#index'
   get 'logout' => 'items#logout'
   get 'identification' => 'items#identification'
+  get 'doneview' => 'items#doneview'
+  get 'address' => 'items#address'
 end
-

@@ -1,0 +1,155 @@
+.address-header{
+  padding: 10px 0px 0px 60px;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+.progress_status{
+  &_first{
+    @include li;
+    color: gray;
+    &_cube{
+      @include bar;
+      background: red;
+    }
+    &_line{
+      @include line;
+      background: red;
+    }
+  }
+  &_second{
+    @include li;
+    color: gray;
+    &_cube{
+      @include bar;
+      background: red;
+    }
+    &_line{
+      @include line;
+      background: red;
+    }
+  }
+  &_third{
+    @include li;
+    color: gray;
+    &_cube{
+      @include bar;
+      background: red;
+    }
+    &_line{
+      @include line;
+      background: red;
+    }
+  }
+  &_fourth{
+    @include li;
+    color: red;
+    &_cube{
+      @include bar;
+      background: gray;
+    }
+    &_line{
+      @include line;
+      background:gray;
+      width: 70px;
+    }
+  }
+  &_fifth{
+    @include li;
+    color: gray; 
+    &_cube{
+      @include bar;
+      background: gray;
+    }
+  }
+}
+
+.address-main{
+  display: block;
+  background: #fff;
+  width: 700px;
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 40px;
+  &__head{
+    font-size: 25px;
+    text-align: center;
+    padding: 24px;
+  }
+  &__content{
+    width: 450px;
+    margin: 0 auto;
+    &_name{
+      @include empty;
+    }
+    &_kana{
+      @include empty;
+    }
+    &_postal{
+      @include empty;
+    }
+    &_prefectures{
+      @include empty;
+    }
+    &_town{
+      @include empty;
+    }
+    &_number{
+      @include empty;
+    }
+    &_building{
+      @include empty;
+    }
+    &_tell{
+      @include empty;
+    }
+  span{
+    background: #ea352d;
+    @include span;
+    &_free{
+      background-color: silver;
+      @include span;
+    }
+  }
+  input{
+    width: 100%;
+    margin: 5px 0 0;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  &_btn{
+    line-height: 48px;
+    font-size: 14px;
+    margin: 24px 0 0;
+    background-color: #ea352d;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+}
+}
+.address_bottom{
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  margin: auto;
+  width: 550px;
+  &_privacy{
+    text-align: left;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  &_terms{
+    text-align: right;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  &_notation{
+    text-align: center;
+    text-decoration: none;
+  }
+}
