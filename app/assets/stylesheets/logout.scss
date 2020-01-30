@@ -1,26 +1,17 @@
-.logout-content {
-  float: right;
+.logout_content {
   width: 700px;
-  &__container {
-    margin: 0;
-    background: #fff;
+  background: #fff;
+  float: right;
+  padding: 90px;
+  &_btn {
+    background: #ea352d;
+    color: #fff;
+    width: 400px;
+    line-height: 55px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    text-align: center;
+    margin: 0px auto;
+    text-decoration: none;
   }
-    &__inner {
-      padding: 64px;
-      border-top: 1px solid #f5f5f5;
-    }
-      &__inner-btn {
-        font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-        margin-top: 40px;
-        background: #ea352d;
-        color: #fff;
-        display: block;
-        width: 400px;
-        line-height: 48px;
-        font-size: 14px;
-        border: 1px solid transparent;
-        transition: all ease-out .3s;
-        cursor: pointer;
-        text-align: center;
-      }
-  }
+}

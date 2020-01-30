@@ -152,13 +152,12 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
   }
 .toppage-main__category-bottom { 
   font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-  display: block;
-  width: 100%;
+  display: flex;
+  width: 1000px;
   height: 100%;
   background-color: rgb(245, 245, 245);
   flex-direction: column;
   margin: auto;
-  padding: 42px 150px;
 }
   .toppage-main__category-name {
     vertical-align: baseline;
@@ -182,7 +181,7 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
       justify-content: space-between;
     }
     .toppage-main__box {
-      width: 1020px;
+      width: 1000px;
       // height: 250px;（各カテゴリー毎にした場合使う）
       vertical-align: baseline;
       padding: 0px;
@@ -194,7 +193,7 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
   }
       .toppage-main__smallbox {
         width: 19%;
-        display: flex;
+        display: inline-block;
         flex-wrap: wrap;
         font-weight: nomal;
         border: solid 3px #000000;
@@ -322,7 +321,6 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
   position: fixed;
   bottom: 50px;
   right: 50px;
-
   &-btn{
     display: block;
     font-size: 30px;
