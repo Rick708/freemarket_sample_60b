@@ -26,7 +26,7 @@
 @mixin line{
   position: absolute;
   left: 50%;
-  top: 28px;
+  top: 30px;
   bottom: 5px;
   display: block;
   width: 125px;
@@ -43,4 +43,13 @@
   border-radius: 2px;
   color: #fff;
   font-size: 12px;
+}
+
+@mixin li{
+  display: inline-block;
+  position: relative;
+  padding: 0 0 14px 0;
+  font-size: x-small;
+  font-weight: 600;
+  margin: 0 25px 0 0;
 }

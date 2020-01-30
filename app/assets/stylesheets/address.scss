@@ -4,64 +4,63 @@
   display: flex;
   margin-bottom: 20px;
 }
-li{
-  display: inline-block;
-  position: relative;
-  padding: 0 0 14px 0;
-  font-size: x-small;
-  font-weight: 600;
-  margin: 0 40px 0 0;
-  &.first{
+.progress_status{
+  &_first{
+    @include li;
     color: gray;
+    &_cube{
+      @include bar;
+      background: red;
+    }
+    &_line{
+      @include line;
+      background: red;
+    }
   }
-  &.second{
+  &_second{
+    @include li;
     color: gray;
+    &_cube{
+      @include bar;
+      background: red;
+    }
+    &_line{
+      @include line;
+      background: red;
+    }
   }
-  &.third{
+  &_third{
+    @include li;
+    color: gray;
+    &_cube{
+      @include bar;
+      background: red;
+    }
+    &_line{
+      @include line;
+      background: red;
+    }
+  }
+  &_fourth{
+    @include li;
     color: red;
+    &_cube{
+      @include bar;
+      background: gray;
+    }
+    &_line{
+      @include line;
+      background:gray;
+      width: 70px;
+    }
   }
-  &.fourth{
-    color: gray;
-  }
-  &.fifth{
-    color: gray;
-  }
-  .progress_status_first{
-    @include bar;
-    background: red;
-  }
-  .progress_line_first{
-    @include line;
-    background: red;
-  }
-  .progress_status_second{
-    @include bar;
-    background: red;
-  }
-  .progress_line_second{
-    @include line;
-    background: red;
-  }
-  .progress_status_third{
-    @include bar;
-    background: red;
-  }
-  .progress_line_third{
-    @include line;
-    background: gray;
-  }
-  .progress_status_fourth{
-    @include bar;
-    background: gray;
-  }
-  .progress_line_fourth{
-    @include line;
-    background: gray;
-    width: 80px;
-  }
-  .progress_status_fifth{
-    @include bar;
-    background: gray;
+  &_fifth{
+    @include li;
+    color: gray; 
+    &_cube{
+      @include bar;
+      background: gray;
+    }
   }
 }
 
@@ -149,7 +148,7 @@ li{
     text-decoration: none;
     padding-right: 20px;
   }
-  .login_bottom_notation{
+  &_notation{
     text-align: center;
     text-decoration: none;
   }
