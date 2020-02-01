@@ -1,7 +1,8 @@
 .mypage-main-container
-  = render 'mypage/header'
+  = render 'mypages/header'
 %main.mypage-container.clearfix
-  = render 'mypage/side-bar'
+  = render 'mypages/side-bar'
+  = render 'items/exhibition'
   .logout_content
     .logout_content_btn
       =link_to "#", class: "logout_content_btn" do

@@ -54,7 +54,7 @@
       }
     }
     .setting-profile-content {
-      height: 362px;
+      height: 100%;
       box-sizing: border-box;
       padding: 40px 16px;
       .textarea-default {
@@ -62,7 +62,9 @@
         display: block;
         width: 100%;
         max-width: 100%;
+        min-width: 100%;
         min-height: 216px;
+        max-height: 216px;
         padding: 10px;
         border: 1px solid #ccc;
         background-color: white;

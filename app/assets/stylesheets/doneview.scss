@@ -1,72 +1,91 @@
-.doneview-header {
-  margin: auto;
-  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif; 
-  background: rgb(245, 245, 245); 
-  width: 500px;
-  height: 150px;
-  padding-top: 50px;
-  text-align: center;
-    .image { 
-      text-align: center;
+.doneview-wrapper{
+  width: 650px;
+  margin:  30px auto;
+  display: flex;
+  .doneview_img {
+    width: 30%;
+    height: 50px;
+    display: inline-block;
+  }
+  .doneview_progress_bar{
+    padding: 16px 0;
+    width: 70%;
+    margin-left: 70px;
+    &_step{
+      color: #888;
+      @include newline;
+      &_item {
+        background: #ea352d;
+        @include content;
+        &::after {
+          @include after;
+          background: #ea352d;
+        }
       }
-    .singup-bar {
-      background: rgb(245, 245, 245); 
-      width: 500px;
-      height: 50px;
+      &_phone_number{
+        color: gray;
+        @include newline;
+      }
+      &_item_phone_number{
+        background: #ea352d;
+        @include content;
+        &::before{
+          @include before;
+          background: #ea352d;
+        }
+        &::after{
+          @include after;
+          background: #ea352d;
+        }
+      }
+      &_address{
+        color: #888;
+        @include newline;
+      }
+      &_item_address{
+        background: #ea352d;
+        @include content;
+        &::before {
+          @include before;
+          background: #ea352d;
+        }
+        &::after {
+          @include after;
+          background: #ea352d;
+        }
+      }
+      &_payment{
+        color: #888;
+        @include newline;
+      }
+      &_item_payment{
+        background: #ea352d;
+        @include content;
+        &::before {
+          @include before;
+          background: #ea352d;
+        }
+        &::after {
+          @include after;
+          background: #ea352d;
+        }
+      }
+      &_complete{
+        color: red;
+        @include newline;
+      }
+      &_item_complete{
+        background: #ea352d;
+        @include content;
+        &::before {
+          @include before;
+          background: #ea352d;
+        }
+      }
     }
-        .li.is-active{
-          color: red;
-        }
-        .progress-status{
-          background-color: red;
-          z-index: 20;
-          position: inherit;
-        }
-          .progress-bar li {
-            flex: 2;
-            display: inline-block;
-            position: relative;
-            padding: 0 0 14px 0;
-            font-size: x-small;
-            line-height: 1.5;
-            color: #888;
-            font-weight: 600;
-            white-space: nowrap;
-            overflow: visible;
-            min-width: 0;
-            text-align: center;
-            margin: 16px 40px 0 0;
-          } 
-          .progress-status{
-            width: 12px;
-            height: 12px;
-            margin: 8px auto 0;
-            background: red;
-            border-radius: 50%;
-          }
-          .progress-line{
-            position: absolute;
-            left: 50%;
-            top: 28px;
-            bottom: 5px;
-            display: block;
-            width: 110px;
-            height: 2px;
-            background: red;
-            z-index: 10;
-          }
-          .progress-line-last{
-            position: absolute;
-            left: 50%;
-            top: 28px;
-            bottom: 5px;
-            display: block;
-            width: 80px;
-            height: 2px;
-            background: red;
-            z-index: 10;
-          }
-        }
+  }
+}
+
 .doneview-main {
   // background-color: rgb(245, 245, 245);
   &__container {
@@ -74,7 +93,7 @@
     background-color:  #fff;
     font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif; 
     max-width: none;
-    width: 500px;
+    width: 700px;
     height: 450px;
     margin: 0 auto;
     display: block;
