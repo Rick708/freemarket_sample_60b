@@ -13,3 +13,80 @@
   float: right;
   border: 1px solid lightgray;
 }
+
+@mixin bar{
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  border-radius: 60%;
+  z-index: 2;
+  position: relative;
+}
+
+@mixin line{
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  bottom: 5px;
+  display: block;
+  width: 125px;
+  height: 2px;
+  z-index: 1;
+}
+
+@mixin empty{
+  margin-bottom: 40px
+}
+
+@mixin span{
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+}
+
+@mixin newline{
+  margin: 0 15px  0 0;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-size: 12px;
+}
+
+@mixin content{
+  height: 12px;
+  width: 12px;
+  margin: 8px auto 0;
+  border-radius: 50%;
+}
+
+@mixin after{
+  content: '';
+  left: 50%;
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  width: 80%;
+  height: 2px;
+}
+
+@mixin before{
+  right: 50%;
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  width: 80%;
+  height: 2px;
+}
+
+@mixin li{
+  display: inline-block;
+  position: relative;
+  padding: 0 0 14px 0;
+  font-size: x-small;
+  font-weight: 600;
+  margin: 0 25px 0 0;
+}

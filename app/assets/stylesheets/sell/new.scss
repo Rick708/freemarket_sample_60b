@@ -1,0 +1,182 @@
+.new-container{
+  background-color: #f5f5f5;
+}
+.sell-main{
+  display: block;
+  &-container{
+    background: #fff;
+    width: 700px;
+    margin: 0 auto;
+    height: 100%;
+    padding-bottom: 40px;
+  }
+  &__head{
+    padding: 24px 8px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  &__form-require{
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  &__content{
+    padding: 40px;
+    border-top: 1px solid #eee;
+  }
+  &__upload-head{
+    font-size: 16px;
+  }
+  // ドラッグアンドドロップはここに書く
+  &__form-group{
+    margin: 40px 0 0;
+    &:first-child{
+      margin: 0;
+    }
+  }
+  &__sample{
+    border-style: dashed;
+    text-align: center;
+    width: 620px;
+    height: 160px;
+  }
+  .clearfix{
+    display: block;
+    line-height: 48px;
+  }
+  .clearfix1{
+    height: 250px;
+  }
+  .clearfix2{
+    height: 355px;
+  }
+  .clearfix3{
+    height: 280px;
+  }
+  // 商品名
+  &__input-default{
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 100%;
+  }
+  // 商品の説明
+  &__textarea-default{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 104px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  // 商品の詳細
+  &__sub-head{
+    color: #888;
+    font-size: 14px;
+  }
+  &__select-wrap{
+    position: relative;
+  }
+  select::-ms-expand {
+	display: none;
+ }
+  &__select-default{
+    position: relative;
+    z-index: 2;
+    height: 48px;
+    width: 400px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background-image: url(./images/chevron-down-solid.svg);
+    background-repeat: no-repeat;
+	  background-size: 12px 10px;
+	  background-position: right 10px center;
+  }
+
+  // ボタン
+  &__btn-default{
+    margin: 40px 0 0;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+  }
+  &__btn-red{
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+  }
+  &__btn-gray{
+    background: #aaa;
+    border: 1px solid #aaa;
+    color: #fff;
+  }
+  &__right{
+    display: inline-flex;
+    float: right;
+  }
+  &__price>li {
+    border-top: 1px solid #ccc;
+    padding: 12px 0;
+  }
+  &__price>li:first-child{
+    padding: 0 0 24px;
+    border: 0;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .sell-main{
+    &__head{
+      padding: 32px 16px;
+      font-size: 22px;
+    }
+    &__sub-head{
+      float: left;
+    }
+    // 出品画像
+    &__upload-box{
+      width: 620px;
+      padding: 40px;
+    }
+    // 商品の詳細、配送についての右側
+    &__form-box{
+      float: right;
+      width: 400px;
+      margin: 0;
+    }
+  }
+}
+.down-icon{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  z-index: 2;
+  color: #888;
+  font-size: 8px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}

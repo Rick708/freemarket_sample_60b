@@ -1,58 +1,60 @@
 .mypage-main-container
-  = render 'mypage/header'
-  %main.mypage-container.clearfix
-    = render 'mypage/side-bar'
-    .indentification-content
-      %section.indentification-content__mypage
-        %h2.indentification-content__head 本人情報の登録
-        %p.indentification-content__info 
-          お客様の本人情報を登録してください。
-          %br 
-            登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
-        %p.indentification-content__textlink
-          = link_to '本人確認書類のアップロードについて', ''
-          .fas.fa-chevron-right
-        .indentification-content__group
-          お名前
-          %span.identification-content__arbitrary 任意
-          %p 
-            %input.indentification-content__group.text{:placeholder => " ", :type => "text", :class => "input-default"}
-        .indentification-content__group 
-          お名前カナ
-          %span.identification-content__arbitrary 任意
-          %p
-            %input.indentification-content__group.text{:placeholder => " ", :type => "text", :class => "input-default"}
-        .indentification-content__group 
-          生年月日
-          %span.identification-content__arbitrary 任意
-          %p
-            %input.indentification-content__group.text{:placeholder => " ", :type => "text", :class => "input-default"}
-        .indentification-content__group 
-          郵便番号
-          %span.identification-content__arbitrary 任意
-          %p
-            %input.indentification-content__group.text{:placeholder => "例）1234567 ", :type => "text", :class => "input-default"}
-        .indentification-content__group 
-          都道府県
-          %span.identification-content__arbitrary 任意
-          %p
-            %input.indentification-content__group.text{:placeholder => " -- ", :type => "text", :class => "input-default"}
-        .indentification-content__group 
-          市区町村
-          %span.identification-content__arbitrary 任意
-          %p
-            %input.indentification-content__group.text{:placeholder => " 例）横浜市緑区 ", :type => "text", :class => "input-default"}
-        .indentification-content__group 
-          番地
-          %span.identification-content__arbitrary 任意
-          %p
-            %input.indentification-content__group.text{:placeholder => " 例）青山1-1-1 ", :type => "text", :class => "input-default"}
-        .indentification-content__group 
-          建物名
-          %span.identification-content__arbitrary 任意
-          %p
-            %input.indentification-content__group.text{:placeholder => " 例）柳ビル 103 ", :type => "text", :class => "input-default"}
-        .submit__button 登録する 
-        %p.indentification-content__textlink
-          = link_to '本人情報の登録について＞', ''
-        
+  = render 'mypages/header'
+%main.mypage-container.clearfix
+  = render 'mypages/side-bar'
+  = render 'items/exhibition'
+  .indentification-content
+    %section.indentification-content__mypage
+      %h2.indentification-content__mypage__head 本人情報の登録
+      %p.indentification-content__mypage__info 
+        お客様の本人情報を登録してください。
+        %br 
+          登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+      %p.indentification-content__mypage__textlink
+        = link_to '本人確認書類のアップロードについて', ''
+        .fas.fa-chevron-right
+      .indentification-content__mypage__group
+        お名前
+        %span.indentification-content__mypage__arbitrary 任意
+        %p 
+          %input.indentification-content__mypage__group.text{placeholder: " ", type: "text", class: "input-default"}
+      .indentification-content__mypage__group 
+        お名前カナ
+        %span.indentification-content__mypage__arbitrary 任意
+        %p
+          %input.indentification-content__mypage__group.text{placeholder: " ", type: "text", class: "input-default"}
+      .indentification-content__mypage__group 
+        生年月日
+        %span.indentification-content__mypage__arbitrary 任意
+        %p
+          %input.indentification-content__mypage__group.text{placeholder: " ", type: "text", class: "input-default"}
+      .indentification-content__mypage__group 
+        郵便番号
+        %span.indentification-content__mypage__arbitrary 任意
+        %p
+          %input.indentification-content__mypage__group.text{placeholder: "例）1234567 ", type: "text", class: "input-default"}
+      .indentification-content__mypage__group 
+        都道府県
+        %span.indentification-content__mypage__arbitrary 任意
+        %p
+          %input.indentification-content__mypage__group.text{placeholder: " -- ", type: "text", class: "input-default"}
+      .indentification-content__mypage__group 
+        市区町村
+        %span.indentification-content__mypage__arbitrary 任意
+        %p
+          %input.indentification-content__mypage__group.text{placeholder: " 例）横浜市緑区 ", type: "text", class: "input-default"}
+      .indentification-content__mypage__group 
+        番地
+        %span.indentification-content__mypage__arbitrary 任意
+        %p
+          %input.indentification-content__mypage__group.text{placeholder: " 例）青山1-1-1 ", type: "text", class: "input-default"}
+      .indentification-content__mypage__group 
+        建物名
+        %span.indentification-content__mypage__arbitrary 任意
+        %p
+          %input.indentification-content__mypage__group.text{placeholder: " 例）柳ビル 103 ", type: "text", class: "input-default"}
+      .submit__button 登録する 
+      %p.indentification-content__mypage__textlink
+        = link_to '本人情報の登録について＞', ''
+    
+= render 'items/footer'

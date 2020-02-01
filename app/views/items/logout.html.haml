@@ -1,9 +1,10 @@
 .mypage-main-container
-  = render 'mypage/header'
-  %main.mypage-container.clearfix
-    = render 'mypage/side-bar'
-    .logout-content
-      .logout-content__container
-        .logout-content__inner 
-          .logout-content__inner-btn ログアウト
-  = render 'exhibition'
+  = render 'mypages/header'
+%main.mypage-container.clearfix
+  = render 'mypages/side-bar'
+  = render 'items/exhibition'
+  .logout_content
+    .logout_content_btn
+      =link_to "#", class: "logout_content_btn" do
+        ログアウト
+= render 'items/footer'

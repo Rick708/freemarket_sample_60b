@@ -4,6 +4,8 @@
   .entry-header {
   }
   .paymethod-contents {
+    background-color: white;
+    padding-top: 20px;
     h2.paymethod-header {
       text-align: center;
       height: 50px;
@@ -12,6 +14,7 @@
     }
     form.paymethod-register {
       padding: 40px 40px 64px;
+      background-color: white;
       .form-card {
         margin: 0px 40px;
         &__number {
@@ -42,7 +45,7 @@
             }
             i {
               position: absolute;
-              right: 45px;
+              right: 80px;
               top: 15px;
               color: #888;
               font-size: 20px;
@@ -62,12 +65,10 @@
       }
     }
   }
-  .entry-footer {
-  }
 }
 
 .input-default {
-  height: 30px;
+  height: 48px;
   width: 100%;
   border-radius: 4px;
   border: 1px solid;

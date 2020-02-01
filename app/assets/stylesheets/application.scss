@@ -7,6 +7,7 @@
 @import "mypage/items";
 @import "mypage/mypage-content";
 @import "mypage/mypage-side-bar";
+@import "mypage/profile";
 @import "login";
 @import "signin";
 @import "items";
@@ -18,5 +19,12 @@
 @import "./paymethod/paymethod.scss";
 @import "./paymethod/paymethod-header.scss";
 @import "./paymethod/paymethod-footer.scss";
+@import "./register-credit/main.scss";
 @import "logout";
-@import "identification"
+@import "identification";
+@import "verification";
+@import "tell";
+@import "address";
+@import "sell/header.scss";
+@import "sell/new.scss";
+@import "sell/footer.scss";
