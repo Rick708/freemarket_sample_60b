@@ -31,19 +31,19 @@
   }
   &_third{
     @include li;
-    color: gray;
+    color: red;
     &_cube{
       @include bar;
       background: red;
     }
     &_line{
       @include line;
-      background: red;
+      background: gray;
     }
   }
   &_fourth{
     @include li;
-    color: red;
+    color: gray;
     &_cube{
       @include bar;
       background: gray;
