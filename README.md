@@ -75,7 +75,7 @@
 |category_id|integer|null: false, foreign_key: true|
 |brand_id|integer|null: false, foreign_key: true|
 |size|string|null: false|
-|delivery-method|string|null: false|
+|delivery_method|string|null: false|
 |prefecture_code|integer|null: false|
 - prefecture_code:JpPrefecture,jquery.jpostal.jsを使用
 
