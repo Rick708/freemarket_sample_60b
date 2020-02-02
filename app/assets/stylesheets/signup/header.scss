@@ -1,80 +1,87 @@
-.signup-header{
-  text-align: center;
-  h1 {
+.registration-wrapper{
+  width: 650px;
+  margin:  30px auto;
+  display: flex;
+  .registration_img {
+    width: 30%;
+    height: 50px;
     display: inline-block;
-    padding: 10px 0px 0px 60px;
   }
-  a {
-    display: inline-block;
-    width: 120px;
-    height: 33px;
-    margin-right: 8px;
-    line-height: 33px;
-  }
-  img {
-    width: 185px;
-    height: 49px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .signup-header{
-    justify-content: center;
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1rem 0;
-  }
-  .progress-bar li.is-active{
-    color: red;
-  }
-  .progress-bar li.is-active .progress-status{
-    background-color: red;
-    z-index: 20;
-    position: inherit;
-  }
-  .progress-bar li {
-    flex: 2;
-    display: inline-block;
-    position: relative;
-    padding: 0 0 14px 0;
-    font-size: x-small;
-    line-height: 1.5;
-    color: #888;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: visible;
-    min-width: 0;
-    text-align: center;
-    margin: 16px 40px 0 0;
-  } 
-  .progress-status{
-    width: 12px;
-    height: 12px;
-    margin: 8px auto 0;
-    background: #ccc;
-    border-radius: 50%;
-  }
-  .progress-line{
-    position: absolute;
-    left: 50%;
-    top: 28px;
-    bottom: 5px;
-    display: block;
-    width: 110px;
-    height: 2px;
-    background: #ccc;
-    z-index: 10;
-  }
-  .progress-line-last{
-    position: absolute;
-    left: 50%;
-    top: 28px;
-    bottom: 5px;
-    display: block;
-    width: 80px;
-    height: 2px;
-    background: #ccc;
-    z-index: 10;
+  .registration_progress_bar{
+    padding: 16px 0;
+    width: 70%;
+    margin-left: 70px;
+    &_step{
+      color: red;
+      @include newline;
+      &_item {
+        background:  gray;
+        @include content;
+        &::after {
+          @include after;
+          background: gray;
+        }
+      }
+      &_phone_number{
+        color: gray;
+        @include newline;
+      }
+      &_item_phone_number{
+        background: gray;
+        @include content;
+        &::before{
+          @include before;
+          background: gray;
+        }
+        &::after{
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_address{
+        color: #888;
+        @include newline;
+      }
+      &_item_address{
+        background: gray;
+        @include content;
+        &::before {
+          @include before;
+          background: gray;
+        }
+        &::after {
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_payment{
+        color: #888;
+        @include newline;
+      }
+      &_item_payment{
+        background: #ccc;
+        @include content;
+        &::before {
+          @include before;
+          background: #ccc;
+        }
+        &::after {
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_complete{
+        color: #888;
+        @include newline;
+      }
+      &_item_complete{
+        background: #ccc;
+        @include content;
+        &::before {
+          @include before;
+          background: #ccc;
+        }
+      }
+    }
   }
 }

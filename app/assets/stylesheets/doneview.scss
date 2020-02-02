@@ -12,74 +12,42 @@
     width: 70%;
     margin-left: 70px;
     &_step{
-      color: #888;
+      color: #ccc;
       @include newline;
       &_item {
-        background: #ea352d;
+        background:  red;
         @include content;
         &::after {
           @include after;
-          background: #ea352d;
+          background: red;
         }
       }
       &_phone_number{
-        color: gray;
-        @include newline;
-      }
-      &_item_phone_number{
-        background: #ea352d;
-        @include content;
-        &::before{
-          @include before;
-          background: #ea352d;
-        }
-        &::after{
-          @include after;
-          background: #ea352d;
-        }
-      }
-      &_address{
-        color: #888;
+        color: #ccc;
         @include newline;
       }
       &_item_address{
-        background: #ea352d;
+        background: red;
         @include content;
         &::before {
           @include before;
-          background: #ea352d;
+          background: red;
         }
         &::after {
           @include after;
-          background: #ea352d;
+          background: red;
         }
       }
       &_payment{
-        color: #888;
-        @include newline;
-      }
-      &_item_payment{
-        background: #ea352d;
-        @include content;
-        &::before {
-          @include before;
-          background: #ea352d;
-        }
-        &::after {
-          @include after;
-          background: #ea352d;
-        }
-      }
-      &_complete{
         color: red;
         @include newline;
       }
       &_item_complete{
-        background: #ea352d;
+        background: red;
         @include content;
         &::before {
           @include before;
-          background: #ea352d;
+          background: red;
         }
       }
     }

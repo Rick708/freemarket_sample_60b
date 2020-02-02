@@ -1,28 +1,80 @@
-.signup-container
-  = render 'header-registration'
-  %main.signup-main
-    %section.signup-main__container
-      %h2.signup-main__head.signup-main__head--registration
-        会員情報入力
-      .signup-main__content
-        .signup-main__form-group
-          %label ニックネーム
-          %span.signup-main__form-require 必須
-          %input.signup-main__input-default{:name => "nickname", :placeholder => "例)メルカリ太郎", :type => "text", :value => ""}/
-        .signup-main__form-group
-          %label メールアドレス
-          %span.signup-main__form-require 必須
-          %input.signup-main__input-default{:name => "mailadress", :placeholder => "例)pc・携帯どちらでも可", :type => "text", :value => ""}/
-        .signup-main__form-group
-          %label パスワード
-          %span.signup-main__form-require 必須
-          %input.signup-main__input-default{:name => "password", :placeholder => "例)6文字以上", :type => "text", :value => ""}/
-        .signup-main__form-group
-          %label パスワード(確認)
-          %span.signup-main__form-require 必須
-          %input.signup-main__input-default{:name => "password", :placeholder => "例)6文字以上", :type => "text", :value => ""}/
-      .signup-main__content
-        .signup-main__form-group
-          %button.signup-main__btn-default.signup-main__btn-red{:type => "submit"}
-            次に進む
+.registration-wrapper
+  .registration_img
+    = image_tag "fmarket_logo_red.svg" 
+  %nav.registration_progress_bar
+    %li.registration_progress_bar_step
+      会員情報
+      .registration_progress_bar_step_item
+    %li.registration_progress_bar_step_phone_number
+      電話番号認証
+      .registration_progress_bar_step_item_address
+    %li.registration_progress_bar_step_payment
+      完了
+      .registration_progress_bar_step_item_complete
+
+%main.signup-main
+  %section.signup-main__container
+    %h2.signup-main__head.signup-main__head--registration
+      会員情報入力
+    .signup-main__content
+      .signup-main__form-group
+        %label ニックネーム
+        %span.signup-main__form-require 必須
+        %input.signup-main__input-default{name: "nickname", placeholder: "例)メルカリ太郎", type: "text", value: ""}/
+      .signup-main__form-group
+        %label メールアドレス
+        %span.signup-main__form-require 必須
+        %input.signup-main__input-default{name: "mailadress", placeholder: "例)pc・携帯どちらでも可", type: "text", value: ""}/
+      .signup-main__form-group
+        %label パスワード
+        %span.signup-main__form-require 必須
+        %input.signup-main__input-default{name: "password", placeholder: "例)6文字以上", type: "text", value: ""}/
+      .signup-main__form-group
+        %label パスワード(確認)
+        %span.signup-main__form-require 必須
+        %input.signup-main__input-default{name: "password", placeholder: "例)6文字以上", type: "text", value: ""}/
+        .signup-main__form-group_text
+          ※英字と数字の両方を含めて設定してください
+        .signup-main__form-group_icon
+          ⬜︎ パスワードを表示する
+          .signup-main__form-group_icon_text
+      .signup-main__form-group
+        本人確認
+      .signup-main__form-group-_man-text
+        安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+      .signup-main__form-group
+        %label お名前（全角）
+        %span.signup-main__form-require 必須
+        %input.signup-main__input-default{name: "nickname", placeholder: "例)メルカリ太郎", type: "text", value: ""}/
+      .signup-main__form-group
+        %label お名前カナ（全角）
+        %span.signup-main__form-require 必須
+        %input.signup-main__input-default{name: "mailadress", placeholder: "例)pc・携帯どちらでも可", type: "text", value: ""}/
+      .signup-main__bd
+        .signup-main__bd-text
+          生年月日
+        .signup-main__bd-form
+          .signup-main__bd-form-y
+            %input.signup-main__bd-form-y-input{placeholder: "--", type: "text", value: ""}
+              %i.fas.fa-chevron-down.signup-main__bd-form-y-input-icon
+              年
+          .signup-main__bd-form-m
+            %input.signup-main__bd-form-m-input{placeholder: "--", type: "text", value: ""}
+              %i.fas.fa-chevron-down.signup-main__bd-form-m-input-icon
+              月
+          .signup-main__bd-form-d 
+            %input.signup-main__bd-form-d-input{placeholder: "--", type: "text", value: ""}
+              %i.fas.fa-chevron-down.signup-main__bd-form-d-input-icon
+              日
+      .signup-main__form-group-text
+        ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+      .signup-main__form-text
+        「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします      
+    .signup-main__content
+      .signup-main__form-group
+        %button.signup-main__btn-default.signup-main__btn-red{:type => "submit"}
+          次に進む
+      .signup-main__form-group
+        .signup-main__form-group-registration
+          本人情報の登録について〉
 = render 'signup/footer.registration'

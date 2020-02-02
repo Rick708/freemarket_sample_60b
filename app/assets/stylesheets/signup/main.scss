@@ -1,9 +1,97 @@
+.registration-wrapper{
+  width: 650px;
+  margin:  30px auto;
+  display: flex;
+  .registration_img {
+    width: 30%;
+    height: 50px;
+    display: inline-block;
+  }
+  .registration_progress_bar{
+    padding: 16px 0;
+    width: 70%;
+    margin-left: 70px;
+    &_step{
+      color: red;
+      @include newline;
+      &_item {
+        background:  red;
+        @include content;
+        &::after {
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_phone_number{
+        color: #ccc;
+        @include newline;
+      }
+      &_item_phone_number{
+        background: #ccc;
+        @include content;
+        &::before{
+          @include before;
+          background: #ccc;
+        }
+        &::after{
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_address{
+        color: #ccc;
+        @include newline;
+      }
+      &_item_address{
+        background: #ccc;
+        @include content;
+        &::before {
+          @include before;
+          background: #ccc;
+        }
+        &::after {
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_payment{
+        color: #ccc;
+        @include newline;
+      }
+      &_item_payment{
+        background: #ccc;
+        @include content;
+        &::before {
+          @include before;
+          background: #ccc;
+        }
+        &::after {
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_complete{
+        color: #ccc;
+        @include newline;
+      }
+      &_item_complete{
+        background: #ccc;
+        @include content;
+        &::before {
+          @include before;
+          background: #ccc;
+        }
+      }
+    }
+  }
+}
+
 .signup-container{
   background-color: #f5f5f5;
 }
 
 .signup-main{
-  display: block;
+  display: flex;
   &__container{
     background: #fff;
     width: 700px;
@@ -23,6 +111,51 @@
   &__content{
     max-width: 320px;
     margin: 0 auto;
+  }
+  &__bd{
+    &-text{
+      margin: 40px 0 0;
+    }
+    &-form{      
+      display: flex;
+      &-y{
+        position: relative;
+        &-input{
+          width: 80%;
+          height: 48px;
+          display: inline-block;
+          &-icon{
+            position: absolute;
+            margin-left: -30px;
+            margin-top: 18px;
+          }
+        }
+      }
+      &-m{
+        &-input{
+          width: 80%;
+          height: 48px;
+          display: inline-block;
+          &-icon{
+            position: absolute;
+            margin-left: -30px;
+            margin-top: 18px;
+          }
+        }
+      }
+      &-d{
+        &-input{
+          width: 80%;
+          height: 48px;
+          display: inline-block;
+          &-icon{
+            position: absolute;
+            margin-left: -30px;
+            margin-top: 18px;
+          }
+        }
+      }
+    }
   }
   &__btn-default{
     border-radius: 4px;
@@ -44,6 +177,17 @@
     label{
       font-weight: 600;
     }
+    &-text{
+      color: #ccc;
+    }
+    &-registration{
+      color: lightskyblue;
+      text-align: right;
+    }
+  }
+  &__form-text{
+    text-align: center;
+    margin: 40px 0 0;
   }
   &__form-require{
     background: #ea352d;
@@ -67,6 +211,15 @@
       width: calc(50% - 6px) !important;
     }
   }
+  &__form-group-bd{
+    display: inline;
+  }
+  &__input-bd{
+    display: inline-block;
+    width: 20%;
+    height: 40px;
+  }
+
 
   &__btn-red{
     margin: 24px 0 0;
