@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'items#index' #トップページ
+  devise_for :users
+  root to: "items#index" #トップページ
   get 'login' => 'items#login' #ログインページ
   get 'signin' => 'items#signin' #サインインページ
   get 'details' => 'items#details' #商品詳細ページ
