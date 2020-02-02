@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root to: "items#index" #トップページ
   get 'login' => 'items#login' #ログインページ
