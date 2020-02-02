@@ -5,16 +5,11 @@
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false, unique: true|
-|first_kananame|string|null: false|
-|last_kananame|string|null: false|
-|first_name|string|null: false|
-|last_name|string|null: false|
 |mail|string|null: false, unique: true|
-|telephone|string|null: false|
-|birthday_year|string|null: false|
-|birthday_month|string|null: false|
-|birthday_day|string|null: false|
-|password|string|null: false, unique: true|
+|birthday_year|string||
+|birthday_month|string||
+|birthday_day|string||
+|password|string|null: false|
 |profile|text||
 |profile_image|string||
 ### Association
@@ -23,6 +18,16 @@
 - has_many :purchases
 - has_many :addresses
 - has_one  :card
+- has_one  :tell
+
+## tellsテーブル
+- 電話番号テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|telephone|string|null: false|
+### Association
+- belongs_to :user
 
 ## addressesテーブル
 - ユーザー住所テーブル
@@ -30,6 +35,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|intrger|null: false, foreign_key: true|
+|first_kananame|string|null: false|
+|last_kananame|string|null: false|
+|first_name|string|null: false|
+|last_name|string|null: false|
 |post_code|integer|null: false|
 |prefecture_code|integer||
 |address_city|string||
@@ -76,8 +85,9 @@
 
 ### Association
 - has_many :comments
-- has_many :purchases
 - has_many :item-images
+- has_one :purchase
+- has_one :exhibition
 - belongs_to :category
 - belongs_to :brand
 - belongs_to :user
@@ -87,7 +97,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string||
+|ancestry|string||
 ### Association
 - has_many :items
 
@@ -126,6 +137,17 @@
 
 ## purchasesテーブル
 - 購入履歴テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :item
+
+## exhibitionsテーブル
+- 出品履歴テーブル
 
 |Column|Type|Options|
 |------|----|-------|
