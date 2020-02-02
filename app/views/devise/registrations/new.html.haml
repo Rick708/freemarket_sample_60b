@@ -1,26 +1,31 @@
 .signup-container
-  = render 'items/header-registration'
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
+  = render 'items/header-registration' 
   %main.signup-main
     %section.signup-main__container
       %h2.signup-main__head.signup-main__head--registration
         会員情報入力
       .signup-main__content
         .signup-main__form-group
-          %label ニックネーム
+          = f.label :ニックネーム
           %span.signup-main__form-require 必須
-          %input.signup-main__input-default{:name => "nickname", :placeholder => "例)メルカリ太郎", :type => "text", :value => ""}/
+          = f.text_field :nickname, { class: 'signup-main__input-default', placeholder: '例) メルカリ太郎' }
+          -# %input.signup-main__input-default{:name => "nickname", :placeholder => "例)メルカリ太郎", :type => "text", :value => ""}/
         .signup-main__form-group
-          %label メールアドレス
+          = f.label :メールアドレス
           %span.signup-main__form-require 必須
-          %input.signup-main__input-default{:name => "mailadress", :placeholder => "例)pc・携帯どちらでも可", :type => "text", :value => ""}/
+          = f.text_field :email, { class: 'signup-main__input-default', placeholder: '例)pc・携帯どちらでも可' }
+          -# %input.signup-main__input-default{:name => "mailadress", :placeholder => "例)pc・携帯どちらでも可", :type => "text", :value => ""}/
         .signup-main__form-group
-          %label パスワード
+          = f.label :パスワード
           %span.signup-main__form-require 必須
-          %input.signup-main__input-default{:name => "password", :placeholder => "例)6文字以上", :type => "text", :value => ""}/
+          = f.text_field :password, { class: 'signup-main__input-default', placeholder: '例)6文字以上' }
+          -# %input.signup-main__input-default{:name => "password", :placeholder => "例)6文字以上", :type => "text", :value => ""}/
         .signup-main__form-group
           %label パスワード(確認)
           %span.signup-main__form-require 必須
-          %input.signup-main__input-default{:name => "password", :placeholder => "例)6文字以上", :type => "text", :value => ""}/
+          = f.text_field :password, { class: 'signup-main__input-default', placeholder: '例)6文字以上' }
+          -# %input.signup-main__input-default{:name => "password", :placeholder => "例)6文字以上", :type => "text", :value => ""}/
       .signup-main__content
         .signup-main__form-group
           %button.signup-main__btn-default.signup-main__btn-red{:type => "submit"}
