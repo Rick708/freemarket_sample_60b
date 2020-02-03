@@ -15,7 +15,6 @@
 ### Association
 - has_many :items
 - has_many :comments
-- has_many :purchases
 - has_many :addresses
 - has_one  :card
 - has_one  :tell
@@ -71,7 +70,8 @@
 |status|integer|default: 0|
 |delivery_charge|integer||
 |send_day|string||
-|user_id|integer|null: false, foreign_key: true|
+|seller_id|integer|null:false|
+|buyer_id|integer||
 |category_id|integer|null: false, foreign_key: true|
 |brand_id|integer|null: false, foreign_key: true|
 |size|string|null: false|
@@ -86,8 +86,6 @@
 ### Association
 - has_many :comments
 - has_many :item-images
-- has_one :purchase
-- has_one :exhibition
 - belongs_to :category
 - belongs_to :brand
 - belongs_to :user
@@ -135,24 +133,4 @@
 - belongs_to :item
 
 
-## purchasesテーブル
-- 購入履歴テーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :item
-
-## exhibitionsテーブル
-- 出品履歴テーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :item
