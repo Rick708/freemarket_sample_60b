@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get 'login' => 'items#login' #ログインページ
   get 'signin' => 'items#signin' #サインインページ
   # get 'details' => 'items#details' #商品詳細ページ
-  # post 'registration' => 'items#registration' #新規登録の会員情報入力
   # get 'verification' => 'items#verification' #購入内容確認
   # get 'logout' => 'items#logout' #マイページのログアウト
   # get 'identification' => 'items#identification' #マイページの本人情報登録

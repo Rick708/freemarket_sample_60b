@@ -17,7 +17,15 @@
     .toppage-header-top__footer-search-btn
       .toppage-header-top__footer-search-btn-wrapper 
         - if user_signed_in?
-
+          .toppage-header-top__footer-search-categories_mypage
+          =link_to "#", class: "toppage-header-top__footer-search-iine" do
+            いいね！一覧
+          =link_to "#", class: "toppage-header-top__footer-search-Notice" do
+            お知らせ
+          =link_to "#", class: "toppage-header-top__footer-search-list" do
+            やることリスト
+          =link_to "#", class: "toppage-header-top__footer-search-mepage" do
+            マイページ      
         - else
           =link_to "/signin", class: "toppage-header-top__footer-search-btn-new" do
             新規会員登録
