@@ -1,5 +1,5 @@
 .signup-container
-= form_with(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = render 'items/header-registration' 
   %main.signup-main
     %section.signup-main__container
@@ -24,6 +24,6 @@
           = f.text_field :password, { class: 'signup-main__input-default', placeholder: '例)6文字以上' }
       .signup-main__content
         .signup-main__form-group
-          = f.submit "次へ進む", class: "signup-main__btn-default.signup-main__btn-red"
+          = f.submit "次へ進む", class: "signup-main__btn-default"
 
 = render 'signup/footer.registration'
