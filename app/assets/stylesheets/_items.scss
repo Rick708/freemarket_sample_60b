@@ -342,3 +342,136 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
     color: white;
   }
 }
+.toppage-header-top__footer {
+  width: 1020px;
+  margin: 0px auto;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-top: 8px;
+  &-search {
+    display: flex;
+    width: 300px;
+    margin-left: -40px;
+    &-categories {
+      padding: 0px 10px;
+    }
+    &-wrapper::before {
+      font-family: FontAwesome;
+      content: '\f03a';
+      color: red;
+      margin-left: 10px;  
+    }
+      &-wrapper{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      }
+    &-brand::before {
+      font-family: FontAwesome;
+      content: '\f02b';
+      color: red;
+      margin-left: 10px;
+    }
+    &-brand{
+      cursor: pointer;
+      margin-left: 11px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    &-categories_mypage{
+      padding-right: 120px;
+    }
+    &-iine::before {
+      font-family: FontAwesome;
+      content: '\f004';
+      color: gray;
+      margin-left: 10px;
+    }
+    &-iine{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: black;
+    }
+    &-Notice::before {
+      font-family: FontAwesome;
+      content: '\f0f3';
+      ccolor: gray;
+      margin-left: 10px;
+    }
+    &-Notice{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: black;
+    }
+    .toppage-header-top__footer-search-list::before {
+      font-family: FontAwesome;
+      content: '\f00c';
+      color: gray;
+      margin-left: 10px;
+    }
+    &-list{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: black;
+    }
+    &-mepage::before {
+      font-family: "Font Awesome 5 Free";
+      content: '\f4da';
+      color: gray;
+      margin-left: 10px;
+    }
+    &-mepage{
+      cursor: pointer;
+      padding-left: 0px;
+      height: 44px;
+      position: relative;
+      z-index: 3;
+      padding: 0px 10px;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
