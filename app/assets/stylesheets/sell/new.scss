@@ -40,10 +40,14 @@
     }
   }
   &__sample{
+    display:block;
     border-style: dashed;
     text-align: center;
     width: 620px;
     height: 160px;
+    input{
+      display:none;
+    }
   }
   .clearfix{
     display: block;
