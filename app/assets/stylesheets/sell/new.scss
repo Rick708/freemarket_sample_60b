@@ -57,7 +57,7 @@
     height: 250px;
   }
   .clearfix2{
-    height: 355px;
+    height: 480px;
   }
   .clearfix3{
     height: 280px;
@@ -132,11 +132,13 @@
     background: #ea352d;
     border: 1px solid #ea352d;
     color: #fff;
+    text-decoration: none;
   }
   &__btn-gray{
     background: #aaa;
     border: 1px solid #aaa;
     color: #fff;
+    text-decoration: none;
   }
   &__right{
     display: inline-flex;

@@ -1,6 +1,6 @@
 .new-container
   = render 'sell/header-sell'
-  %main.sell-main
+  = form_with model: @item, local: true , class: "sell-main" do |f|
     %section.sell-main-container.buy-item-container
       #sell-main-container
         %div
@@ -19,9 +19,9 @@
                     またはクリックしたファイルをアップロード
             .sell-main__content
               .sell-main__form-group
-                %label 商品名
+                %label :商品名
                 %span.sell-main__form-require 必須
-                %input.sell-main__input-default{name: "sell", type: "text", placeholder: "商品名(必須40文字まで)"}
+                = f.text_field :name, class: "sell-main__input-default", placeholder: "商品名(必須40文字まで)" 
               .sell-main__form-group
                 %label 商品の説明
                 %span.sell-main__form-require 必須
@@ -29,18 +29,27 @@
             .sell-main__content.clearfix1
               %h3.sell-main__sub-head 商品の詳細
               .sell-main__form-box
+                -# 下記はカテゴリーテーブル作ったら実装します。
                 .sell-main__form-group
                   %label カテゴリー
                   %span.sell-main__form-require 必須
                   .sell-main__select-wrap
                     %i.fas.fa-chevron-down.down-icon
-                    %select.sell-main__select-default
+                    %input.sell-main__select-default
+                    -# 上記はselectからinputに変えてます。カテゴリー機能実装時に戻しましょう。
                 .sell-main__form-group
                   %label 商品の状態
                   %span.sell-main__form-require 必須
                   .sell-main__select-wrap
                     %i.fas.fa-chevron-down.down-icon
                     %select.sell-main__select-default
+                      %option{:value => "0"}  ---
+                      %option{:value => "1"}  新品、未使用
+                      %option{:value => "2"}  未使用に近い
+                      %option{:value => "3"}  目立った傷や汚れなし
+                      %option{:value => "4"}  やや傷や汚れあり
+                      %option{:value => "5"}  傷や汚れあり
+                      %option{:value => "6"}  全体的に状態が悪い
             .sell-main__content.clearfix2
               %h3.sell-main__sub-head 配送について
               .sell-main__form-box
@@ -50,6 +59,20 @@
                   .sell-main__select-wrap
                     %i.fas.fa-chevron-down.down-icon
                     %select.sell-main__select-default
+                      %option{:value => "0"}  ---
+                      %option{:value => "1"}  送料込み(出品者負担)
+                      %option{:value => "2"}  着払い(購入者負担)
+                .sell-main__form-group
+                  %label 配送の方法
+                  %span.sell-main__form-require 必須
+                  .sell-main__select-wrap
+                    %i.fas.fa-chevron-down.down-icon
+                    %select.sell-main__select-default
+                      %option{:value => "0"}  ---
+                      %option{:value => "1"}  未定
+                      %option{:value => "2"}  クロネコヤマト
+                      %option{:value => "3"}  ゆうパック
+                      %option{:value => "4"}  ゆうメール
                 .sell-main__form-group
                   %label 発送元の地域
                   %span.sell-main__form-require 必須
@@ -62,6 +85,10 @@
                   .sell-main__select-wrap
                     %i.fas.fa-chevron-down.down-icon
                     %select.sell-main__select-default
+                      %option{:value => "0"}  ---
+                      %option{:value => "1"}  1~2日で発送
+                      %option{:value => "2"}  2~3日で発送
+                      %option{:value => "3"}  4~7日で発送
             .sell-main__content.clearfix3
               %h3.sell-main__sub-head 販売価格(300〜9,999,999)
               .sell-main__form-box
@@ -75,19 +102,23 @@
                         %input.sell-main__input-default{name: "sell", type: "text", placeholder: "例) 300"}
                   %li
                     .clearfix
-                      %label.sell-main__left 販売手数料(10%)
-                      .sell-main__right -
+                      %label.sell-main__left 販売手数料
+                      .sell-main__right １０％
+                      -# 少しだけview変えてます。
                   %li
                     .cleafix.bold
                       %label.sell-main__left 販売利益
-                      .sell-main__right -
+                      .sell-main__right 価格  ×  90％
+                      -# Jqueryで実装？
             .sell-main__content.sell-main__btn-box
               %div
                 %p 禁止されている出品、行為を必ずご確認ください。
                 %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
                 %p また、出品をもちまして加盟店規約に同意したことになります。
               %button.sell-main__btn-default.sell-main__btn-red{type: "submit"}
-                出品する
+                =link_to root_path, class: "sell-main__btn-red" do
+                  出品する
               %button.sell-main__btn-default.sell-main__btn-gray{type: "submit"}
-                もどる
+                =link_to root_path, class: "sell-main__btn-gray" do
+                  もどる
   = render 'sell/footer-sell'

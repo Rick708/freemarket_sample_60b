@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: "items#index" #トップページ
+  resources :items 
   get 'login' => 'items#login' #ログインページ
   get 'signin' => 'items#signin' #サインインページ
   # get 'details' => 'items#details' #商品詳細ページ
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
   # get 'address' => 'items#address' #新規登録の住所登録 
   # get 'paymethod' => 'items#paymethod' ##新規登録のお支払い方法
   # get 'register_credit' => 'items#register_credit' #マイページの支払い方法
-  get 'new' => 'items#new' #商品出品ページ
+  # get 'new' => 'items#new' #商品出品ページ
   # get 'profile' => 'mypages#profile' #マイページのプロフィール編集
   # get 'mypages' => 'mypages#index' #マイページ
 end
