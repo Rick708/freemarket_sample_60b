@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   get 'new' => 'items#new' #商品出品ページ
   get 'profile' => 'mypages#profile' #マイページのプロフィール編集
   get 'mypages' => 'mypages#index' #マイページ
+  # resources :items
 end
