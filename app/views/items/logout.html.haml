@@ -5,6 +5,7 @@
   = render 'items/exhibition'
   .logout_content
     .logout_content_btn
-      =link_to "#", class: "logout_content_btn" do
+      -# =link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout_content_btn" do
         ログアウト
+      = link_to "ログアウト", :back, class: 'logout_content_btn' 
 = render 'items/footer'

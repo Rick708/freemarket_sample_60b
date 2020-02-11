@@ -16,4 +16,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    reset_session
+    redirect_to root_path, notice: 'ログアウトしました。'
+  end
+end
+
 end
