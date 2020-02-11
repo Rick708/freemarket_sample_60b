@@ -88,6 +88,17 @@
   }
   &__select-wrap{
     position: relative;
+    select{
+      -webkit-appearance: none;
+      height: 48px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+      width: 100%;
+    }
   }
   select::-ms-expand {
 	display: none;

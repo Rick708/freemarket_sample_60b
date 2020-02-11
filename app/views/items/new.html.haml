@@ -40,6 +40,13 @@
                   .sell-main__select-wrap
                     %i.fas.fa-chevron-down.down-icon
                     %select.sell-main__select-default
+                      %option{:value => "0"}  ---
+                      %option{:value => "1"}  新品、未使用
+                      %option{:value => "2"}  未使用に近い
+                      %option{:value => "3"}  目立った傷や汚れなし
+                      %option{:value => "4"}  やや傷や汚れあり
+                      %option{:value => "5"}  傷や汚れあり
+                      %option{:value => "6"}  全体的に状態が悪い
             .sell-main__content.clearfix2
               %h3.sell-main__sub-head 配送について
               .sell-main__form-box
@@ -54,13 +61,13 @@
                   %span.sell-main__form-require 必須
                   .sell-main__select-wrap
                     %i.fas.fa-chevron-down.down-icon
-                    %select.sell-main__select-default
+                    = f.collection_select :prefecture_code, Prefecture.all, :id, :name, {include_blank: "---"}
                 .sell-main__form-group
                   %label 発送までの日数
                   %span.sell-main__form-require 必須
                   .sell-main__select-wrap
                     %i.fas.fa-chevron-down.down-icon
-                    %select.sell-main__select-default
+                    -# = f.collection_select :sendday, Sendday.all, :id, :name, {include_blank: "---"}
             .sell-main__content.clearfix3
               %h3.sell-main__sub-head 販売価格(300〜9,999,999)
               .sell-main__form-box
