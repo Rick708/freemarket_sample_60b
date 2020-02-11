@@ -25,7 +25,7 @@
               .sell-main__form-group
                 %label 商品の説明
                 %span.sell-main__form-require 必須
-                %textarea.sell-main__textarea-default{name: "sell", type: "text", placeholder: "商品の説明(必須1,000文字以内) (色、素材、重さ、定価、注意点など) 例)2010年頃年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"}
+                = f.text_area :content, class: "sell-main__textarea-default" , placeholder: "商品の説明(必須1,000文字以内) (色、素材、重さ、定価、注意点など) 例)2010年頃年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
             .sell-main__content.clearfix1
               %h3.sell-main__sub-head 商品の詳細
               .sell-main__form-box
@@ -43,6 +43,7 @@
                   .sell-main__select-wrap
                     %i.fas.fa-chevron-down.down-icon
                     %select.sell-main__select-default
+                    -# = f.select :status, [["--","0"],["新品","1"], [[[class: "sell-main__select-default"
                       %option{:value => "0"}  ---
                       %option{:value => "1"}  新品、未使用
                       %option{:value => "2"}  未使用に近い
@@ -99,7 +100,7 @@
                       %span.sell-main__form-require 必須
                       .sell-main__right.sell-main__price-input
                         ¥
-                        %input.sell-main__input-default{name: "sell", type: "text", placeholder: "例) 300"}
+                        = f.text_field :price, class: "sell-main__input-default", placeholder: "例) 300" 
                   %li
                     .clearfix
                       %label.sell-main__left 販売手数料
