@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  get 'signin' => 'items#signin' #サインインページ
   root to: "items#index" #トップページ
   resources :items
   resources :mypages
-  get 'login' => 'items#login' #ログインページ
-  get 'signin' => 'items#signin' #サインインページ
-  get 'details' => 'items#details' #商品詳細ページ
-  # get 'verification' => 'items#verification' #購入内容確認
   get 'logout' => 'items#logout' #マイページのログアウト
-  delete 'logout', to:'items#destroy'
+
+
+  # 下記はまだ残すー後日消す
+
+  # get 'details' => 'items#details' #商品詳細ページ
+  # # get 'verification' => 'items#verification' #購入内容確認
+  # delete 'logout', to:'items#destroy'
   # get 'identification' => 'items#identification' #マイページの本人情報登録
   # get 'tell' => 'items#tell' #新規登録の電話番号認証
   # get 'doneview' => 'items#doneview' #新規登録の完了画面
