@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "items#index" #トップページ
   resources :items
-
-  # get 'login' => 'items#login' #ログインページ
-  # get 'signin' => 'items#signin' #サインインページ
+  resources :mypages
+  get 'login' => 'items#login' #ログインページ
+  get 'signin' => 'items#signin' #サインインページ
   get 'details' => 'items#details' #商品詳細ページ
   # get 'verification' => 'items#verification' #購入内容確認
   get 'logout' => 'items#logout' #マイページのログアウト
