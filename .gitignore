@@ -28,3 +28,4 @@
 #githubに上がるのを除外する。
 /config/master.key
 /config/credentials.yml.enc
+/public/uploads
