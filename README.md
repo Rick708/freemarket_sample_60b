@@ -68,6 +68,7 @@
 |content|text||
 |price|integer|null:false|
 |status|integer|default: 0|
+|condition|string||
 |delivery_charge|integer||
 |send_day|string||
 |seller_id|integer|null:false|
