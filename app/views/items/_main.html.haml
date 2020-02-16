@@ -22,8 +22,7 @@
             %str ¥
             =item.price
           %li.toppage-main__smallbox_photo
-            - item.images.each do |image|
-              = image_tag image.image.url, size: '100x150'
+            = image_tag item.images[0].image.url, size: '100x150'
           %li.toppage-main__smallbox_name
             =item.name
   .toppage-main__category-name
