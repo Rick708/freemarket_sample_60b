@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :login_check, {only: [:new, :create]}
   def index
-    @items = Item.includes(:images).order('created_at DESC')
+    @items = Item.includes(:images).limit(10).order('created_at DESC')
   end
 
   def new
