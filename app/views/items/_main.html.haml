@@ -16,31 +16,15 @@
     .toppage-main__text
       レディース新着アイテム（仮の商品一覧）
     .toppage-main__box
-      %ul.toppage-main__smallbox
-        %li.toppage-main__smallbox_price ¥1,200
-        %li.toppage-main__smallbox_photo
-          = image_tag "cropkey458A2852.jpg", width: "100%", height: "150px"
-        %li.toppage-main__smallbox_name キーケース
-      %ul.toppage-main__smallbox
-        %li.toppage-main__smallbox_price ¥1,000
-        %li.toppage-main__smallbox_photo
-          = image_tag "cropchikyuGFVS3960.jpg", width: "100%", height: "150px"
-        %li.toppage-main__smallbox_name 地球儀
-      %ul.toppage-main__smallbox
-        %li.toppage-main__smallbox_price ¥600
-        %li.toppage-main__smallbox_photo
-          = image_tag "cropsetubunPAKU2668.jpg", width: "100%", height: "150px"
-        %li.toppage-main__smallbox_name お面と豆
-      %ul.toppage-main__smallbox
-        %li.toppage-main__smallbox_price ¥1,800
-        %li.toppage-main__smallbox_photo
-          = image_tag "cropN811_oyatunojikanwosasutokei.jpg", width: "100%", height: "150px"
-        %li.toppage-main__smallbox_name 目覚まし時計
-      %ul.toppage-main__smallbox        
-        %li.toppage-main__smallbox_price ¥200
-        %li.toppage-main__smallbox_photo
-          = image_tag "cropN114_kougoninarabuobakekabocya.jpg", width: "100%", height: "150px"
-        %li.toppage-main__smallbox_name 南瓜
+      - @items.each do |item|
+        %ul.toppage-main__smallbox
+          %li.toppage-main__smallbox_price
+            %str ¥
+            =item.price
+          %li.toppage-main__smallbox_photo
+            = image_tag item.images[0].image.url, size: '185x150'
+          %li.toppage-main__smallbox_name
+            =item.name
   .toppage-main__category-name
     .toppage-main__text 
       メンズ新着アイテム
@@ -53,4 +37,3 @@
     .toppage-main__text
       おもちゃ・ホビー・グッズ新着アイテム
     .toppage-main__box
-

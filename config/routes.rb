@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root to: "items#index" #トップページ
   resources :items, only: [:index, :new, :create]
   get 'signin' => 'items#signin' #サインインページ
-
   #各ページの内容の概要（実装完了したものから消してください）
   # get 'details' => 'items#details' #商品詳細ページ
   # get 'verification' => 'items#verification' #購入内容確認
