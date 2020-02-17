@@ -88,3 +88,5 @@ gem 'fog-aws'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'font-awesome-sass'
+
+# 選択時に使用
