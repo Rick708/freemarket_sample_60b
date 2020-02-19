@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'users/registrations'
+  }
   root to: "items#index" #トップページ
   get 'login' => 'items#login' #ログインページ
   get 'signin' => 'items#signin' #サインインページ
