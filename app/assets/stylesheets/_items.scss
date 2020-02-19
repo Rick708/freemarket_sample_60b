@@ -199,18 +199,21 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
         border: solid 3px #000000;
         display: inline-block;
         position:relative;
+        margin-bottom: 5px;
         .toppage-main__smallbox_price{
           background-color: rgba(0,0,0, 0.5);
-          width: 80px;
+          width: auto;
           height: 20px;
           position: absolute;
           top: 120px;
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
           color: white;
+          padding-right: 6px;
         }
         .toppage-main__smallbox_photo{
           margin-bottom: 0px;
+          background-color:white;
         }
         .toppage-main__smallbox_name{
           background-color:white;
