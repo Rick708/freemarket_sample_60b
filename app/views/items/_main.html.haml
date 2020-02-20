@@ -18,6 +18,7 @@
     .toppage-main__box
       - @items.each do |item|
         %ul.toppage-main__smallbox
+        =link_to show_path, class: "toppage-main__smallbox" do
           %li.toppage-main__smallbox_price
             %str ¥
             =item.price
