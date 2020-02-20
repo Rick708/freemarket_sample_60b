@@ -111,6 +111,11 @@ GEM
     erubis (2.7.0)
     excon (0.71.1)
     execjs (2.7.0)
+    factory_bot (5.1.1)
+      activesupport (>= 4.2.0)
+    factory_bot_rails (5.1.1)
+      factory_bot (~> 5.1.0)
+      railties (>= 4.2.0)
     ffi (1.11.3)
     fog-aws (3.5.2)
       fog-core (~> 2.1)
@@ -325,6 +330,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
+  factory_bot_rails
   fog-aws
   font-awesome-rails
   font-awesome-sass
