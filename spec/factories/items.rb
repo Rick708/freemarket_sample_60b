@@ -10,8 +10,8 @@ FactoryBot.define do
     size            {""}
     delivery_method {""}
     prefecture_code {""}
-    seller          
-    buyer           
+    seller          {""}
+    buyer           {""}
     condition       {""}
   end
 end
