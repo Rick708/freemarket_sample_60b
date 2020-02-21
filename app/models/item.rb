@@ -12,4 +12,6 @@ class Item < ApplicationRecord
 # validation
   validates :name, presence: true, length: { maximum: 40}
   validates :content, length: { maximum: 4}
+  validates :images, presence:true
 end
+
