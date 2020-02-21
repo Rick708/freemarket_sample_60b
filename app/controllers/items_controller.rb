@@ -27,10 +27,6 @@ class ItemsController < ApplicationController
   def show
   end
 
-  def destroy
-    reset_session
-    redirect_to root_path, notice: 'ログアウトしました。'
-  end
   
   def login_check
     unless user_signed_in?

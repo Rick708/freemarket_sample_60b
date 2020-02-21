@@ -24,11 +24,10 @@
             お知らせ
           =link_to "#", class: "toppage-header-top__footer-search-list" do
             やることリスト
-          =link_to "マイページ ", mypages_path
-                 
+          =link_to users_path, class: "toppage-header-top__footer-search-mepage" do
+            マイページ   
         - else
-          =link_to "新規会員登録", signin_path
-            
-          =link_to "ログイン", signin_path
-            
-        
+          =link_to signin_path, class: "toppage-header-top__footer-search-btn-new" do
+            新規会員登録
+          =link_to new_user_session_path, class: "toppage-header-top__footer-search-btn-login" do
+            ログイン
