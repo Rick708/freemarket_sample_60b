@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+  }
+  devise_scope :user do
+    get 'tells', to: 'users/registrations#new_tell'
+    post 'tells', to: 'users/registrations#create_tell'
+  end
   get 'signin' => 'items#signin' #サインインページ
   
   root to: "items#index" #トップページ

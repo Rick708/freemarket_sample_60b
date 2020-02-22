@@ -1,6 +1,6 @@
 .signup-container
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render 'items/header-registration' 
+  = render 'items/header-registration' , resource: @user
   %main.signup-main
     %section.signup-main__container
       %h2.signup-main__head.signup-main__head--registration
