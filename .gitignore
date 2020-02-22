@@ -28,3 +28,5 @@
 #githubに上がるのを除外する。
 /config/master.key
 /config/credentials.yml.enc
+# Ignore master key for decrypting credentials and more.
+/config/master.key
