@@ -24,8 +24,9 @@
       =link_to "#", class: "toppage-header-top__footer-search-mepage" do
         マイページ      
 .details_body
-  .details
-    .details_name 地球儀
+  .details 
+    .details_name 
+      = @item.name
     .details_content
     .details_content_photo
       = image_tag "cropchikyuGFVS3960.jpg", width: "350px", height: "400px"

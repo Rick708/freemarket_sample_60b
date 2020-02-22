@@ -25,6 +25,9 @@ class ItemsController < ApplicationController
   end
   
   def show
+    @items = Item.where(user_id: @item.user_id)
+    # @items = Item.includes(:images).order('created_at DESC')
+    # @item = Item.find(params[:id])
   end
 
   def destroy
