@@ -1,0 +1,70 @@
+.address-header
+  = image_tag 'fmarket_logo_red.svg', width: "185px", height: "49px"
+  .progress_status
+    %li.progress_status_first
+      会員情報
+      .progress_status_first_cube
+      .progress_status_first_line
+    %li.progress_status_second
+      電話番号認証
+      .progress_status_second_cube
+      .progress_status_second_line
+    %li.progress_status_third
+      お届け先住所入力
+      .progress_status_third_cube
+      .progress_status_third_line
+    %li.progress_status_fourth
+      支払い方法
+      .progress_status_fourth_cube
+      .progress_status_fourth_line
+    %li.progress_status_fifth
+      完了
+      .progress_status_fifth_cube
+
+.address-main
+  .address-main__head
+    住所入力
+  .address-main__content
+  = form_for @address do |f|
+    = render "devise/shared/error_messages", resource: @user
+    .address-main__content_name
+      = f.label :お名前
+      %span 必須
+      = f.text_field :first_name, { class: 'address-main__content-input', placeholder: '例)山田' }
+      = f.text_field :last_name, { class: 'address-main__content-input', placeholder: '例)孝之' }
+    .address-main__content_kana
+      = f.label :お名前カナ
+      %span 必須
+      = f.text_field :first_name, { class: 'address-main__content-input', placeholder: '例)ヤマダ' }
+      = f.text_field :last_name, { class: 'address-main__content-input', placeholder: '例)タカユキ' }
+    .address-main__content_postal
+      = f.label :郵便番号
+      %span 必須
+      = f.text_field :post_code, { class: 'address-main__content-input', placeholder: '例)1234567' }
+    .address-main__content_prefectures
+      = f.label :都道府県
+      %span 必須
+      = f.text_field :prefecture_code, { class: 'address-main__content-input', placeholder: "例)大阪"}
+    .address-main__content_town
+      = f.label :市区町村
+      %span 必須
+      = f.text_field :address_city, { class: 'address-main__content-input', placeholder: "例)中央区難波"}
+    .address-main__content_number
+      = f.label :番地
+      %span 必須
+      = f.text_field :address_street, { class: 'address-main__content-input', placeholder: "例)5丁目1-60"}
+    .address-main__content_building
+      = f.label :建物名
+      %span_free 任意
+      = f.text_field :address_building, { class: 'address-main__content-input', placeholder: "例)なんばスカイオ15階"}
+      = f.submit "次へ進む", class: "address-main__content_btn"
+
+.address_bottom
+  =link_to "#", class: "address_bottom_privacy" do
+    プライバシーポリシー
+  =link_to "#", class: "address_bottom_terms" do
+    メルカリ利用規約
+  =link_to "#", class: "address_bottom_notation" do
+    特定商取引に関する表記
+  .address_bottom_logo
+    = image_tag "logo_gray.svg", width: "110px"

@@ -2,12 +2,11 @@
   = render 'items/tell'
 
 .tell_main
-= form_for @tell do |f|
-  = render "devise/shared/error_messages", resource: @tell
   .tell_main_head
     電話番号の確認
   .tell_main_content
-  
+  = form_for @tell do |f|
+    = render "devise/shared/error_messages", resource: @user
     .tell_main_contant_name 
       = f.label :telephone, "携帯電話の番号"
       = f.text_field :telephone, { class: 'tell_main_content_num', placeholder: '携帯電話の番号を入力' }

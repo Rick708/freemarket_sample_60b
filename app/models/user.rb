@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   validates :nickname ,presence: true
   has_one :tell
+  has_one :address
   has_many :items
 end

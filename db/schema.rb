@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_22_104319) do
+ActiveRecord::Schema.define(version: 2020_02_23_063623) do
+
+  create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "first_kananame", null: false
+    t.string "last_kananame", null: false
+    t.integer "post_code", null: false
+    t.integer "prefecture_code", null: false
+    t.string "address_city", null: false
+    t.string "address_street", null: false
+    t.string "address_building"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image"
@@ -38,7 +54,7 @@ ActiveRecord::Schema.define(version: 2020_02_22_104319) do
   end
 
   create_table "tells", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "telephone", null: false
+    t.string "telephone", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_02_22_104319) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "users"
   add_foreign_key "images", "items"
   add_foreign_key "tells", "users"
 end

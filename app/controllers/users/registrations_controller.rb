@@ -26,10 +26,30 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash.now[:alert] = @tell.errors.full_messages
       render :new_tell and return
     end
-    @user.build_tell(@tell.attributes)
+    session["devise.regist_data"] = {user: @user.attributes}
+    session["devise.regist_data"][:tell] = params[:tell]
+    # ここが分からん！なんでuser?
+    @address = @user.build_address
+    render :new_address
+  end
+
+  def create_address
+    @user = User.new(session["devise.regist_data"]["user"])
+    @tell = Tell.new(session["devise.regist_data"]["tell"])
+    @address = Address.new(address_params)
+    unless @address.valid?
+      flash.now[:alert] = @address.errors.full_messages
+      render :new_address and return
+    end
+    @user.build_address(@address.attributes)
     @user.save
     sign_in(:user, @user)
   end
+
+
+
+
+
 
   protected
 
@@ -39,6 +59,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def tell_params
     params.require(:tell).permit(:telephone)
+  end
+
+  def address_params
+    params.require(:address).permit(:first_name, :last_name, :first_kananame, :last_kananame, :post_code, :prefecture_code, :address_city, :address_street, :address_building)
   end
 
 end

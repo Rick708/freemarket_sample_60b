@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'tells', to: 'users/registrations#new_tell'
     post 'tells', to: 'users/registrations#create_tell'
+    get 'addresses', to: 'users/registrations#new_address'
+    post 'addresses', to: 'users/registrations#create_address'
   end
   
   get 'signin' => 'items#signin' #サインインページ
