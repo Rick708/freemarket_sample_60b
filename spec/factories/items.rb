@@ -5,13 +5,13 @@ FactoryBot.define do
     content         {"abc"} 
     price           {"100"}
     status          {0}
-    delivery_charge {""}
-    send_day        {""}
-    size            {""}
-    delivery_method {""}
-    prefecture_code {""}
-    seller          {""}
-    buyer           {""}
-    condition       {""}
+    delivery_charge {nil}
+    send_day        {nil}
+    size            {nil}
+    delivery_method {nil}
+    prefecture_code {nil}
+    seller_id       {"3"}
+    buyer           {nil}
+    condition       {nil}
   end
 end

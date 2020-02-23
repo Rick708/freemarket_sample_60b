@@ -1,8 +1,8 @@
 class Item < ApplicationRecord
 # association
   belongs_to :user, optional: true
-  belongs_to :seller, class_name: "User"
-  belongs_to :buyer, class_name: "User", foreign_key: "user_id", optional: true
+  belongs_to :seller, class_name: "User",foreign_key:"seller_id"
+  belongs_to :buyer, class_name: "User", foreign_key: "buyer_id", optional: true
   has_many :images
   accepts_nested_attributes_for :images, allow_destroy: true
 
@@ -14,4 +14,3 @@ class Item < ApplicationRecord
   validates :content, length: { maximum: 4}
   validates :images, presence:true
 end
-
