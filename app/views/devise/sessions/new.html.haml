@@ -6,7 +6,7 @@
     .login_message
       =link_to "#", class: "login_message_no" do
         アカウントをお持ちでない方はこちら
-      =link_to "#", class: "login_message_new" do
+      =link_to new_user_registration_path, class: "login_message_new" do
         新規会員登録
     .login_sns
       =link_to "#", class: "login_sns_fb" do
@@ -16,14 +16,16 @@
         = icon('fab', 'google', class: "login_sns_gg_btn")
         Googleでログイン
     .login_form
-      .login_form_id
-      %input.login_form_id_text{:placeholder => "メールアドレス", :type => "text"}
-      .login_form_pw 
-      %input.login_form_id_text{:placeholder => "パスワード", :type => "text"}
-      =link_to "#", class: "login_form_btm" do
-        ログイン
-      =link_to "#", class: "login_form_lost" do
-        パスワードをお忘れの方
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          
+        .login_form_id
+          = f.email_field :email, :placeholder => "メールアドレス",class: 'form-control', id: 'session_email'
+        .login_form_pw 
+          = f.password_field :password, :placeholder => "パスワード",class: 'form-control', id: 'session_password'
+        .actions
+          = f.submit "ログイン", class: "login_form_btm"
+          =link_to "#", class: "login_form_lost" do
+            パスワードをお忘れの方
 
   .login_bottom
     =link_to "#", class: "login_bottom_privacy" do

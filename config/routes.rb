@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   get 'signin' => 'items#signin' #サインインページ
+
   
   root to: "items#index" #トップページ
   

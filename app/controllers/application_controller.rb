@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
-  before_action :basic_auth, if: :production?
   before_action :configure_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
-
+  helper_method :current_user
+  before_action :authenticate_user!
 
   def index
   end
@@ -19,6 +19,10 @@ class ApplicationController < ActionController::Base
 
   def production?
     Rails.env.production?
+  end
+  
+  def login_required
+    redirect_to new_user_session_path unless current_user
   end
 
   def basic_auth

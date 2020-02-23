@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(user_params,user_id: current_user.id)
     if @user.save
       redirect_to root_path
     else
@@ -17,6 +17,23 @@ class UsersController < ApplicationController
   end
 
   def destroy
+  end
+
+  def edit
+  end
+
+  def update
+    if current_user.update(user_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:nickname, :email)
   end
 
 end
