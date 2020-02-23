@@ -89,4 +89,6 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'font-awesome-sass'
 
-# 選択時に使用
+# デバックに使用
+gem 'pry-rails'
+gem 'pry-byebug'

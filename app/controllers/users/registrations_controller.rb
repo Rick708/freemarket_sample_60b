@@ -27,9 +27,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
       render :new_tell and return
     end
     session["devise.regist_data"] = {user: @user.attributes}
-    session["devise.regist_data"][:tell] = params[:tell]
-    # ここが分からん！なんでuser?
+    session["devise.regist_data"][:user] = params[:tell]
     @address = @user.build_address
+    binding.pry
     render :new_address
   end
 

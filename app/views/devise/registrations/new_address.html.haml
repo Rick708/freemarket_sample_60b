@@ -35,8 +35,8 @@
     .address-main__content_kana
       = f.label :お名前カナ
       %span 必須
-      = f.text_field :first_name, { class: 'address-main__content-input', placeholder: '例)ヤマダ' }
-      = f.text_field :last_name, { class: 'address-main__content-input', placeholder: '例)タカユキ' }
+      = f.text_field :first_kananame, { class: 'address-main__content-input', placeholder: '例)ヤマダ' }
+      = f.text_field :last_kananame, { class: 'address-main__content-input', placeholder: '例)タカユキ' }
     .address-main__content_postal
       = f.label :郵便番号
       %span 必須
