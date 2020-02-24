@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get :logout
+      get :sell_list
     end
+
 end
 
   #各ページの内容の概要（実装完了したものから消してください）

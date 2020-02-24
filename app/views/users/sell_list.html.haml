@@ -1,0 +1,17 @@
+.mypage-main-container
+  = render 'mypages/header'
+%main.mypage-container.clearfix
+  = render 'mypages/side-bar'
+  = render 'items/exhibition'
+  .logout_content
+    -# .logout_content_btn
+    -#   =link_to destroy_user_session_path, method: :delete, class: "logout_content_btn" do
+    .sell-list
+      .sell-list-head
+        出品リスト
+      .sell-list-contents
+        - @item.each do |item| 
+          .sell-list-content
+            = link_to edit_item_path(item), class: 'sell-item' do
+              = item.name
+= render 'items/footer'
