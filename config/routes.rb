@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'card/new'
+  get 'card/show'
   devise_for :users
   get 'signin' => 'items#signin' #サインインページ
 
@@ -12,7 +14,16 @@ Rails.application.routes.draw do
     collection do
       get :logout
     end
-end
+  end
+
+  resources :card, only: [:new, :show] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
+    end
+  end
+
 
   #各ページの内容の概要（実装完了したものから消してください）
   # get 'details' => 'items#details' #商品詳細ページ

@@ -91,3 +91,8 @@ gem 'devise'
 gem 'font-awesome-sass'
 
 # 選択時に使用
+gem 'payjp'
+gem "jquery-rails"
+gem 'pry-rails'
+gem 'pry-byebug'
+gem 'pry-doc'
