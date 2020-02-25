@@ -18,13 +18,14 @@
     .toppage-main__box
       - @items.each do |item|
         %ul.toppage-main__smallbox
-          %li.toppage-main__smallbox_price
-            %str ¥
-            =item.price
-          %li.toppage-main__smallbox_photo
-            = image_tag item.images[0].image.url, size: '185x150'
-          %li.toppage-main__smallbox_name
-            =item.name
+          = link_to show_path(item.id), method: :get do
+            %li.toppage-main__smallbox_price
+              %str ¥
+              =item.price
+            %li.toppage-main__smallbox_photo
+              = image_tag item.images[0].image.url, size: '185x150'
+            %li.toppage-main__smallbox_name
+              =item.name
   .toppage-main__category-name
     .toppage-main__text 
       メンズ新着アイテム
