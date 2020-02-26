@@ -89,5 +89,6 @@ gem 'fog-aws'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'font-awesome-sass'
+gem "gretel"
 
 # 選択時に使用
