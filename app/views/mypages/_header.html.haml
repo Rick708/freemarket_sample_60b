@@ -22,6 +22,7 @@
       =link_to "#", class: "toppage-header-top__footer-search-list" do
         やることリスト
       =link_to "#", class: "toppage-header-top__footer-search-mepage" do
-        マイページ 
--breadcrumb :users_show
-= breadcrumbs separator: "&rsaquo;"
+        マイページ
+.breadcrumb
+  - breadcrumb :users_show
+  = breadcrumbs separator: "&rsaquo;"
