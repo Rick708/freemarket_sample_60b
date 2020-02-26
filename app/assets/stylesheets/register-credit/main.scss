@@ -19,6 +19,7 @@
         .input-default {
         }
         ul.card-list {
+          margin-top: 10px;
           li {
             display: inline;
           }
@@ -38,6 +39,7 @@
             border-radius: 4px;
             border: 1px solid;
             padding: 0 16px;
+            margin-bottom: 5px;
           }
           i {
             position: absolute;
