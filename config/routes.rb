@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :new, :create]
   get 'signin' => 'items#signin' #サインインページ
   #各ページの内容の概要（実装完了したものから消してください）
-  get 'show' => 'items#show' #商品詳細ページ
+  get 'items/:id' => 'items#show' #商品詳細ページ
   # get 'verification' => 'items#verification' #購入内容確認
   # get 'logout' => 'items#logout' #マイページのログアウト
   # get 'identification' => 'items#identification' #マイページの本人情報登録

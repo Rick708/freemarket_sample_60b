@@ -33,40 +33,47 @@
     .details_content_info
       .details_content_info_user
         .details_content_info_user_title 出品者
-        .details_content_info_user_name  Rick
+        .details_content_info_user_name
+          -# = @item.user.nickname
       .details_content_info_category
         .details_content_info_category_title カテゴリー
-        .details_content_info_category_name おもちゃ
+        .details_content_info_category_name
+          おもちゃ
+          -# = @item.status
+          -# カテゴリーの実装まだなのでコメントアウトしてます
       .details_content_info_brand
         .details_content_info_brand_title  ブランド
-        .details_content_info_brand_name  ノーブランド
+        .details_content_info_brand_name  ノーブランド@
+        -# ブランドのカラムがないので一旦このままにしています。
       .details_content_info_status
         .details_content_info_status_title  商品の状態
-        .details_content_info_status_name  新品
+        .details_content_info_status_name  
+          = @item.condition
       .details_content_info_burden 
         .details_content_info_burden_title  配送料の負担
-        .details_content_info_burden_name 送料込み（出品者負担）
+        .details_content_info_burden_name
+          = @item.delivery_charge
       .details_content_info_method
         .details_content_info_method_title  配送の方法
-        .details_content_info_method_name らくらくフリマケ便
+        .details_content_info_method_name
+          = @item.delivery_method
       .details_content_info_area
         .details_content_info_area_title  配送元の地域
-        .details_content_info_area_name 難波
+        .details_content_info_area_name 
+          = @item.prefecture_code
       .details_content_info_indication
         .details_content_info_indication_title 配送日の目安
-        .details_content_info_indication_name  ２時間で発送
-    .details_price ￥1,200
+        .details_content_info_indication_name
+          = @item.send_day
+    .details_price 
+      %str ¥
+      = @item.price
     .details_price_tax （税込）送料込み
     .details_btn 
       =link_to "#", class: "details_btn" do
         購入画面に進む
     .details_profile
-      この地球儀は適当なフリー素材のサイトから適当に
-      取ってきた画像です。
-      なぜ地球儀なのかと言いますと、特に意味はなく何となくひらいた場所に地球儀の画像があり
-      メルカリというネットオークションに適した画像であると判断した為にこの画像にしました。
-      値段に関しても適当に決めた為特に意味はありません。
-      余談にはなりますが、私は地球儀に1,200は払えません、たけぇ
+      = @item.content
   .details_comment
     .details_comment_rule 
       相手のことを考え丁寧なコメントを心がけましょう。

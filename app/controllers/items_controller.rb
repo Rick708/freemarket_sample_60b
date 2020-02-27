@@ -25,8 +25,8 @@ class ItemsController < ApplicationController
   end
   
   def show
+    # @item = Item.where(seller_id: @item.seller_id)
     @item = Item.find(params[:id])
-    # @item = Item.find_by(id: params[:id])
   end
 
   def destroy
