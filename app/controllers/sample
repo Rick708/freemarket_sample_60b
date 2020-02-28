@@ -1,0 +1,19 @@
+"utf8"=>"✓"
+"_method"=>"patch",
+"authenticity_token"=>"MU4AYAtUjrWjEvwhwqlI4YD5QHwJXf2DjILLh1Kg9k5ScSwJ5Ko1zuo1sLxL8XdYwrY7Vhf9z8czFL6OGZod0g==",
+"item"=><ActionController::Parameters {
+"images_attributes"=>{"0"=>{"id"=>"11"},
+"1"=>{"id"=>"12"}},
+"name"=>"karikari3",
+"content"=>"",
+"condition"=>"",
+"delivery_charge"=>"", 
+"delivery_method"=>"", 
+"prefecture_code"=>"", 
+"send_day"=>"", 
+"price"=>"100"} 
+permitted: false>,
+"commit"=>"編集する", 
+"controller"=>"items",
+"action"=>"update",
+"id"=>"24"

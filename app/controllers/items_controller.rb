@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
   before_action :login_check, {only: [:new, :create]}
+  before_action :set_item, {only: [:edit, :update]}
+  
   def index
     @items = Item.includes(:images).limit(10).order('created_at DESC')
   end
@@ -19,16 +21,15 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
-    if @item.update(item_params)
+    # binding.pry
+    if @item.update(update_item_params)
       redirect_to root_path(@item)
-     else
+    else
       render :edit
-     end
+    end
   end
   
   def show
@@ -47,5 +48,14 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :content, :price, :status, :delivery_charge, :send_day, :size, :delivery_method, :prefecture_code, :condition, images_attributes: [:image]).merge(seller_id: current_user.id)
   end
+
+  def update_item_params
+    params.require(:item).permit(:name, :content, :price, :status, :delivery_charge, :send_day, :size, :delivery_method, :prefecture_code, :condition, images_attributes: [:image, :_destroy, :id]).merge(seller_id: current_user.id)
+  end
+  
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
 
 end
