@@ -25,8 +25,11 @@ class ItemsController < ApplicationController
   end
   
   def show
-    # @item = Item.where(seller_id: @item.seller_id)
     @item = Item.find(params[:id])
+    @image = @item.images[0]
+    # @user = @item.
+
+    # @image = @item.images
   end
 
   def destroy

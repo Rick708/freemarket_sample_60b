@@ -90,3 +90,4 @@ gem 'devise'
 gem 'font-awesome-sass'
 
 # 選択時に使用
+gem "pry-rails"

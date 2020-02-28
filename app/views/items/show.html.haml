@@ -29,12 +29,12 @@
       = @item.name
     .details_content
     .details_content_photo
-      = image_tag "cropchikyuGFVS3960.jpg", width: "350px", height: "400px"
+      = image_tag @item.images.first.image.url, size: '350x400'
     .details_content_info
       .details_content_info_user
         .details_content_info_user_title 出品者
         .details_content_info_user_name
-          -# = @item.user.nickname
+          = @item.seller.nickname
       .details_content_info_category
         .details_content_info_category_title カテゴリー
         .details_content_info_category_name
