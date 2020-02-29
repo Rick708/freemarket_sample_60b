@@ -8,13 +8,12 @@
       =link_to new_user_registration_path, class: "signin_sns_ma" do
         = icon('far', 'envelope', class: "signin_sns_ma_btn")
         メールアドレスで登録する
-      =link_to "#", class: "signin_sns_fb" do
+      =link_to user_facebook_omniauth_authorize_path, method: :post, class: "signin_sns_fb" do
         = icon('fab', 'facebook-square', class: "signin_sns_fb_btn")
         Facebookで登録する
-      =link_to "#", class: "signin_sns_gg" do
+      =link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: "signin_sns_gg" do
         = icon('fab', 'google', class: "signin_sns_gg_btn")
         Googleで登録する
-
   .signin_bottom
     =link_to "#", class: "signin_bottom_privacy" do
       プライバシーポリシー

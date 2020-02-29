@@ -14,6 +14,20 @@
           = f.label :メールアドレス
           %span.signup-main__form-require 必須
           = f.text_field :email, { class: 'signup-main__input-default', placeholder: '例)pc・携帯どちらでも可' }
+      - if @sns_id.present?
+        = hidden_field_tag :sns_auth, true
+      - else
+        .field
+          = f.label :password
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} characters minimum)
+          %br/
+          = f.password_field :password, autocomplete: "new-password"
+        .field
+          = f.label :password_confirmation
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password"
         .signup-main__form-group
           = f.label :パスワード
           %span.signup-main__form-require 必須
@@ -22,6 +36,7 @@
           %label パスワード(確認)
           %span.signup-main__form-require 必須
           = f.text_field :password, { class: 'signup-main__input-default', placeholder: '例)6文字以上' }
+
       .signup-main__content
         .signup-main__form-group
           = f.submit "次へ進む", class: "signup-main__btn-red"

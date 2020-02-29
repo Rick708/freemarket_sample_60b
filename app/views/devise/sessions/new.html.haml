@@ -9,10 +9,10 @@
       =link_to new_user_registration_path, class: "login_message_new" do
         新規会員登録
     .login_sns
-      =link_to "#", class: "login_sns_fb" do
+      =link_to user_facebook_omniauth_authorize_path, method: :post, class: "login_sns_fb" do
         = icon('fab', 'facebook-square', class: "login_sns_fb_btn")
         Facebookでログイン
-      =link_to "#", class: "login_sns_gg" do
+      =link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: "login_sns_gg" do
         = icon('fab', 'google', class: "login_sns_gg_btn")
         Googleでログイン
     .login_form
