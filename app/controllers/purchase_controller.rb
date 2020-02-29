@@ -3,6 +3,7 @@ class PurchaseController < ApplicationController
   require 'payjp'
 
   def index
+    @items = Item.all
     card = Card.where(user_id: current_user.id).first
     if card.blank?
       redirect_to controller: "card", action: "new"

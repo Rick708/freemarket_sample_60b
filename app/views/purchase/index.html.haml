@@ -5,13 +5,16 @@
     .verification_name 購入内容の確認
     .verification_item
       .verification_item_photo
-        = image_tag "cropchikyuGFVS3960.jpg", class: "verification_item_photo"
+        - @items.find do |item|
+          = image_tag item.images[0].image.url, size: '185x150', class: "verification_item_photo"
       .verification_item_profile 
-        地球儀
-      .verification_item_price ￥600　税込　送料込み
+        - @items.find do |item|
+          =item.name
     .verification_price
-      .verification_price_name 支払い金額
-      .verification_price_number ￥600
+      .verification_price_name 支払い金額￥
+      .verification_price_number 
+        - @items.find do |item|
+          =item.price
     .verification_pay
       支払い方法
       .verification_pay_method
