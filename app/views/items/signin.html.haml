@@ -1,6 +1,7 @@
 .signin_page
   .signin_logo
-    = image_tag "fmarket_logo_red.svg", class: "image", width: "200px"
+    =link_to root_path, class: "image" do
+      = image_tag "fmarket_logo_red.svg", class: "image", width: "200px"
 
   .signin
     .signin_message 新規会員登録
