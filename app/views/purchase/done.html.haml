@@ -1,0 +1,25 @@
+.verification_logo
+  = image_tag "fmarket_logo_red.svg", class: "image", width: "200px"
+
+  .done
+    .done_name 購入が完了しました。
+    .done_item
+      .done_item_profile 
+        地球儀
+    .done_price
+      .done_price_name 支払い金額￥
+      .done_price_number 600
+    .done_delivery
+      =link_to root_path, class: "done_delivery_method" do
+        トップページに戻る
+
+  .verification_bottom
+    =link_to "#", class: "verification_bottom_privacy" do
+      プライバシーポリシー
+    =link_to "#", class: "verification_bottom_terms" do
+      メルカリ利用規約
+    =link_to "#", class: "verification_bottom_notation" do
+      特定商取引に関する表記
+
+  .verification_bottom_logo
+    = image_tag "logo_gray.svg", width: "110px" 
