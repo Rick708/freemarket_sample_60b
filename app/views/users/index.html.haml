@@ -1,5 +1,8 @@
 .mypage-main-container
   = render 'mypages/header'
+  .breadcrumb 
+    - breadcrumb :users_show
+    = breadcrumbs separator: "&rsaquo;"
   %main.mypage-container.clearfix
     = render 'mypages/content'
     = render 'mypages/side-bar'
