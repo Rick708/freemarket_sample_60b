@@ -1,0 +1,113 @@
+.new-container
+  = render 'sell/header-sell'
+  .sell-main
+    = form_for @item do |f|
+      %section.sell-main-container.buy-item-container
+        .sell-main-container
+          %div
+            .sell-main__inner
+              .error-box
+                - if @item.errors.any?
+                  全て入力してね
+              %h2.sell-main__head
+                商品の情報を入力
+              .sell-main__upload-box
+                %label.sell-main__upload-head 出品画像
+                %span.sell-main__form-require 必須
+                %p 最大10枚までアップロードできます
+                .sell-main__dropbox-container.clearfix.state-image-number-10
+                  .sell-main__upload-drop-box.sell-main__have-item-0
+                    %label.sell-main__sample
+                      = f.fields_for :images do |i|
+                        = i.file_field :image
+                      ドラッグアンドドロップ
+                      またはクリックしたファイルをアップロード
+              .sell-main__content
+                .sell-main__form-group
+                  %label :商品名
+                  %span.sell-main__form-require 必須
+                  = f.text_field :name, class: "sell-main__input-default", placeholder: "商品名(必須40文字まで)" 
+                .sell-main__form-group
+                  %label 商品の説明
+                  %span.sell-main__form-require 必須
+                  = f.text_area :content, class: "sell-main__textarea-default" , placeholder: "商品の説明(必須1,000文字以内) (色、素材、重さ、定価、注意点など) 例)2010年頃年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+              .sell-main__content.clearfix1
+                %h3.sell-main__sub-head 商品の詳細
+                .sell-main__form-box
+                  -# 下記はカテゴリーテーブル作ったら実装します。
+                  .sell-main__form-group
+                    %label カテゴリー
+                    %span.sell-main__form-require 必須
+                    .sell-main__select-wrap
+                      %i.fas.fa-chevron-down.down-icon
+                      %input.sell-main__select-default
+                      -# 上記はselectからinputに変えてます。カテゴリー機能実装時に戻しましょう。
+                  .sell-main__form-group
+                    %label 商品の状態
+                    %span.sell-main__form-require 必須
+                    .sell-main__select-wrap
+                      %i.fas.fa-chevron-down.down-icon
+                      .select
+                        = f.select :condition, ["新品", "未使用", "傷なし", "やや傷あり", "傷あり", "状態が悪い"], {include_blank: "--"}, class: "sell-main__select-default"
+              .sell-main__content.clearfix2
+                %h3.sell-main__sub-head 配送について
+                .sell-main__form-box
+                  .sell-main__form-group
+                    %label 配送料の負担
+                    %span.sell-main__form-require 必須
+                    .sell-main__select-wrap
+                      %i.fas.fa-chevron-down.down-icon
+                      .select
+                        = f.select :delivery_charge, [['送料込み(出品者負担)',0], ['着払い(購入者負担)', 1]], {include_blank: '--'}, class: 'sell-main__select-default'
+                  .sell-main__form-group
+                    %label 配送の方法
+                    %span.sell-main__form-require 必須
+                    .sell-main__select-wrap
+                      %i.fas.fa-chevron-down.down-icon
+                      .select
+                        = f.select :delivery_method, ['未定', 'クロネコヤマト', 'ゆうパック','ゆうメール'], {include_blank: '--'}, class: 'sell-main__select-default'
+                  .sell-main__form-group
+                    %label 発送元の地域
+                    %span.sell-main__form-require 必須
+                    .sell-main__select-wrap
+                      %i.fas.fa-chevron-down.down-icon
+                      .select
+                        = f.text_field :prefecture_code, class: "sell-main__select-default"
+                  .sell-main__form-group
+                    %label 発送までの日数
+                    %span.sell-main__form-require 必須
+                    .sell-main__select-wrap
+                      %i.fas.fa-chevron-down.down-icon
+                      .select
+                        = f.select :send_day, ['1~2日で発送', '2~3日で発送', '4~7日で発送'], {include_blank: '--'}, class: 'sell-main__select-default'
+              .sell-main__content.clearfix3
+                %h3.sell-main__sub-head 販売価格(300〜9,999,999)
+                .sell-main__form-box
+                  %ul.sell-main__price
+                    %li.sell-main__form-group
+                      .clearfix
+                        %label.sell-main__left 価格
+                        %span.sell-main__form-require 必須
+                        .sell-main__right.sell-main__price-input
+                          ¥
+                          = f.text_field :price, class: "sell-main__input-default", placeholder: "例) 300" 
+                    %li
+                      .clearfix
+                        %label.sell-main__left 販売手数料
+                        .sell-main__right １０％
+                        -# 少しだけview変えてます。
+                    %li
+                      .cleafix.bold
+                        %label.sell-main__left 販売利益
+                        .sell-main__right 価格  ×  90％
+                        -# Jqueryで実装？
+              .sell-main__content.sell-main__btn-box
+                %div
+                  %p 禁止されている出品、行為を必ずご確認ください。
+                  %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+                  %p また、出品をもちまして加盟店規約に同意したことになります。
+                = f.submit '編集する', class: "sell-main__btn-red"
+                %button.sell-main__btn-default.sell-main__btn-gray
+                  =link_to root_path, class: "sell-main__btn-gray" do
+                    もどる
+  = render 'sell/footer-sell'

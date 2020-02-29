@@ -8,15 +8,15 @@ Rails.application.routes.draw do
 
   get 'signin' => 'items#signin' #サインインページ
 
-  
   root to: "items#index" #トップページ
-  
-  resources :items
 
+  resources :items
   resources :users do
     collection do
       get :logout
+      get :sell_list
     end
+
 end
 
   #各ページの内容の概要（実装完了したものから消してください）

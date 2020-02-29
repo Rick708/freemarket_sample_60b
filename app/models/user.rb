@@ -3,7 +3,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
   validates :nickname ,presence: true
 
+  has_many :items
+
   has_many :sns_credentials
+
   has_many :seller_items, class_name: "Item"
   has_many :buyer_items, class_name: "Item"
 
