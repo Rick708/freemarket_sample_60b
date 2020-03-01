@@ -27,9 +27,6 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @image = @item.images[0]
-    # @user = @item.
-
-    # @image = @item.images
   end
 
   def destroy
