@@ -6,6 +6,9 @@
         .sell-main-container
           %div
             .sell-main__inner
+              .error-box
+                - if @item.errors.any?
+                  全て入力してね
               %h2.sell-main__head
                 商品の情報を入力
               .sell-main__upload-box
