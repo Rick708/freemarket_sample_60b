@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :login_check, {only: [:new, :create]}
-  before_action :set_item, {only: [:edit, :update]}
+  before_action :set_item, {only: [:edit, :update, :show]}
   
   def index
     @items = Item.includes(:images).limit(10).order('created_at DESC')
@@ -32,7 +32,6 @@ class ItemsController < ApplicationController
   end
   
   def show
-    @item = Item.find(params[:id])
     @image = @item.images[0]
   end
 
