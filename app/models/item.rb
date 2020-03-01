@@ -10,7 +10,8 @@ class Item < ApplicationRecord
   enum status: { 出品中: 0,取引中: 1,購入済み: 2}
 
 # validation
-  validates :name, presence: true, length: { maximum: 40}
-  validates :content, length: { maximum: 4}
-  validates :images, presence:true
+  validates :price, presence: true
+  validates :name, presence: true, length: { maximum: 13}
+  validates :content, length: { maximum: 400}
+  validates :images, presence:true, on: :create
 end

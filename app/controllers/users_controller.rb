@@ -30,6 +30,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def sell_list
+    @item = Item.where(seller_id: current_user.id)
+  end
+  
   private
 
   def user_params
