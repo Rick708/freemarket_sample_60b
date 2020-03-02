@@ -1,0 +1,86 @@
+.toppage-header-wrapper
+  .toppage-header-top
+    .toppage-header-top__header
+      .toppage-header-top__header-contents
+        .toppage-header-top__header-search
+          = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
+      %input.toppage-header-top__header-search-form.seach{placeholder: "何かお探しですか？", type:"text"}
+      .toppage-header-top__header-btn
+        = fa_icon "search"
+  .toppage-header-top__footer
+    .toppage-header-top__footer-search
+      .toppage-header-top__footer-search-categories
+      =link_to "#", class: "toppage-header-top__footer-search-wrapper" do
+        カテゴリーから探す
+      =link_to "#", class: "toppage-header-top__footer-search-brand" do
+        ブランドから探す
+      .toppage-header-top__footer-search-categories_mypage
+      =link_to "#", class: "toppage-header-top__footer-search-iine" do
+        いいね！一覧
+      =link_to "#", class: "toppage-header-top__footer-search-Notice" do
+        お知らせ
+      =link_to "#", class: "toppage-header-top__footer-search-list" do
+        やることリスト
+      =link_to "#", class: "toppage-header-top__footer-search-mepage" do
+        マイページ      
+.details_body
+  %section.details 
+    .details_name 
+      = @item.name
+    .details_content
+      .details_content_photo
+        = image_tag @item.images.first.image.url, size: '350x400'
+      .details_content_info
+        .details_content_info_user
+          .details_content_info_user_title 出品者
+          .details_content_info_user_name
+            = @item.seller.nickname
+        .details_content_info_category
+          .details_content_info_category_title カテゴリー
+          .details_content_info_category_name
+            おもちゃ
+            -# = @item.status
+            -# カテゴリーの実装まだなのでコメントアウトしてます
+        .details_content_info_brand
+          .details_content_info_brand_title  ブランド
+          .details_content_info_brand_name  ノーブランド@
+          -# ブランドのカラムがないので一旦このままにしています。
+        .details_content_info_status
+          .details_content_info_status_title  商品の状態
+          .details_content_info_status_name  
+            = @item.condition
+        .details_content_info_burden 
+          .details_content_info_burden_title  配送料の負担
+          .details_content_info_burden_name
+            = @item.delivery_charge
+        .details_content_info_method
+          .details_content_info_method_title  配送の方法
+          .details_content_info_method_name
+            = @item.delivery_method
+        .details_content_info_area
+          .details_content_info_area_title  配送元の地域
+          .details_content_info_area_name 
+            = @item.prefecture_code
+        .details_content_info_indication
+          .details_content_info_indication_title 配送日の目安
+          .details_content_info_indication_name
+            = @item.send_day
+    .details_price 
+      .details_price__bold ¥
+      .details_price__body= @item.price
+      .details_price_tax （税込）送料込み
+    .details_btn 
+      =link_to "#", class: "details_btn" do
+        購入画面に進む
+    .details_profile
+      = @item.content
+  .details_comment
+    .details_comment_rule 
+      相手のことを考え丁寧なコメントを心がけましょう。
+      不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    .details_comment_form
+      %textarea.details_comment_form{type:"text"}
+    .details_comment_btn
+      =link_to "#", class: "details_comment_btn" do
+        コメントする
+= render 'footer'

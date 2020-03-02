@@ -96,4 +96,3 @@ gem "gretel"
 
 
 gem 'pry-rails'
-
