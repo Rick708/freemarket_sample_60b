@@ -1,0 +1,21 @@
+.sell-list {
+  height: 1000px;
+  .sell-list-head {
+    padding: 0 16px;
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  .sell-list-contents {
+    height: 100%;
+    padding: 0 16px;
+    .sell-list-content {
+      .sell-item {
+        height: 100px;
+      }
+    } 
+  }
+}
+
+a:-webkit-any-link {
+  color: black;
+}
