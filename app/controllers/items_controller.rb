@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
   before_action :login_check, {only: [:new, :create]}
-  before_action :set_item, {only: [:edit, :update, :destroy]}
+
+  before_action :set_item, {only: [:edit, :update, :destroy, :show]}
+
   
   def index
     @items = Item.includes(:images).limit(10).order('created_at DESC')
@@ -32,6 +34,7 @@ class ItemsController < ApplicationController
   end
   
   def show
+    @image = @item.images[0]
   end
 
   def destroy
