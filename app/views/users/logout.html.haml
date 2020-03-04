@@ -1,5 +1,8 @@
 .mypage-main-container
-  = render "items/header"
+  = render 'items/header'
+.breadcrumb 
+  - breadcrumb :users_logout
+  = breadcrumbs separator: "&rsaquo;"
 %main.mypage-container.clearfix
   = render 'mypages/side-bar'
   = render 'items/exhibition'
@@ -9,3 +12,4 @@
         ログアウト
       = link_to "", :back, class: 'logout_content_btn' 
 = render 'items/footer'
+

@@ -3,7 +3,8 @@
     .toppage-header-top__header
       .toppage-header-top__header-contents
         .toppage-header-top__header-search
-          = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
+          =link_to root_path, class: "image" do
+            = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
       %input.toppage-header-top__header-search-form.seach{placeholder: "何かお探しですか？", type:"text"}
       .toppage-header-top__header-btn
         = fa_icon "search"
@@ -25,10 +26,15 @@
           =link_to "purchase/index", class: "toppage-header-top__footer-search-list" do
             やることリスト
           =link_to users_path, class: "toppage-header-top__footer-search-mepage" do
-            マイページ      
+            マイページ 
         - else
           =link_to signin_path, class: "toppage-header-top__footer-search-btn-new" do
             新規会員登録
           =link_to new_user_session_path, class: "toppage-header-top__footer-search-btn-login" do
             ログイン
-        
+
+-# =render 'devise/shared/breadcrumbs'
+
+-# .breadcrumb
+-#   - breadcrumb :users_show
+-#   = breadcrumbs separator: "&rsaquo;"        
