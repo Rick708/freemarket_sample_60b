@@ -43,7 +43,7 @@
             -# カテゴリーの実装まだなのでコメントアウトしてます
         .details_content_info_brand
           .details_content_info_brand_title  ブランド
-          .details_content_info_brand_name  ノーブランド@
+          .details_content_info_brand_name  ノーブランド
           -# ブランドのカラムがないので一旦このままにしています。
         .details_content_info_status
           .details_content_info_status_title  商品の状態
@@ -70,7 +70,7 @@
       .details_price__body= @item.price
       .details_price_tax （税込）送料込み
     .details_btn 
-      =link_to "#", class: "details_btn" do
+      =link_to purchase_path(@item.id), class: "details_btn" do
         購入画面に進む
     .details_profile
       = @item.content

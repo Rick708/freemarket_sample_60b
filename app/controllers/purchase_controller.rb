@@ -1,9 +1,10 @@
 class PurchaseController < ApplicationController
 
   require 'payjp'
+  before_action :set_item
 
+#itemのデータとcard情報を両方記載
   def index
-    @items = Item.all
     card = Card.where(user_id: current_user.id).first
     if card.blank?
       redirect_to controller: "card", action: "new"
@@ -14,15 +15,23 @@ class PurchaseController < ApplicationController
     end
   end
 
+  # 購入の処理です
   def pay
     card = Card.where(user_id: current_user.id).first
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
     Payjp::Charge.create(
-    :amount => 600, #変更箇所
+    :amount => @item.price,
     :customer => card.customer_id,
     :currency => 'jpy',
   )
   redirect_to action: 'done'
   end
 
-end
+  private
+
+  #itemの情報を持ってくるために記述した
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+end 

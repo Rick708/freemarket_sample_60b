@@ -5,10 +5,11 @@
     .done_name 購入が完了しました。
     .done_item
       .done_item_profile 
-        地球儀
+        = image_tag @item.images[0].image.url, size: '185x150', class: "verification_item_photo"
     .done_price
       .done_price_name 支払い金額￥
-      .done_price_number 600
+      .done_price_number 
+        =@item.price
     .done_delivery
       =link_to root_path, class: "done_delivery_method" do
         トップページに戻る

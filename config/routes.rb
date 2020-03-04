@@ -3,14 +3,14 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks',
     registrations: 'users/registrations'
   }
-  root to: "items#index" #トップページ
   get 'login' => 'items#login' #ログインページ
-
   get 'signin' => 'items#signin' #サインインページ
 
   root to: "items#index" #トップページ
 
   resources :items
+
+
   resources :users do
     collection do
       get :logout
@@ -27,12 +27,13 @@ Rails.application.routes.draw do
   end
 
   get 'purchase/index'
-
   resources :purchase, only: [:index] do
-    collection do
-      get 'index', to: 'items#verification'
+    member do
       post 'pay', to: 'purchase#pay'
       get 'done', to: 'purchase#done'
+    end
+    member do 
+     get 'index'
     end
   end
 
