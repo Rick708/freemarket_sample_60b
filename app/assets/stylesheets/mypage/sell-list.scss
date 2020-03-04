@@ -1,14 +1,14 @@
 .sell-list {
   height: 1000px;
-  .sell-list-head {
+  &__head {
     padding: 0 16px;
     font-size: 20px;
     border-bottom: 1px solid #eee;
   }
-  .sell-list-contents {
+  &__contents {
     height: 100%;
     padding: 0 16px;
-    .sell-list-content {
+    &__content {
       .sell-item {
         height: 100px;
       }
