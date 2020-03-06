@@ -1,28 +1,5 @@
-.toppage-header-wrapper
-  .toppage-header-top
-    .toppage-header-top__header
-      .toppage-header-top__header-contents
-        .toppage-header-top__header-search
-          = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
-      %input.toppage-header-top__header-search-form.seach{placeholder: "何かお探しですか？", type:"text"}
-      .toppage-header-top__header-btn
-        = fa_icon "search"
-  .toppage-header-top__footer
-    .toppage-header-top__footer-search
-      .toppage-header-top__footer-search-categories
-      =link_to "#", class: "toppage-header-top__footer-search-wrapper" do
-        カテゴリーから探す
-      =link_to "#", class: "toppage-header-top__footer-search-brand" do
-        ブランドから探す
-      .toppage-header-top__footer-search-categories_mypage
-      =link_to "#", class: "toppage-header-top__footer-search-iine" do
-        いいね！一覧
-      =link_to "#", class: "toppage-header-top__footer-search-Notice" do
-        お知らせ
-      =link_to "#", class: "toppage-header-top__footer-search-list" do
-        やることリスト
-      =link_to "#", class: "toppage-header-top__footer-search-mepage" do
-        マイページ      
+.mypage-main-container
+  = render 'mypages/header'  
 .details_body
   %section.details 
     .details_name 

@@ -32,7 +32,6 @@ class ItemsController < ApplicationController
   end
   
   def show
-    # binding.pry
     @image = @item.images[0]
   end
 

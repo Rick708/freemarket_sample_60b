@@ -18,15 +18,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :card, only: [:new, :show] do
+  resources :card, only: [:new, :show, :destroy] do
     collection do
-      post 'show', to: 'card#show'
       post 'pay', to: 'card#pay'
-      post 'delete', to: 'card#delete'
     end
   end
 
-  get 'purchase/index'
   resources :purchase, only: [:index] do
     member do
       post 'pay', to: 'purchase#pay'
@@ -37,7 +34,6 @@ Rails.application.routes.draw do
     end
   end
 
-  
   #各ページの内容の概要（実装完了したものから消してください）
   # get 'identification' => 'items#identification' #マイページの本人情報登録
   # get 'tell' => 'items#tell' #新規登録の電話番号認証

@@ -4,7 +4,7 @@ class CardController < ApplicationController
 
   def new
     card = Card.where(user_id: current_user.id)
-    redirect_to action: "show" if card.exists?
+    redirect_to card_path(@card) if card.exists?
   end
 
   def pay
@@ -20,14 +20,14 @@ class CardController < ApplicationController
       ) 
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
       if @card.save
-        redirect_to action: "show"
+        redirect_to card_path(@card)
       else
         redirect_to action: "pay"
       end
     end
   end
 
-  def delete
+  def destroy
     card = Card.where(user_id: current_user.id).first
     if card.blank?
     else
