@@ -69,9 +69,13 @@
       .details_price__bold ¥
       .details_price__body= @item.price
       .details_price_tax （税込）送料込み
-    .details_btn 
-      =link_to purchase_path(@item.id), class: "details_btn" do
-        購入画面に進む
+    .details_btn
+      - if @item.status == "sold"
+        =link_to root_path, class: "details_btn" do
+          売り切れました。
+      - else
+        =link_to purchase_path(@item.id), class: "details_btn" do
+          購入画面に進む
     .details_profile
       = @item.content
   .details_comment
