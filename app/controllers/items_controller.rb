@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to root_path, notice: '作成完了'
+      redirect_to root_path
     else
       render :new
     end

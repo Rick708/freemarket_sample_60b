@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   accepts_nested_attributes_for :images, allow_destroy: true
 
 # enum設定
-  enum status: { 出品中: 0,取引中: 1,購入済み: 2}
+  enum status: { exhibition: 0, buy: 1, sold: 2}
 
 # validation
   validates :price, presence: true
