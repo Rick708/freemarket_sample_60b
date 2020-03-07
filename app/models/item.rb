@@ -13,4 +13,10 @@ class Item < ApplicationRecord
   validates :name, presence: true, length: { maximum: 40}
   validates :content, length: { maximum: 4}
   validates :images, presence:true
+
+
+  def self.search(search)
+    return Item.all unless search
+    Item.where(['name LIKE ?', "%#{search}%"])
+  end
 end

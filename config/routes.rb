@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   
   root to: "items#index" #トップページ
   
-  resources :items
+  resources :items do
+    collection do
+    end
+end
+
 
   resources :users do
     collection do
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
 end
 
   #各ページの内容の概要（実装完了したものから消してください）
-  # get 'details' => 'items#details' #商品詳細ページ
+  get 'search' => 'items#search' #検索結果のページ
   # get 'verification' => 'items#verification' #購入内容確認
   # get 'identification' => 'items#identification' #マイページの本人情報登録
   # get 'tell' => 'items#tell' #新規登録の電話番号認証

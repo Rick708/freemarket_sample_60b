@@ -1,0 +1,47 @@
+.l-container {
+  margin: 40px auto 0;
+  width: 1020px;
+  .search-result{
+    width: 100%;
+  }
+}
+  .search__box {
+    width: 1000px;
+    vertical-align: baseline;
+    padding: 0px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    font: inherit;
+  }
+      .search__box__smallbox {
+        width: 19%;
+        display: inline-block;
+        flex-wrap: wrap;
+        font-weight: nomal;
+        border: solid 3px #000000;
+        display: inline-block;
+        position:relative;
+        margin-bottom: 5px;
+        .search__box__smallbox_price{
+          background-color: rgba(0,0,0, 0.5);
+          width: auto;
+          height: 20px;
+          position: absolute;
+          top: 120px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          color: white;
+          padding-right: 6px;
+        }
+        .search__box__smallbox_photo{
+          margin-bottom: 0px;
+          background-color:white;
+        }
+        .search__box__smallbox_name{
+          background-color:white;
+          width: 100%;
+          padding: 10px 10px;
+        }
+  }

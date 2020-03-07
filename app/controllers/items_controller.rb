@@ -25,7 +25,9 @@ class ItemsController < ApplicationController
   end
   
   def show
+    @items = Item.find(params[:id])
   end
+
 
   def destroy
   end
@@ -35,7 +37,10 @@ class ItemsController < ApplicationController
       redirect_to new_user_session_path
     end
   end
-  
+
+  def search
+    @items = Item.search(params[:search])
+  end
 
   def item_params
     params.require(:item).permit(:name, :content, :price, :status, :delivery_charge, :send_day, :size, :delivery_method, :prefecture_code, :condition, images_attributes: [:image]).merge(seller_id: current_user.id)

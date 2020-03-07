@@ -15,20 +15,18 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
       display: flex;
       justify-content: space-between;  
     }
-      &__header-contents {
-        height: 40px;
-        margin-right: 45px;
-        }
-      &__header-search-form {
-        width: 100%;      
-        background-color: rgb(245, 245, 245);
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgb(204, 204, 204);
-        border-image: initial;
-        border-radius: 4px;
-        padding: 0px 50px 0px 10px;
-        }
+          .input {
+            height: 40px;
+            margin-right: 45px;
+            width: 100%;      
+            background-color: rgb(245, 245, 245);
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(204, 204, 204);
+            border-image: initial;
+            border-radius: 4px;
+            padding: 0px 50px 0px 10px;
+          }
       &__header-btn {
         position:absolute;
         right: 20px;
