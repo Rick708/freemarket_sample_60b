@@ -94,5 +94,9 @@ gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 gem "gretel"
 
-
+# 選択時に使用
+gem 'payjp'
+gem "jquery-rails"
 gem 'pry-rails'
+gem 'pry-byebug'
+gem 'pry-doc'

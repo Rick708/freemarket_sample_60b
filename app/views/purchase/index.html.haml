@@ -1,0 +1,50 @@
+.verification_logo
+  = image_tag "fmarket_logo_red.svg", class: "image", width: "200px"
+
+  .verification
+    .verification_name 購入内容の確認
+    .verification_item
+      .verification_item_photo
+        = image_tag @item.images[0].image.url, size: '185x150', class: "verification_item_photo"
+      .verification_item_profile 
+        = @item.name
+    .verification_price
+      .verification_price_name 支払い金額￥
+      .verification_price_number 
+        = @item.price
+    .verification_pay
+      支払い方法
+      .verification_pay_method
+        - if @default_card_information.blank?
+          %br
+          %br 登録してください
+        - else
+        %br
+          カード番号
+          %br
+          = "**** **** **** " + @default_card_information.last4
+          %br
+          有効期限
+          %br
+          - exp_month = @default_card_information.exp_month.to_s
+          - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+          = exp_month + " / " + exp_year
+    .verification_delivery
+      配送先
+      .verification_delivery_method
+        =link_to "#", class: "verification_delivery_method_name" do
+          登録してください
+    .verification_btn
+      = form_tag(action: :pay, method: :post) do
+        %button 購入を確定する
+
+  .verification_bottom
+    =link_to "#", class: "verification_bottom_privacy" do
+      プライバシーポリシー
+    =link_to "#", class: "verification_bottom_terms" do
+      メルカリ利用規約
+    =link_to "#", class: "verification_bottom_notation" do
+      特定商取引に関する表記
+
+  .verification_bottom_logo
+    = image_tag "logo_gray.svg", width: "110px" 
