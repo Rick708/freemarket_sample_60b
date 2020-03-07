@@ -269,7 +269,6 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
     font-size: 20px;
     color:white;
   }
-
         &__nav{
           line-height: 1.4em;
           margin: 16px 0px 0px;
@@ -314,7 +313,12 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
     color: white;
     text-align: center;
 }
-
+.contents__btn--icon{
+  color: white;
+}
+.toppage-footer-bottom__nav_mercari{
+  color: white;
+}
 .exhibition{
   width: 200px;
   height: 200px;
