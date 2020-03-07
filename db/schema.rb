@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_02_25_131919) do
     t.string "name", null: false
     t.text "content"
     t.integer "price", null: false
-    t.integer "status", default: 0, null: false
+    t.integer "status", default: 0
     t.integer "delivery_charge"
     t.string "send_day"
     t.string "size"
