@@ -1,12 +1,15 @@
+
 .toppage-header-wrapper
   .toppage-header-top
     .toppage-header-top__header
       .toppage-header-top__header-contents
         .toppage-header-top__header-search
-          = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
+          =link_to root_path, class: "image" do
+            = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
       = form_tag(search_path, method: :'get', class: "toppage-header-top__header-search-form") do
         = text_field_tag "search", "", {class: "toppage-header-top__header-search-form__shape", id: "toppage-search", placeholder: "何かお探しですか？"}
         = button_tag '<i class="fas fa-search"></i>'.html_safe, :type => "submit", :class =>"toppage-header-top__header-btn"
+
   .toppage-header-top__footer
     .toppage-header-top__footer-search
       .toppage-header-top__footer-search-categories
@@ -21,5 +24,5 @@
         お知らせ
       =link_to "#", class: "toppage-header-top__footer-search-list" do
         やることリスト
-      =link_to "#", class: "toppage-header-top__footer-search-mepage" do
+      =link_to users_path, class: "toppage-header-top__footer-search-mepage" do
         マイページ

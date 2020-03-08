@@ -2,14 +2,14 @@
   float: right;
   background-color: #fff;
   width: 700px;
-  h2.paymethod-header {
+  .paymethod-header {
     padding-top: 10px;
     text-align: center;
     height: 50px;
     font-size: 20px;
     border-bottom: solid 1px rgb(168, 167, 167);
   }
-  form.paymethod-register {
+  .paymethod-register {
     padding: 40px 80px 64px;
     .form-card {
       margin: 0px 40px;
@@ -19,6 +19,7 @@
         .input-default {
         }
         ul.card-list {
+          margin-top: 10px;
           li {
             display: inline;
           }
@@ -30,20 +31,19 @@
         }
         .select-half {
           display: inline-block;
-          width: calc(50% - 2px);
+          width: calc(49% - 2px);
           position: relative;
+          background-color: white;
           .select-default {
             height: 48px;
-            width: calc(100% - 70px);
+            width: 87%;
             border-radius: 4px;
             border: 1px solid;
             padding: 0 16px;
+            margin-bottom: 5px;
+            background-color: white;
           }
-          i {
-            position: absolute;
-            right: 80px;
-            top: 15px;
-            color: #888;
+          span{
             font-size: 20px;
           }
         }
@@ -57,6 +57,39 @@
         color: #fff;
         width: 100%;
         height: 50px;
+      }
+    }
+  }
+}
+
+// 以下show部分
+.paymethod-contents-register {
+  float: right;
+  background-color: #fff;
+  width: 700px;
+  .paymethod-header {
+    padding-top: 10px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    border-bottom: solid 1px rgb(168, 167, 167);
+  }
+  .paymethod-del{
+    padding: 40px 80px 64px;
+    .del_form-card {
+      margin: 0px 40px;
+      &_number {
+        font-size: 20px;
+      }
+      &_btn{
+        button{
+        margin-top: 32px;
+        background: #ea352d;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+        }
       }
     }
   }

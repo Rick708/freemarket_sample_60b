@@ -1,0 +1,17 @@
+.mypage-main-container
+  = render 'mypages/header'
+%main.mypage-container.clearfix
+  = render 'mypages/side-bar'
+  = render 'items/exhibition'
+  .logout_content
+    .sell-list
+      .sell-list__head
+        出品リスト
+      .sell-list__contents
+        - @item.each do |item|
+          .sell-list__contents__content
+            = link_to edit_item_path(item), class: "sell-item" do
+              = image_tag item.images[0].image.url, size: '80x80'
+              = item.name
+= render 'items/footer' 
+

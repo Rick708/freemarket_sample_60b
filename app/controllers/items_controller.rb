@@ -1,5 +1,9 @@
 class ItemsController < ApplicationController
   before_action :login_check, {only: [:new, :create]}
+
+  before_action :set_item, {only: [:edit, :update, :destroy, :show]}
+
+  
   def index
     @items = Item.includes(:images).limit(10).order('created_at DESC')
   end
@@ -12,7 +16,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to root_path, notice: '作成完了'
+      redirect_to root_path
     else
       render :new
     end
@@ -22,14 +26,25 @@ class ItemsController < ApplicationController
   end
 
   def update
+    if @item.update(update_item_params)
+      redirect_to root_path(@item)
+    else
+      render :edit
+    end
   end
   
   def show
     @items = Item.find(params[:id])
+    @image = @item.images[0]
   end
 
 
   def destroy
+    if @item.destroy
+      redirect_to root_path
+    else
+      reder :edit
+    end
   end
   
   def login_check
@@ -45,5 +60,14 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :content, :price, :status, :delivery_charge, :send_day, :size, :delivery_method, :prefecture_code, :condition, images_attributes: [:image]).merge(seller_id: current_user.id)
   end
+
+  def update_item_params
+    params.require(:item).permit(:name, :content, :price, :status, :delivery_charge, :send_day, :size, :delivery_method, :prefecture_code, :condition, images_attributes: [:image, :_destroy, :id]).merge(seller_id: current_user.id)
+  end
+  
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
 
 end

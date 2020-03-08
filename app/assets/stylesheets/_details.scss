@@ -271,12 +271,12 @@ body{
       }
     }
     &_price{
-      display: inline;
-      margin: auto;
+      display: inline-flex;
       font-size: 70px;
-      padding-left: 150px;
+      padding-left: 215px;
       &_tax{
-        display: inline;
+        display: contents;
+        font-size: 16px;
       }
     }
     &_btn{
