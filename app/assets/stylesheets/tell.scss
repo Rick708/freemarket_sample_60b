@@ -43,11 +43,11 @@
         @include newline;
       }
       &_item_address{
-        background: #ccc;
+        background: red;
         @include content;
         &::before {
           @include before;
-          background: #ccc;
+          background: red;
         }
         &::after {
           @include after;
