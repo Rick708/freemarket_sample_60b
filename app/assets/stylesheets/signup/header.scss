@@ -1,3 +1,90 @@
+.registration-wrapper{
+  width: 650px;
+  margin:  30px auto;
+  display: flex;
+  .registration_img {
+    width: 30%;
+    height: 50px;
+    display: inline-block;
+  }
+  .registration_progress_bar{
+    padding: 16px 0;
+    width: 70%;
+    margin-left: 70px;
+    &_step{
+      color: red;
+      @include newline;
+      &_item {
+        background:  red;
+        @include content;
+        &::after {
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_phone_number{
+        color: #ccc;
+        @include newline;
+      }
+      &_item_phone_number{
+        background: #ccc;
+        @include content;
+        &::before{
+          @include before;
+          background: #ccc;
+        }
+        &::after{
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_address{
+        color: #888;
+        @include newline;
+      }
+      &_item_address{
+        background: #ccc;
+        @include content;
+        &::before {
+          @include before;
+          background: #ccc;
+        }
+        &::after {
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_payment{
+        color: #ccc;
+        @include newline;
+      }
+      &_item_payment{
+        background: #ccc;
+        @include content;
+        &::before {
+          @include before;
+          background: #ccc;
+        }
+        &::after {
+          @include after;
+          background: #ccc;
+        }
+      }
+      &_complete{
+        color: #ccc;
+        @include newline;
+      }
+      &_item_complete{
+        background: #ccc;
+        @include content;
+        &::before {
+          @include before;
+          background: #ccc;
+        }
+      }
+    }
+  }
+}
 .signup-header{
   text-align: center;
   h1 {
