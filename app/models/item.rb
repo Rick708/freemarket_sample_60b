@@ -10,9 +10,10 @@ class Item < ApplicationRecord
   enum status: { exhibition: 0, buy: 1, sold: 2}
 
 # validation
-  validates :name, presence: true, length: { maximum: 40}
-  validates :content, length: { maximum: 4}
-  validates :images, presence:true
+  validates :price, presence: true
+  validates :name, presence: true, length: { maximum: 13}
+  validates :content, length: { maximum: 400}
+  validates :images, presence:true, on: :create
 
 
   def self.search(search)
@@ -20,8 +21,5 @@ class Item < ApplicationRecord
     Item.where(['name LIKE ?', "%#{search}%"])
   end
 end
-  validates :price, presence: true
-  validates :name, presence: true, length: { maximum: 13}
-  validates :content, length: { maximum: 400}
-  validates :images, presence:true, on: :create
-end
+
+

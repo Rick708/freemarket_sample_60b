@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :items do
     collection do
     end
-　end
+  end
 
 
   resources :users do
