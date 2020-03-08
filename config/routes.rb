@@ -8,10 +8,7 @@ Rails.application.routes.draw do
 
   root to: "items#index" #トップページ
   
-  resources :items do
-    collection do
-    end
-  end
+  resources :items 
 
 
   resources :users do

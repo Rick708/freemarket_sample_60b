@@ -34,7 +34,6 @@ class ItemsController < ApplicationController
   end
   
   def show
-    @items = Item.find(params[:id])
     @image = @item.images[0]
   end
 
