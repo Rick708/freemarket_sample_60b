@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     collection do
       get :logout
       get :sell_list
+      get :profile
     end
   end
 
@@ -40,5 +41,5 @@ Rails.application.routes.draw do
   # get 'tell' => 'items#tell' #新規登録の電話番号認証
   # get 'address' => 'items#address' #新規登録の住所登録 
   # get 'paymethod' => 'items#paymethod' ##新規登録のお支払い方法
-  # get 'profile' => 'mypages#profile' #マイページのプロフィール編集
+  get 'profile' => 'mypages#profile' #マイページのプロフィール編集
 end
