@@ -4,8 +4,8 @@
       %figure
         = image_tag 'mypage-user-icon.png', size: '60x60'
       %h2.mypage-content__user-name.bold
-        -# = current_user.nickname
-        ユーザー名
+        = current_user.nickname
+        -# ユーザー名
       .mypage-content__status
         .mypage-content__reviews
           評価&nbsp
