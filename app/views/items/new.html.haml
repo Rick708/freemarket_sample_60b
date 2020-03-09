@@ -72,7 +72,7 @@
                     .sell-main__select-wrap
                       %i.fas.fa-chevron-down.down-icon
                       .select
-                        = f.select :prefecture_code, Item.prefecture_codes.keys.map {|k| [I18n.t("enum.item.prefecture_code.#{k}"), k]},{include_blank: true}, {class: 'sell-main__select-default'}
+                        = f.select :prefecture_code, Item.prefecture_codes.keys.map, {include_blank: true}, {class: 'sell-main__select-default'}
                   .sell-main__form-group
                     %label 発送までの日数
                     %span.sell-main__form-require 必須
