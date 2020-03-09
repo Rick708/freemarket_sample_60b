@@ -58,7 +58,7 @@
                     .sell-main__select-wrap
                       %i.fas.fa-chevron-down.down-icon
                       .select
-                        = f.select :delivery_charge, [['送料込み(出品者負担)',0], ['着払い(購入者負担)', 1]], {include_blank: '--'}, class: 'sell-main__select-default'
+                        = f.select :delivery_charge, Item.delivery_charges.keys.to_a, {include_blank: true}, class: 'sell-main__select-default'
                   .sell-main__form-group
                     %label 配送の方法
                     %span.sell-main__form-require 必須
@@ -72,7 +72,7 @@
                     .sell-main__select-wrap
                       %i.fas.fa-chevron-down.down-icon
                       .select
-                        = f.text_field :prefecture_code, class: "sell-main__select-default"
+                        = f.select :prefecture_code, Item.prefecture_codes.keys.map {|k| [I18n.t("enum.item.prefecture_code.#{k}"), k]},{include_blank: true}, {class: 'sell-main__select-default'}
                   .sell-main__form-group
                     %label 発送までの日数
                     %span.sell-main__form-require 必須

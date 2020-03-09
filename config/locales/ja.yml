@@ -1,0 +1,13 @@
+ja:
+  enum:
+    item:
+      prefecture_code:
+        hokkaido: 北海道
+        aomori: 青森
+        iwate:    岩手
+        miyagi:  宮城
+        akita:    秋田
+        yamagata: 山形
+      delivery_charge:
+        include: 送料込み(出品者負担)
+        not: 着払い(購入者負担)
