@@ -52,6 +52,7 @@ class ItemsController < ApplicationController
     end
   end
 
+  #検索/Viewのformで取得したパラメータをモデルに渡す
   def search
     @items = Item.search(params[:search])
   end

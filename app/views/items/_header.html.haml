@@ -5,9 +5,10 @@
         .toppage-header-top__header-search
           =link_to root_path, class: "image" do
             = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
-      = form_tag(search_path, method: :'get', class: "toppage-header-top__header-search-form") do
-        = text_field_tag "search", "", {class: "toppage-header-top__header-search-form", id: "toppage-search", placeholder: "何かお探しですか？"}
-        = button_tag '<i class="fas fa-search"></i>'.html_safe, :type => "submit", :class =>"toppage-header-top__header-btn"
+      = form_with url: search_path, method: :get, class: 'toppage-header-top__header-search-form', local: true do |f|
+        = f.text_field :search, class:"toppage-header-top__header-search-form", id:"toppage-search", placeholder:"何かお探しですか？"
+        = button_tag type: 'submit', class: "toppage-header-top__header-btn" do
+          = fa_icon "search"
   .toppage-header-top__footer
     .toppage-header-top__footer-search
       .toppage-header-top__footer-search-categories

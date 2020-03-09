@@ -16,6 +16,7 @@ class Item < ApplicationRecord
   validates :images, presence:true, on: :create
 
 
+# 検索
   def self.search(search)
     return Item.all unless search
     Item.where(['name LIKE ?', "%#{search}%"])
