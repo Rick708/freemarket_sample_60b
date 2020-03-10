@@ -37,6 +37,7 @@ class ItemsController < ApplicationController
     @image = @item.images[0]
   end
 
+
   def destroy
     if @item.destroy
       redirect_to root_path
@@ -50,7 +51,11 @@ class ItemsController < ApplicationController
       redirect_to new_user_session_path
     end
   end
-  
+
+  #検索/Viewのformで取得したパラメータをモデルに渡す
+  def search
+    @items = Item.search(params[:search])
+  end
 
   def item_params
     params.require(:item).permit(:name, :content, :price, :status, :delivery_charge, :send_day, :size, :delivery_method, :prefecture_code, :condition, images_attributes: [:image]).merge(seller_id: current_user.id)

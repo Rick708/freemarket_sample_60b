@@ -5,9 +5,10 @@
         .toppage-header-top__header-search
           =link_to root_path, class: "image" do
             = image_tag "fmarket_logo_red.svg", class: "image", width: "150px"
-      %input.toppage-header-top__header-search-form.seach{placeholder: "何かお探しですか？", type:"text"}
-      .toppage-header-top__header-btn
-        = fa_icon "search"
+      = form_with url: search_path, method: :get, class: 'toppage-header-top__header-search-form', local: true do |f|
+        = f.text_field :search, class:"toppage-header-top__header-search-form", id:"toppage-search", placeholder:"何かお探しですか？"
+        = button_tag type: 'submit', class: "toppage-header-top__header-btn" do
+          = fa_icon "search"
   .toppage-header-top__footer
     .toppage-header-top__footer-search
       .toppage-header-top__footer-search-categories
@@ -32,4 +33,3 @@
             新規会員登録
           =link_to new_user_session_path, class: "toppage-header-top__footer-search-btn-login" do
             ログイン
-      
