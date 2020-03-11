@@ -126,6 +126,7 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
   width: 100%;
   &__category-top {
     margin-bottom: 16px;
+    margin-top: -6px;
     text-align: center;
     background-color: white;
     font-size: 28px;
@@ -188,7 +189,7 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
       font: inherit;
   }
       .toppage-main__smallbox {
-        width: 19%;
+        width: 19.1%;
         display: inline-block;
         flex-wrap: wrap;
         font-weight: nomal;
@@ -219,7 +220,7 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
       }
 
 .toppage-footer-top__box{
-  margin-bottom: -4px;
+  margin-bottom: -6px;
 }
 .toppage-footer-bottom{
   height: 100%;
