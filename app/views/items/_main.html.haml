@@ -1,20 +1,19 @@
 .toppage-main
   .toppage-main__category-top
-    人気のカテゴリー（仮の商品一覧ページ）
+    商品一覧ページ
     %ul.toppage-main__list
       %li.toppage-main__menu
-        =link_to "#", class: "toppage-main__logo" do
-          レディース
-        =link_to "#", class: "toppage-main__logo" do
-          メンズ
-        =link_to "#", class: "toppage-main__logo" do
-          家電・スマホ・カメラ新着アイテム
-        =link_to "#", class: "toppage-main__logo" do
-          おもちゃ・ホビー・グッズ新着アイテム
+        -# =link_to "#", class: "toppage-main__logo" do
+        -#   レディース
+        -# =link_to "#", class: "toppage-main__logo" do
+        -#   メンズ
+        -# =link_to "#", class: "toppage-main__logo" do
+        -#   家電・スマホ・カメラ新着アイテム
+        -# =link_to "#", class: "toppage-main__logo" do
+        -#   おもちゃ・ホビー・グッズ新着アイテム
 .toppage-main__category-bottom
   .toppage-main__category-name
     .toppage-main__text
-      レディース新着アイテム（仮の商品一覧）
     .toppage-main__box
       - @items.each do |item|
         %ul.toppage-main__smallbox
@@ -26,15 +25,15 @@
               = image_tag item.images[0].image.url, size: '185x150'
             %li.toppage-main__smallbox_name
               =item.name
-  .toppage-main__category-name
-    .toppage-main__text 
-      メンズ新着アイテム
-    .toppage-main__box
-  .toppage-main__category-name
-    .toppage-main__text 
-      家電・スマホ・カメラ新着アイテム
-    .toppage-main__box
-  .toppage-main__category-name
-    .toppage-main__text
-      おもちゃ・ホビー・グッズ新着アイテム
-    .toppage-main__box
+  -# .toppage-main__category-name
+  -#   .toppage-main__text 
+  -#     メンズ新着アイテム
+  -#   .toppage-main__box
+  -# .toppage-main__category-name
+  -#   .toppage-main__text 
+  -#     家電・スマホ・カメラ新着アイテム
+  -#   .toppage-main__box
+  -# .toppage-main__category-name
+  -#   .toppage-main__text
+  -#     おもちゃ・ホビー・グッズ新着アイテム
+  -#   .toppage-main__box

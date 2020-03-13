@@ -155,6 +155,7 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
   background-color: rgb(245, 245, 245);
   flex-direction: column;
   margin: auto;
+  margin-bottom: 5px;
 }
   .toppage-main__category-name {
     vertical-align: baseline;
@@ -178,15 +179,7 @@ html { box-sizing: border-box; } *, *:before, *:after { box-sizing: inherit; }
       justify-content: space-between;
     }
     .toppage-main__box {
-      width: 1000px;
-      // height: 250px;（各カテゴリー毎にした場合使う）
-      vertical-align: baseline;
-      padding: 0px;
-      border-width: 0px;
-      border-style: initial;
-      border-color: initial;
-      border-image: initial;
-      font: inherit;
+      margin-bottom: 10px;
   }
       .toppage-main__smallbox {
         width: 19.1%;
