@@ -1,5 +1,5 @@
 .mypage-main-container
-  = render 'mypages/header'  
+  = render 'items/header'  
 .details_body
   %section.details 
     .details_name 
@@ -49,10 +49,13 @@
     .details_btn
       - if @item.status == "sold"
         =link_to root_path, class: "details_btn" do
-          売り切れました。
-      - else
-        =link_to purchase_path(@item.id), class: "details_btn" do
+          売り切れました
+      - elsif user_signed_in?
+        = link_to purchase_path(@item.id), class: "details_btn" do
           購入画面に進む
+      - else
+        =link_to new_user_session_path, class: "details_btn" do
+          ログインして下さい
     .details_profile
       = @item.content
   .details_comment
