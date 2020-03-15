@@ -61,6 +61,8 @@ class Item < ApplicationRecord
   }
   # 配送料の負担 
   enum delivery_charge: { "送料込み(出品者負担)": 0, "着払い(購入者負担)": 1}
+  # カテゴリー
+  enum category: {"メンズ": 0, "レディース": 1}
 
 # validation
   validates :price, presence: true

@@ -40,8 +40,8 @@
                     %span.sell-main__form-require 必須
                     .sell-main__select-wrap
                       %i.fas.fa-chevron-down.down-icon
-                      %input.sell-main__select-default
-                      -# 上記はselectからinputに変えてます。カテゴリー機能実装時に戻しましょう。
+                      .select
+                        = f.select :category, Item.categories.keys.to_a, {include_blank: true}, class: 'sell-main__select-default'
                   .sell-main__form-group
                     %label 商品の状態
                     %span.sell-main__form-require 必須
