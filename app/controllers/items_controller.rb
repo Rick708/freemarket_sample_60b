@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   
   def index
     @items = Item.includes(:images).limit(10).order('created_at DESC')
+    @parents = Category.all.order("id ASC").limit(13)
   end
 
   def new

@@ -100,3 +100,4 @@ gem "jquery-rails"
 gem 'pry-rails'
 gem 'pry-byebug'
 gem 'pry-doc'
+gem 'ancestry'

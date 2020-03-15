@@ -13,6 +13,16 @@
       .toppage-header-top__footer-search-categories
       =link_to "#", class: "toppage-header-top__footer-search-wrapper" do
         カテゴリーから探す
+        .toppage-header-top__footer-searchcategory
+        - @parents.each do |parent|
+          =parent.name
+          - parent.children.each do |child|
+          =child.name  
+            - child.children.each do |grandchild|
+              =grandchild.name
+        -# %li.category レディース
+        -# %li.category メンズ
+        -# %li.category ベビー・キッズ
       =link_to "#", class: "toppage-header-top__footer-search-brand" do
         ブランドから探す
     .toppage-header-top__footer-search-btn
